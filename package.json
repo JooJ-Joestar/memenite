@@ -1,0 +1,23 @@
+{
+  "name": "friends",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "tsc && vite build",
+    "preview": "tsc && vite build && vite preview --host --open"
+  },
+  "typeRoots": [
+    "node_modules/@types",
+    "src/@types"
+  ],
+  "devDependencies": {
+    "@babylonjs/core": "^6.36.1",
+    "@babylonjs/inspector": "^6.36.1",
+    "typescript": "^4.6.2",
+    "vite": "^2.8.6"
+  },
+  "dependencies": {
+    "babylonjs": "^4.2.2",
+    "express": "^4.18.2"
+  }
+}

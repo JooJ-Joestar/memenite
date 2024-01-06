@@ -1,0 +1,264 @@
+Exporter version: 3.3.2, Blender version: 3.6.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  C:\Users\jorge\OneDrive\Documentos\Babylon.js\slippery-surprise\assets\maps\level-1\
+	Python World class constructor completed
+	processing begun of mesh:  house-floor
+		processing begun of material:  floor
+			processing texture floor
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  kitchen-desk-1
+		processing begun of material:  kitchen-desk-body
+		processing begun of material:  kitchen-desk-metal
+		processing begun of multimaterial:  level_1.Multimaterial#0
+		num positions      :  241
+		num normals        :  241
+		num tangents       :  0
+		num uvs            :  482
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  127
+	processing begun of mesh:  kitchen-desk-with-sink-1
+		processing begun of material:  kitchen-desk-with-sink-body
+		processing begun of material:  kitchen-desk-with-sink-metal
+		processing begun of multimaterial:  level_1.Multimaterial#1
+		num positions      :  2257
+		num normals        :  2257
+		num tangents       :  0
+		num uvs            :  4514
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  933
+	processing begun of mesh:  fridge-1
+		processing begun of material:  fridge-body
+		processing begun of material:  fridge-metal
+		processing begun of material:  fridge-edge
+		processing begun of multimaterial:  level_1.Multimaterial#2
+		num positions      :  251
+		num normals        :  251
+		num tangents       :  0
+		num uvs            :  502
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  140
+	processing begun of mesh:  kitchen-desk-2
+		processing begun of material:  kitchen-desk-body
+		processing begun of material:  kitchen-desk-metal
+		registered as also a user of material:  kitchen-desk-body
+		registered as also a user of material:  kitchen-desk-metal
+		processing begun of multimaterial:  level_1.Multimaterial#3
+		num positions      :  241
+		num normals        :  241
+		num tangents       :  0
+		num uvs            :  482
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  127
+	processing begun of mesh:  fridge-2
+		processing begun of material:  fridge-body
+		processing begun of material:  fridge-metal
+		processing begun of material:  fridge-edge
+		registered as also a user of material:  fridge-body
+		registered as also a user of material:  fridge-metal
+		registered as also a user of material:  fridge-edge
+		processing begun of multimaterial:  level_1.Multimaterial#4
+		num positions      :  251
+		num normals        :  251
+		num tangents       :  0
+		num uvs            :  502
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  140
+	processing begun of mesh:  kitchen-desk-with-sink-2
+		processing begun of material:  kitchen-desk-with-sink-body
+		processing begun of material:  kitchen-desk-with-sink-metal
+		registered as also a user of material:  kitchen-desk-with-sink-body
+		registered as also a user of material:  kitchen-desk-with-sink-metal
+		processing begun of multimaterial:  level_1.Multimaterial#5
+		num positions      :  2257
+		num normals        :  2257
+		num tangents       :  0
+		num uvs            :  4514
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  933
+	processing begun of mesh:  stove
+		processing begun of material:  stove-body
+		processing begun of material:  stove-metal-1
+		processing begun of material:  stove-metal-2
+		processing begun of material:  stove-button
+		processing begun of multimaterial:  level_1.Multimaterial#6
+		num positions      :  2300
+		num normals        :  2300
+		num tangents       :  0
+		num uvs            :  4600
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1020
+	processing begun of mesh:  vase
+		processing begun of material:  vase-wood
+		processing begun of material:  vase-dirt
+		processing begun of material:  vase-body
+		processing begun of material:  vase-folliage
+		processing begun of material:  vase-flower
+		processing begun of multimaterial:  level_1.Multimaterial#7
+		num positions      :  3452
+		num normals        :  3452
+		num tangents       :  0
+		num uvs            :  6904
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  furniture-desk-1
+		processing begun of material:  furniture-desk-wood
+		processing begun of material:  furniture-desk-metal
+		processing begun of multimaterial:  level_1.Multimaterial#8
+		num positions      :  246
+		num normals        :  246
+		num tangents       :  0
+		num uvs            :  492
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  128
+	processing begun of mesh:  furniture-desk-2
+		processing begun of material:  furniture-desk-wood
+		processing begun of material:  furniture-desk-metal
+		registered as also a user of material:  furniture-desk-wood
+		registered as also a user of material:  furniture-desk-metal
+		processing begun of multimaterial:  level_1.Multimaterial#9
+		num positions      :  246
+		num normals        :  246
+		num tangents       :  0
+		num uvs            :  492
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  128
+	processing begun of mesh:  desk
+		processing begun of material:  desk-wood
+		num positions      :  222
+		num normals        :  222
+		num tangents       :  0
+		num uvs            :  444
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  128
+	processing begun of mesh:  chair
+		processing begun of material:  chair-wood
+		num positions      :  680
+		num normals        :  680
+		num tangents       :  0
+		num uvs            :  1360
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  396
+	processing begun of mesh:  sofa-tv
+		processing begun of material:  sofa-body
+		num positions      :  61089
+		num normals        :  61089
+		num tangents       :  0
+		num uvs            :  122178
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  29312
+		WARNING: # of 0 area faces found:  48
+	processing begun of mesh:  desk-tv
+		processing begun of material:  desk-wood
+		registered as also a user of material:  desk-wood
+		num positions      :  222
+		num normals        :  222
+		num tangents       :  0
+		num uvs            :  444
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  128
+	processing begun of mesh:  tv
+		processing begun of material:  tv-body
+		num positions      :  5970
+		num normals        :  5970
+		num tangents       :  0
+		num uvs            :  11940
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2544
+	processing begun of mesh:  sofa-1
+		processing begun of material:  sofa-body
+		registered as also a user of material:  sofa-body
+		num positions      :  61089
+		num normals        :  61089
+		num tangents       :  0
+		num uvs            :  122178
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  29312
+		WARNING: # of 0 area faces found:  48
+	processing begun of mesh:  sofa-2
+		processing begun of material:  sofa-body
+		registered as also a user of material:  sofa-body
+		num positions      :  61089
+		num normals        :  61089
+		num tangents       :  0
+		num uvs            :  122178
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  29312
+		WARNING: # of 0 area faces found:  48
+	processing begun of mesh:  wall-1
+		processing begun of material:  wall
+			processing texture wall
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  wall-2
+		processing begun of material:  wall
+		registered as also a user of material:  wall
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of light (HEMI FROM AREA):  Area
+========= Writing of JSON file started =========
+	writing mesh:  house-floor
+	writing mesh:  kitchen-desk-1
+	writing mesh:  kitchen-desk-with-sink-1
+	writing mesh:  fridge-1
+	writing mesh:  kitchen-desk-2
+	writing mesh:  fridge-2
+	writing mesh:  kitchen-desk-with-sink-2
+	writing mesh:  stove
+	writing mesh:  vase
+	writing mesh:  furniture-desk-1
+	writing mesh:  furniture-desk-2
+	writing mesh:  desk
+	writing mesh:  chair
+	writing mesh:  sofa-tv
+	writing mesh:  desk-tv
+	writing mesh:  tv
+	writing mesh:  sofa-1
+	writing mesh:  sofa-2
+	writing mesh:  wall-1
+	writing mesh:  wall-2
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 4.7598 secs
