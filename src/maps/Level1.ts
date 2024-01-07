@@ -19,10 +19,13 @@ export class Level1 {
         });
 
         async function afterMeshIsImported (colliders: BABYLON.AbstractMesh[]) {
-            console.log('Calling');
             const result = await import_mesh;
             for (let i in result.meshes) {
                 if (result.meshes[i].name.indexOf("collider") == -1) return;
+
+                // result.meshes[i].isVisible = false;
+                result.meshes[i].isPickable = true;
+                result.meshes[i].checkCollisions = true;
                 colliders.push(result.meshes[i]);
             }
         }
