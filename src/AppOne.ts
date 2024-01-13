@@ -1,4 +1,5 @@
-import * as BABYLON from 'babylonjs'
+import * as BABYLON from 'babylonjs';
+import * as Colyseus from "colyseus.js";
 import { Level1 } from './maps/Level1';
 import {Player} from './models/Player';
 import { PlayerAttributes } from './types/PlayerAttributes';
@@ -10,6 +11,8 @@ enum State {
     LOSE = 2,
     CUTSCENE = 3
 }
+
+export const COLYSEUS_URL = 'ws://localhost:2567';
 
 export class AppOne {
     engine: BABYLON.Engine;
@@ -24,6 +27,13 @@ export class AppOne {
         });
         this.createScene()
 
+        // this.client.joinOrCreate("my_room")
+        //     .then(function (room) {
+        //     console.log("Connected to roomId: " + room.roomId);
+        //     })
+        //     .catch(function (error) {
+        //     console.log("Couldn't connect.");
+        //     });
     }
 
     debug(debugOn: boolean = true) {
