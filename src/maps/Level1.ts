@@ -7,8 +7,7 @@ import { COLYSEUS_URL } from '../AppOne';
 export class Level1 {
     private scene: BABYLON.Scene;
     private colliders: BABYLON.AbstractMesh[] = [];
-    public playerEntities = {};
-    public test: string = "asdf";
+    public playerEntities: any = {};
 
     colyseusSDK: Colyseus.Client = new Colyseus.Client(COLYSEUS_URL);
 
@@ -54,15 +53,15 @@ export class Level1 {
         // const wife = new Player("wife", wife_options, scene, );
 
         this.scene = scene;
-        this.colyseusSDK.joinOrCreate("my_room").then(function (this: Level1, room: Colyseus.Room) {
+        this.colyseusSDK.joinOrCreate("my_room").then((room: Colyseus.Room) => {
             // listen for new players
-            // let playerEntities = this.playerEntities;
-            room.state.players.onAdd((player, sessionId) => {
+            room.state.players.onAdd((player: any, sessionId: string) => {
                 var isCurrentPlayer = sessionId === room.sessionId;
+                this.playerEntities[sessionId] = player;
 
-                player.onChange(function () {
-                    // this.super.playerEntities[sessionId].position.set(player.x, player.y, player.z);
-                    console.log(this);
+                player.onChange(() => {
+                    // this.playerEntities[sessionId].position.set(player.x, player.y, player.z);
+                    this.playerEntities[sessionId];
                 });
 
                 // console.log(room.state.players.entries());
