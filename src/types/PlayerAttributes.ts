@@ -22,3 +22,69 @@ export type PlayerAttributes = {
         z: number
     }
 };
+
+export const kek_options: PlayerAttributes = {
+    mesh: {
+        size: 1,
+        width: 1,
+        height: 1,
+        depth: 1,
+        faceColors: [
+            new BABYLON.Color4(1, 0, 0, 1),
+            new BABYLON.Color4(1, 0, 0, 1),
+            new BABYLON.Color4(1, 0, 0, 1),
+            new BABYLON.Color4(1, 0, 0, 1),
+            new BABYLON.Color4(1, 0, 0, 1),
+            new BABYLON.Color4(1, 0, 0, 1),
+        ],
+    },
+    position: {
+        x: -6.5,
+        y: 0.5,
+        z: 6.5
+    }
+};
+
+export const husband_options: PlayerAttributes = {
+    mesh: {
+        size: 1,
+        width: 1,
+        height: 1,
+        depth: 1,
+        faceColors: [
+            new BABYLON.Color4(0, 1, 0, 1),
+            new BABYLON.Color4(0, 1, 0, 1),
+            new BABYLON.Color4(0, 1, 0, 1),
+            new BABYLON.Color4(0, 1, 0, 1),
+            new BABYLON.Color4(0, 1, 0, 1),
+            new BABYLON.Color4(0, 1, 0, 1),
+        ],
+    },
+    position: {
+        x: 7.5,
+        y: 0.5,
+        z: -6.5
+    }
+};
+
+export const wife_options: PlayerAttributes = {
+    mesh: {
+        size: 1,
+        width: 1,
+        height: 1,
+        depth: 1,
+        faceColors: [
+            new BABYLON.Color4(0, 0, 1, 1),
+            new BABYLON.Color4(0, 0, 1, 1),
+            new BABYLON.Color4(0, 0, 1, 1),
+            new BABYLON.Color4(0, 0, 1, 1),
+            new BABYLON.Color4(0, 0, 1, 1),
+            new BABYLON.Color4(0, 0, 1, 1),
+        ],
+    },
+    position: {
+        x: 6.5,
+        y: 0.5,
+        z: -7.5
+    }
+};
