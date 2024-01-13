@@ -1,12 +1,18 @@
+import * as Colyseus from "colyseus.js";
 import { Player } from '../models/Player';
 import { PlayerInput } from '../models/PlayerInput';
 import type { PlayerAttributes } from '../types/PlayerAttributes';
+import { COLYSEUS_URL } from '../AppOne';
 
 export class Level1 {
     private scene: BABYLON.Scene;
     private colliders: BABYLON.AbstractMesh[] = [];
+    public playerEntities = {};
+    public test: string = "asdf";
 
-    constructor (scene: BABYLON.Scene) {
+    colyseusSDK: Colyseus.Client = new Colyseus.Client(COLYSEUS_URL);
+
+    constructor(scene: BABYLON.Scene) {
         let _colliders: any = [];
 
         // The first parameter can be used to specify which mesh to import. Here we import all meshes
@@ -18,7 +24,7 @@ export class Level1 {
         let import_mesh = BABYLON.SceneLoader.ImportMeshAsync("", "/assets/maps/level-1/", "level-1-colliders.babylon", scene, function (newMeshes) {
         });
 
-        async function afterMeshIsImported (colliders: BABYLON.AbstractMesh[]) {
+        async function afterMeshIsImported(colliders: BABYLON.AbstractMesh[]) {
             const result = await import_mesh;
             for (let i in result.meshes) {
                 if (result.meshes[i].name.indexOf("collider") == -1) return;
@@ -41,12 +47,35 @@ export class Level1 {
         });
 
 
-        const kek_input = new PlayerInput(scene);
-        const kek = new Player("kek", kek_options, scene, kek_input);
-        kek.activatePlayerCamera();
+        // const kek_input = new PlayerInput(scene);
+        // const kek = new Player("kek", kek_options, scene, kek_input);
+        // kek.activatePlayerCamera();
         // const husband = new Player("husband", husband_options, scene, );
         // const wife = new Player("wife", wife_options, scene, );
 
         this.scene = scene;
+        this.colyseusSDK.joinOrCreate("my_room").then(function (this: Level1, room: Colyseus.Room) {
+            // listen for new players
+            // let playerEntities = this.playerEntities;
+            room.state.players.onAdd((player, sessionId) => {
+                var isCurrentPlayer = sessionId === room.sessionId;
+
+                player.onChange(function () {
+                    // this.super.playerEntities[sessionId].position.set(player.x, player.y, player.z);
+                    console.log(this);
+                });
+
+                // console.log(room.state.players.entries());
+                // room.state.players.forEach(element => {
+                //     console.log(element);
+                // })
+            });
+
+            // room.onMessage("player_ready", function () {
+            //     console.log("player_ready");
+            //     Player.setCharacter();
+            //     // const new_player = new Player("sessionId", PlayerAttributes.kek_options, this.scene);
+            // });
+        });
     }
 }

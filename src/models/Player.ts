@@ -34,22 +34,28 @@ export class Player extends BABYLON.TransformNode {
         attributes: PlayerAttributes,
         scene: BABYLON.Scene,
         // shadowGenerator: BABYLON.ShadowGenerator,
-        input: PlayerInput,
+        input?: PlayerInput,
     ) {
         super(name, scene);
         this.scene = scene;
-        this.mesh = BABYLON.MeshBuilder.CreateBox(name, attributes.mesh, scene);
-        this.mesh.position.x = attributes.position.x;
-        this.mesh.position.y = attributes.position.y;
-        this.mesh.position.z = attributes.position.z;
+        this.mesh = BABYLON.MeshBuilder.CreateBox(name, null, scene);
+        // this.mesh.position.x = attributes.position.x;
+        // this.mesh.position.y = attributes.position.y;
+        // this.mesh.position.z = attributes.position.z;
 
         // let pivot = new BABYLON.TransformNode(name + "_pivot");
         // this.mesh.parent = pivot;
         // pivot.position = new BABYLON.Vector3(0,0,0);
         this.camRoot.rotate(BABYLON.Axis.Y, -0.75);
 
-        this.input = input;
+        if (input) {
+            this.input = input;
+        }
         return this;
+    }
+
+    public static setCharacter(character: string) {
+        console.log(character);
     }
 
     //--GAME UPDATES--
