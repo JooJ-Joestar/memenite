@@ -94,6 +94,10 @@ export class Level1 {
                 //     this.scene,
                 //     is_current_player
                 // );
+
+                player.onChange(() => {
+                    this.playerEntities[sessionId].mesh.position.set(player.x, player.y, player.z);
+                });
             });
 
             room.onMessage("player_ready", (client: any) => {
