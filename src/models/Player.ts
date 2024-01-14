@@ -56,7 +56,13 @@ export class Player extends BABYLON.TransformNode {
         return this;
     }
 
-    public static setCharacter(session_id: string, player_ref: any, character: string, scene: BABYLON.Scene) {
+    public static setCharacter(
+        session_id: string,
+        player_ref: any,
+        character: string,
+        scene: BABYLON.Scene,
+        is_current: boolean = false
+    ) {
         let attributes: any = null;
         switch (character) {
             case "kek":
@@ -73,6 +79,12 @@ export class Player extends BABYLON.TransformNode {
             scene,
             attributes
         );
+
+        if (is_current === true) {
+            player.input = new PlayerInput(scene);
+            player.activatePlayerCamera();
+        }
+
         return player;
     }
 

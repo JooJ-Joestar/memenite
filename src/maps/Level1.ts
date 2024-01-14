@@ -57,8 +57,9 @@ export class Level1 {
             // listen for new players
             let new_player_session_id: string = "";
             let new_player: any = null;
+            let is_current_player = false;
             room.state.players.onAdd((player: any, sessionId: string) => {
-                var isCurrentPlayer = sessionId === room.sessionId;
+                is_current_player = sessionId === room.sessionId;
                 // this.playerEntities[sessionId] = player;
 
                 // console.log(room.state.players.entries());
@@ -74,7 +75,8 @@ export class Level1 {
                     new_player_session_id,
                     new_player,
                     client.character,
-                    this.scene
+                    this.scene,
+                    is_current_player
                 );
                 // console.log(this.playerEntities[new_player_session_id]);
                 this.playerEntities[new_player_session_id].mesh.position.set(client.position.x, client.position.y, client.position.z);
