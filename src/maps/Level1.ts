@@ -45,13 +45,7 @@ export class Level1 {
             }
         });
 
-
-        // const kek_input = new PlayerInput(scene);
-        // const kek = new Player("kek", kek_options, scene, kek_input);
-        // kek.activatePlayerCamera();
-        // const husband = new Player("husband", husband_options, scene, );
-        // const wife = new Player("wife", wife_options, scene, );
-
+        // TODO move this block of code somewhere else.
         this.scene = scene;
         this.colyseusSDK.joinOrCreate("my_room").then((room: any) => {
             // listen for new players
@@ -76,24 +70,11 @@ export class Level1 {
                         this.scene,
                         is_current_player
                     );
-                    // console.log(new_player.x);
-                    // console.log(new_player.y);
-                    // console.log(new_player.z);
 
-                    // console.log(room.state.players.entries());
-                    room.state.players.forEach(element => {
-                        console.log(element.session_id);
-                    })
-                    // this.playerEntities[new_player_session_id].position.set(new_player.x, new_player.y, new_player.z);
+                    // room.state.players.forEach(element => {
+                    //     console.log(element.session_id);
+                    // })
                 });
-
-                // this.playerEntities[new_player_session_id] = Player.setCharacter(
-                //     new_player_session_id,
-                //     new_player,
-                //     client.character,
-                //     this.scene,
-                //     is_current_player
-                // );
 
                 player.onChange(() => {
                     this.playerEntities[sessionId].mesh.position.set(player.x, player.y, player.z);
@@ -101,12 +82,7 @@ export class Level1 {
             });
 
             room.onMessage("player_ready", (client: any) => {
-                // this.playerEntities[new_player_session_id].mesh.position.set(client.position.x, client.position.y, client.position.z);
-
-            //     new_player.onChange(() => {
-            //         console.log("onChange");
-            //         // this.playerEntities[new_player_session_id].position.set(player.x, player.y, player.z);
-            //     });
+                // TODO?
             });
         });
     }

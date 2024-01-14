@@ -5,7 +5,7 @@ import { PlayerInput } from './PlayerInput';
 export class Player extends BABYLON.TransformNode {
     private mesh: BABYLON.Mesh;
     private scene: BABYLON.Scene;
-    private input: PlayerInput;
+    private input: any = null;
 
     //Camera
     private camRoot: BABYLON.TransformNode = new BABYLON.TransformNode('camRoot');
@@ -38,9 +38,7 @@ export class Player extends BABYLON.TransformNode {
         session_id: string,
         character: string,
         scene: BABYLON.Scene,
-        attributes: PlayerAttributes.PlayerAttributes,
-        // shadowGenerator: BABYLON.ShadowGenerator,
-        // input?: PlayerInput,
+        attributes: PlayerAttributes.PlayerAttributes
     ) {
         super(session_id, scene);
         this.scene = scene;
@@ -51,11 +49,6 @@ export class Player extends BABYLON.TransformNode {
         // this.mesh.parent = pivot;
         // pivot.position = new BABYLON.Vector3(0,0,0);
         this.camRoot.rotate(BABYLON.Axis.Y, -0.75);
-
-        // if (input) {
-        //     this.input = input;
-        // }
-        return this;
     }
 
     public static setCharacter(
@@ -98,7 +91,6 @@ export class Player extends BABYLON.TransformNode {
         this.updateFromControls();
         // this.updateGroundDetection();
         // this.animatePlayer();
-        // console.log(this.moveDirection);
     }
 
     public activatePlayerCamera()/*: BABYLON.UniversalCamera*/ {
