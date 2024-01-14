@@ -180,6 +180,12 @@ export class Player extends BABYLON.TransformNode {
         this.moveDirection = this.moveDirection.scaleInPlace(this.inputAmt * Player.PLAYER_SPEED);
         // console.log(this.moveDirection);
         this.mesh.moveWithCollisions(this.moveDirection);
+        this.room.send("updatePosition", {
+            x: this.mesh.position.x,
+            y: this.mesh.position.y,
+            z: this.mesh.position.z,
+        })
+        // console.log(this.mesh.position);
         // console.log(this.moveDirection);
 
         //check if there is movement to determine if rotation is needed
