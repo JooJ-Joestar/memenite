@@ -44,6 +44,7 @@ export class Player extends BABYLON.TransformNode {
         super(session_id, scene);
         this.scene = scene;
         this.mesh = BABYLON.MeshBuilder.CreateBox(session_id, attributes.mesh, scene);
+        this.mesh.position.set(attributes.position.x, attributes.position.y, attributes.position.z);
 
         // let pivot = new BABYLON.TransformNode(name + "_pivot");
         // this.mesh.parent = pivot;
