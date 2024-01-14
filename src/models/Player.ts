@@ -1,5 +1,5 @@
 import * as BABYLON from 'babylonjs';
-import type {PlayerAttributes} from '../types/PlayerAttributes';
+import * as PlayerAttributes from '../types/PlayerAttributes';
 import { PlayerInput } from './PlayerInput';
 
 export class Player extends BABYLON.TransformNode {
@@ -29,16 +29,21 @@ export class Player extends BABYLON.TransformNode {
     private moveDirection: BABYLON.Vector3 = new BABYLON.Vector3();
     private inputAmt: number = 0;
 
+    // Colyseus.js
+    private session_id: string = "";
+    private player_ref: any = null;
+
     constructor (
-        name: string,
-        attributes: PlayerAttributes,
+        session_id: string,
+        character: string,
         scene: BABYLON.Scene,
+        attributes: PlayerAttributes.PlayerAttributes,
         // shadowGenerator: BABYLON.ShadowGenerator,
-        input?: PlayerInput,
+        // input?: PlayerInput,
     ) {
-        super(name, scene);
+        super(session_id, scene);
         this.scene = scene;
-        this.mesh = BABYLON.MeshBuilder.CreateBox(name, null, scene);
+        this.mesh = BABYLON.MeshBuilder.CreateBox(session_id, attributes.mesh, scene);
         // this.mesh.position.x = attributes.position.x;
         // this.mesh.position.y = attributes.position.y;
         // this.mesh.position.z = attributes.position.z;
@@ -48,14 +53,30 @@ export class Player extends BABYLON.TransformNode {
         // pivot.position = new BABYLON.Vector3(0,0,0);
         this.camRoot.rotate(BABYLON.Axis.Y, -0.75);
 
-        if (input) {
-            this.input = input;
-        }
+        // if (input) {
+        //     this.input = input;
+        // }
         return this;
     }
 
-    public static setCharacter(character: string) {
-        console.log(character);
+    public static setCharacter(session_id: string, player_ref: any, character: string, scene: BABYLON.Scene) {
+        let attributes: any = null;
+        switch (character) {
+            case "kek":
+                attributes = PlayerAttributes.kek_options;
+            break;
+            case "husband": default:
+                attributes = PlayerAttributes.husband_options;
+            break;
+        }
+
+        const player = new Player(
+            session_id,
+            character,
+            scene,
+            attributes
+        );
+        return player;
     }
 
     //--GAME UPDATES--

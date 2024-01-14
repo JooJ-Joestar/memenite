@@ -5,7 +5,7 @@ import type { PlayerAttributes } from '../types/PlayerAttributes';
 import { COLYSEUS_URL } from '../AppOne';
 
 export class Level1 {
-    private scene: BABYLON.Scene;
+    private scene: any;
     private colliders: BABYLON.AbstractMesh[] = [];
     public playerEntities: any = {};
 
@@ -53,28 +53,35 @@ export class Level1 {
         // const wife = new Player("wife", wife_options, scene, );
 
         this.scene = scene;
-        this.colyseusSDK.joinOrCreate("my_room").then((room: Colyseus.Room) => {
+        this.colyseusSDK.joinOrCreate("my_room").then((room: any) => {
             // listen for new players
+            let new_player_session_id: string = "";
+            let new_player: any = null;
             room.state.players.onAdd((player: any, sessionId: string) => {
                 var isCurrentPlayer = sessionId === room.sessionId;
-                this.playerEntities[sessionId] = player;
-
-                player.onChange(() => {
-                    // this.playerEntities[sessionId].position.set(player.x, player.y, player.z);
-                    this.playerEntities[sessionId];
-                });
+                // this.playerEntities[sessionId] = player;
 
                 // console.log(room.state.players.entries());
                 // room.state.players.forEach(element => {
                 //     console.log(element);
                 // })
+                new_player_session_id = sessionId;
+                new_player = player;
             });
 
-            // room.onMessage("player_ready", function () {
-            //     console.log("player_ready");
-            //     Player.setCharacter();
-            //     // const new_player = new Player("sessionId", PlayerAttributes.kek_options, this.scene);
-            // });
+            room.onMessage("player_ready", (client: any, data: any) => {
+                this.playerEntities[new_player_session_id] = Player.setCharacter(
+                    new_player_session_id,
+                    new_player,
+                    client.character,
+                    this.scene
+                );
+                // console.log(this.playerEntities[new_player_session_id]);
+                this.playerEntities[new_player_session_id].mesh.position.set(client.position.x, client.position.y, client.position.z);
+                // new_player.onChange(() => {
+                //     this.playerEntities[new_player_session_id].position.set(player.x, player.y, player.z);
+                // });
+            });
         });
     }
 }
