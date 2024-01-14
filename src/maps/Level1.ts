@@ -59,30 +59,49 @@ export class Level1 {
             let new_player: any = null;
             let is_current_player = false;
             room.state.players.onAdd((player: any, sessionId: string) => {
+                console.log("New player " + sessionId);
                 is_current_player = sessionId === room.sessionId;
-                // this.playerEntities[sessionId] = player;
 
-                // console.log(room.state.players.entries());
-                // room.state.players.forEach(element => {
-                //     console.log(element);
-                // })
                 new_player_session_id = sessionId;
                 new_player = player;
+
+                new_player.listen("ready", () => {
+                    if (this.playerEntities[new_player_session_id]) return;
+
+                    this.playerEntities[new_player_session_id] = Player.setCharacter(
+                        new_player_session_id,
+                        new_player,
+                        new_player.character,
+                        this.scene,
+                        is_current_player
+                    );
+                    // console.log(new_player.x);
+                    // console.log(new_player.y);
+                    // console.log(new_player.z);
+
+                    // console.log(room.state.players.entries());
+                    room.state.players.forEach(element => {
+                        console.log(element.session_id);
+                    })
+                    // this.playerEntities[new_player_session_id].position.set(new_player.x, new_player.y, new_player.z);
+                });
+
+                // this.playerEntities[new_player_session_id] = Player.setCharacter(
+                //     new_player_session_id,
+                //     new_player,
+                //     client.character,
+                //     this.scene,
+                //     is_current_player
+                // );
             });
 
-            room.onMessage("player_ready", (client: any, data: any) => {
-                this.playerEntities[new_player_session_id] = Player.setCharacter(
-                    new_player_session_id,
-                    new_player,
-                    client.character,
-                    this.scene,
-                    is_current_player
-                );
-                // console.log(this.playerEntities[new_player_session_id]);
-                this.playerEntities[new_player_session_id].mesh.position.set(client.position.x, client.position.y, client.position.z);
-                // new_player.onChange(() => {
-                //     this.playerEntities[new_player_session_id].position.set(player.x, player.y, player.z);
-                // });
+            room.onMessage("player_ready", (client: any) => {
+                // this.playerEntities[new_player_session_id].mesh.position.set(client.position.x, client.position.y, client.position.z);
+
+            //     new_player.onChange(() => {
+            //         console.log("onChange");
+            //         // this.playerEntities[new_player_session_id].position.set(player.x, player.y, player.z);
+            //     });
             });
         });
     }
