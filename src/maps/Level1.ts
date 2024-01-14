@@ -69,6 +69,7 @@ export class Level1 {
                     if (this.playerEntities[new_player_session_id]) return;
 
                     this.playerEntities[new_player_session_id] = Player.setCharacter(
+                        room,
                         new_player_session_id,
                         new_player,
                         new_player.character,

@@ -32,6 +32,7 @@ export class Player extends BABYLON.TransformNode {
     // Colyseus.js
     private session_id: string = "";
     private player_ref: any = null;
+    private room: any = null;
 
     constructor (
         session_id: string,
@@ -58,6 +59,7 @@ export class Player extends BABYLON.TransformNode {
     }
 
     public static setCharacter(
+        room: any,
         session_id: string,
         player_ref: any,
         character: string,
@@ -80,6 +82,8 @@ export class Player extends BABYLON.TransformNode {
             scene,
             attributes
         );
+        player.player_ref = player_ref;
+        player.room = room;
 
         if (is_current === true) {
             player.input = new PlayerInput(scene);
