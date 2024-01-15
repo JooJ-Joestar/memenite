@@ -1,4 +1,5 @@
-import * as BABYLON from 'babylonjs';
+import * as BABYLON from '@babylonjs/core';
+import { Inspector } from '@babylonjs/inspector';
 import * as Colyseus from "colyseus.js";
 import { Level1 } from './maps/Level1';
 import {Player} from './models/Player';
@@ -38,9 +39,11 @@ export class AppOne {
 
     debug(debugOn: boolean = true) {
         if (debugOn) {
-            this.scene.debugLayer.show({ overlay: true });
+            Inspector.Show(this.scene, {embedMode: true});
+            // this.scene.debugLayer.show({ overlay: true });
         } else {
-            this.scene.debugLayer.hide();
+            Inspector.Hide();
+            // this.scene.debugLayer.hide();
         }
     }
 

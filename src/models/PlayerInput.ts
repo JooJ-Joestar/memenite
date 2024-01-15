@@ -1,4 +1,4 @@
-import * as BABYLON from 'babylonjs'
+import * as BABYLON from '@babylonjs/core'
 import { Hud } from './Hud';
 
 export class PlayerInput {

@@ -1,5 +1,6 @@
-import * as BABYLON from 'babylonjs';
+import * as BABYLON from '@babylonjs/core';
 import * as PlayerAttributes from '../types/PlayerAttributes';
+import { Hud } from './Hud';
 import { PlayerInput } from './PlayerInput';
 
 export class Player extends BABYLON.TransformNode {
@@ -34,6 +35,8 @@ export class Player extends BABYLON.TransformNode {
     private session_id: string = "";
     private player_ref: any = null;
     private room: any = null;
+
+    private hud: any = null;
 
     constructor (
         session_id: string,
@@ -81,6 +84,7 @@ export class Player extends BABYLON.TransformNode {
 
         if (is_current === true) {
             player.input = new PlayerInput(scene);
+            player.hud = new Hud(scene, room);
             player.activatePlayerCamera();
         }
 

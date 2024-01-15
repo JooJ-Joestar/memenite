@@ -1,3 +1,4 @@
+import * as BABYLON from "@babylonjs/core";
 import * as Colyseus from "colyseus.js";
 import { Player } from '../models/Player';
 import { PlayerInput } from '../models/PlayerInput';

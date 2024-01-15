@@ -1,4 +1,4 @@
-import { Color4, Vector4 } from "babylonjs";
+import { Color4, Vector4 } from "@babylonjs/core";
 
 export type PlayerAttributes = {
     mesh: {
@@ -30,12 +30,12 @@ export const kek_options: PlayerAttributes = {
         height: 1,
         depth: 1,
         faceColors: [
-            new BABYLON.Color4(1, 0, 0, 1),
-            new BABYLON.Color4(1, 0, 0, 1),
-            new BABYLON.Color4(1, 0, 0, 1),
-            new BABYLON.Color4(1, 0, 0, 1),
-            new BABYLON.Color4(1, 0, 0, 1),
-            new BABYLON.Color4(1, 0, 0, 1),
+            new Color4(1, 0, 0, 1),
+            new Color4(1, 0, 0, 1),
+            new Color4(1, 0, 0, 1),
+            new Color4(1, 0, 0, 1),
+            new Color4(1, 0, 0, 1),
+            new Color4(1, 0, 0, 1),
         ],
     },
     position: {
@@ -52,12 +52,12 @@ export const husband_options: PlayerAttributes = {
         height: 1,
         depth: 1,
         faceColors: [
-            new BABYLON.Color4(0, 1, 0, 1),
-            new BABYLON.Color4(0, 1, 0, 1),
-            new BABYLON.Color4(0, 1, 0, 1),
-            new BABYLON.Color4(0, 1, 0, 1),
-            new BABYLON.Color4(0, 1, 0, 1),
-            new BABYLON.Color4(0, 1, 0, 1),
+            new Color4(0, 1, 0, 1),
+            new Color4(0, 1, 0, 1),
+            new Color4(0, 1, 0, 1),
+            new Color4(0, 1, 0, 1),
+            new Color4(0, 1, 0, 1),
+            new Color4(0, 1, 0, 1),
         ],
     },
     position: {
@@ -74,12 +74,12 @@ export const wife_options: PlayerAttributes = {
         height: 1,
         depth: 1,
         faceColors: [
-            new BABYLON.Color4(0, 0, 1, 1),
-            new BABYLON.Color4(0, 0, 1, 1),
-            new BABYLON.Color4(0, 0, 1, 1),
-            new BABYLON.Color4(0, 0, 1, 1),
-            new BABYLON.Color4(0, 0, 1, 1),
-            new BABYLON.Color4(0, 0, 1, 1),
+            new Color4(0, 0, 1, 1),
+            new Color4(0, 0, 1, 1),
+            new Color4(0, 0, 1, 1),
+            new Color4(0, 0, 1, 1),
+            new Color4(0, 0, 1, 1),
+            new Color4(0, 0, 1, 1),
         ],
     },
     position: {
