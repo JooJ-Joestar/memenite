@@ -4,6 +4,7 @@ import { PlayerInput } from './PlayerInput';
 
 export class Player extends BABYLON.TransformNode {
     private mesh: BABYLON.Mesh;
+    private mesh_next_position: any;
     private scene: BABYLON.Scene;
     private input: any = null;
 
@@ -95,10 +96,8 @@ export class Player extends BABYLON.TransformNode {
 
     public activatePlayerCamera()/*: BABYLON.UniversalCamera*/ {
         this.scene.registerBeforeRender(() => {
-
             this.beforeRenderUpdate();
-            // this.updateCamera();
-
+            // this.updateCamera();)
         })
         // return this.camera;
     }

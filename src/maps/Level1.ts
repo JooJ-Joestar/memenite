@@ -76,14 +76,27 @@ export class Level1 {
                     // })
                 });
 
+                this.playerEntities[sessionId].mesh_next_position = this.playerEntities[sessionId].mesh.position.clone();
                 player.onChange(() => {
-                    this.playerEntities[sessionId].mesh.position.set(player.x, player.y, player.z);
+                    // Without interpolation
+                    // this.playerEntities[sessionId].mesh.position.set(player.x, player.y, player.z);
+
+                    // With interpolation
+                    this.playerEntities[sessionId].mesh_next_position.set(player.x, player.y, player.z);
                 });
             });
 
             room.onMessage("player_ready", (client: any) => {
                 // TODO?
             });
+        });
+
+        this.scene.registerBeforeRender(() => {
+            for (let session_id in this.playerEntities) {
+                var entity = this.playerEntities[session_id].mesh;
+                var targetPosition = this.playerEntities[session_id].mesh_next_position;
+                entity.position = BABYLON.Vector3.Lerp(entity.position, targetPosition, 0.30);
+            }
         });
     }
 }
