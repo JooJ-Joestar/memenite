@@ -19,9 +19,11 @@ export class AppOne {
     engine: BABYLON.Engine;
     scene: BABYLON.Scene;
     state: number = 0;
+    readonly canvas: HTMLCanvasElement;
 
-    constructor(readonly canvas: HTMLCanvasElement) {
-        this.engine = new BABYLON.Engine(canvas);
+    constructor(readonly canvas_element: HTMLCanvasElement) {
+        this.canvas = canvas_element;
+        this.engine = new BABYLON.Engine(this.canvas);
 
         this.scene = new BABYLON.Scene(this.engine);
         window.addEventListener('resize', () => {
