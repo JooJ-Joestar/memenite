@@ -4,9 +4,12 @@ import { Hud } from './Hud';
 import { PlayerInput } from './PlayerInput';
 
 export class Player extends BABYLON.TransformNode {
+    // Mesh that represents the player.
     private mesh: BABYLON.Mesh;
+    // Target mesh for movement smoothing.
     private mesh_next_position: any;
     private scene: BABYLON.Scene;
+    // If this is the current player, assigns inputs to it.
     private input: any = null;
 
     //Camera
@@ -55,9 +58,12 @@ export class Player extends BABYLON.TransformNode {
         if (is_current === true) {
             this.input = new PlayerInput(scene);
             this.hud = new Hud(scene, room);
+
+            // Despite the dumb name, anything that needs to be checked like inputs, triggers, animations and stuff are registered in here.
             this.activatePlayerCamera();
         }
 
+        // Picks attributes according to the character.
         let attributes: any = null;
         switch (character) {
             case "kek":
@@ -68,6 +74,7 @@ export class Player extends BABYLON.TransformNode {
             break;
         }
 
+        // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
         this.mesh = BABYLON.MeshBuilder.CreateBox(session_id, attributes.mesh, scene);
         this.mesh.position.set(attributes.position.x, attributes.position.y, attributes.position.z);
 
