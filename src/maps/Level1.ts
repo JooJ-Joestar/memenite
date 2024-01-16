@@ -55,13 +55,14 @@ export class Level1 {
 
                 player.listen("ready", () => {
 
-                    this.playerEntities[sessionId] = Player.setCharacter(
+                    // Creates the player model.
+                    this.playerEntities[sessionId] = new Player(
                         room,
+                        this.scene,
                         sessionId,
                         player,
-                        player.character,
-                        this.scene,
-                        is_current_player
+                        is_current_player,
+                        player.character
                     );
 
                     // room.state.players.forEach(element => {

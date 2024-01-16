@@ -39,30 +39,25 @@ export class Player extends BABYLON.TransformNode {
     private hud: any = null;
 
     constructor (
-        session_id: string,
-        character: string,
+        room: any,
         scene: BABYLON.Scene,
-        attributes: PlayerAttributes.PlayerAttributes
+        session_id: string,
+        player_ref: any,
+        is_current: boolean,
+        character: string,
     ) {
         super(session_id, scene);
         this.scene = scene;
-        this.mesh = BABYLON.MeshBuilder.CreateBox(session_id, attributes.mesh, scene);
-        this.mesh.position.set(attributes.position.x, attributes.position.y, attributes.position.z);
+        this.room = room;
+        this.player_ref = player_ref;
 
-        // let pivot = new BABYLON.TransformNode(name + "_pivot");
-        // this.mesh.parent = pivot;
-        // pivot.position = new BABYLON.Vector3(0,0,0);
-        this.camRoot.rotate(BABYLON.Axis.Y, -0.75);
-    }
+        // Assign controls to this player if it is the current one.
+        if (is_current === true) {
+            this.input = new PlayerInput(scene);
+            this.hud = new Hud(scene, room);
+            this.activatePlayerCamera();
+        }
 
-    public static setCharacter(
-        room: any,
-        session_id: string,
-        player_ref: any,
-        character: string,
-        scene: BABYLON.Scene,
-        is_current: boolean = false
-    ) {
         let attributes: any = null;
         switch (character) {
             case "kek":
@@ -73,22 +68,11 @@ export class Player extends BABYLON.TransformNode {
             break;
         }
 
-        const player = new Player(
-            session_id,
-            character,
-            scene,
-            attributes
-        );
-        player.player_ref = player_ref;
-        player.room = room;
+        this.mesh = BABYLON.MeshBuilder.CreateBox(session_id, attributes.mesh, scene);
+        this.mesh.position.set(attributes.position.x, attributes.position.y, attributes.position.z);
 
-        if (is_current === true) {
-            player.input = new PlayerInput(scene);
-            player.hud = new Hud(scene, room);
-            player.activatePlayerCamera();
-        }
-
-        return player;
+        // Don't ask me.
+        this.camRoot.rotate(BABYLON.Axis.Y, -0.75);
     }
 
     //--GAME UPDATES--
