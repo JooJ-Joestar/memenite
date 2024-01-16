@@ -27,14 +27,6 @@ export class AppOne {
             this.engine.resize();
         });
         this.createScene()
-
-        // this.client.joinOrCreate("my_room")
-        //     .then(function (room) {
-        //     console.log("Connected to roomId: " + room.roomId);
-        //     })
-        //     .catch(function (error) {
-        //     console.log("Couldn't connect.");
-        //     });
     }
 
     debug(debugOn: boolean = true) {
