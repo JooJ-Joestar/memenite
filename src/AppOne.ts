@@ -22,6 +22,7 @@ export class AppOne {
 
     constructor(readonly canvas: HTMLCanvasElement) {
         this.engine = new BABYLON.Engine(canvas);
+
         this.scene = new BABYLON.Scene(this.engine);
         window.addEventListener('resize', () => {
             this.engine.resize();
@@ -31,11 +32,9 @@ export class AppOne {
 
     debug(debugOn: boolean = true) {
         if (debugOn) {
-            Inspector.Show(this.scene, {embedMode: true});
-            // this.scene.debugLayer.show({ overlay: true });
+            Inspector.Show(this.scene, {overlay: true});
         } else {
             Inspector.Hide();
-            // this.scene.debugLayer.hide();
         }
     }
 
@@ -45,9 +44,9 @@ export class AppOne {
             //Shift+Ctrl+Alt+I
             if (ev.shiftKey && ev.ctrlKey && ev.altKey && ev.key === 'D') {
                 if (this.scene.debugLayer.isVisible()) {
-                    this.scene.debugLayer.hide();
+                    this.debug(false);
                 } else {
-                    this.scene.debugLayer.show({overlay: true});
+                    this.debug();
                 }
             }
         });
