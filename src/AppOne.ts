@@ -65,8 +65,8 @@ export class AppOne {
 
         // This creates and positions a free camera (non-mesh)
         var camera = new BABYLON.ArcRotateCamera("Camera", 5.5, 1.0, 30, BABYLON.Vector3.Zero(), scene);
-        camera.mode = camera.ORTHOGRAPHIC_CAMERA;
-        const rect   = this.engine.getRenderingCanvasClientRect();
+        camera.mode = BABYLON.ArcRotateCamera.ORTHOGRAPHIC_CAMERA;
+        const rect: any = this.engine.getRenderingCanvasClientRect();
         const aspect = rect.height / rect.width;
         // In this example we'll set the distance based on the camera's radius.
         camera.orthoLeft   = -camera.radius;

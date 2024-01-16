@@ -13,7 +13,7 @@ export class Level1 {
     colyseusSDK: Colyseus.Client = new Colyseus.Client(COLYSEUS_URL);
 
     constructor(scene: BABYLON.Scene) {
-        let _colliders: any = [];
+        this.scene = scene;
 
         // The first parameter can be used to specify which mesh to import. Here we import all meshes
         BABYLON.SceneLoader.ImportMesh("", "/assets/maps/level-1/", "level-1.babylon", scene, function (newMeshes) {
@@ -47,27 +47,19 @@ export class Level1 {
         });
 
         // TODO move this block of code somewhere else.
-        this.scene = scene;
         this.colyseusSDK.joinOrCreate("my_room").then((room: any) => {
-            // listen for new players
-            let new_player_session_id: string = "";
-            let new_player: any = null;
             let is_current_player = false;
             room.state.players.onAdd((player: any, sessionId: string) => {
                 console.log("New player " + sessionId);
                 is_current_player = sessionId === room.sessionId;
 
-                new_player_session_id = sessionId;
-                new_player = player;
+                player.listen("ready", () => {
 
-                new_player.listen("ready", () => {
-                    if (this.playerEntities[new_player_session_id]) return;
-
-                    this.playerEntities[new_player_session_id] = Player.setCharacter(
+                    this.playerEntities[sessionId] = Player.setCharacter(
                         room,
-                        new_player_session_id,
-                        new_player,
-                        new_player.character,
+                        sessionId,
+                        player,
+                        player.character,
                         this.scene,
                         is_current_player
                     );
