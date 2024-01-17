@@ -16,17 +16,11 @@ export class Hud {
         // var grid = new GUI.Grid();
 
         // GUI
-        var advancedTexture = AdvancedDynamicTexture.CreateFullscreenUI("UI");
+        var advancedTexture = AdvancedDynamicTexture.CreateFullscreenUI("UI", true, this.scene);
 
-        var button1 = Button.CreateSimpleButton("but1", "Click Me");
-        button1.width = "150px"
-        button1.height = "40px";
-        button1.color = "white";
-        button1.cornerRadius = 20;
-        button1.background = "green";
-        button1.onPointerUpObservable.add(function() {
-            alert("you did it!");
-        });
-        advancedTexture.addControl(button1);
+        let import_hud = advancedTexture.parseFromSnippetAsync("#0QWKF2#4");
+        async function afterHudIsImported() {
+        }
+        afterHudIsImported();
     }
 }
