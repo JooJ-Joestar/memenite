@@ -54,6 +54,7 @@ export class Player extends BABYLON.TransformNode {
         this.scene = scene;
         this.room = room;
         this.player_ref = player_ref;
+        this.session_id = session_id;
 
         // Picks attributes according to the character.
         let attributes: any = null;
@@ -78,7 +79,7 @@ export class Player extends BABYLON.TransformNode {
             // Despite the dumb name, anything that needs to be checked like inputs, triggers, animations and stuff are registered in here.
             this.activatePlayerCamera();
         } else {
-            Hud.addLabel(this.scene, this.nickname, this.mesh);
+            Hud.addLabel(this.scene, this.nickname, this.mesh, this.session_id, this.room);
         }
 
         // Don't ask me.

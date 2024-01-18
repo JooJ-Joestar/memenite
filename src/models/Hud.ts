@@ -34,16 +34,19 @@ export class Hud {
                 field_nickname.isVisible = false;
                 btn_ready.isVisible = false;
                 player.nickname = field_nickname.text;
-                Hud.addLabel(player.scene, player.nickname, player.mesh);
+                Hud.addLabel(player.scene, player.nickname, player.mesh, player.session_id, player.room);
+                player.room.send("updateNickname", {
+                    nickname: player.nickname
+                })
             });
         }
         afterHudIsImported(this.player, entity_labels);
     }
 
-    public static addLabel (scene: BABYLON.Scene, label: string, mesh: BABYLON.Mesh) {
+    public static addLabel (scene: BABYLON.Scene, label: string, mesh: BABYLON.Mesh, id: string, room: any) {
         let entity_labels: any = Hud.pickOrCreateEntityLabels(scene);
 
-        const player_nickname = new TextBlock();
+        const player_nickname = new TextBlock("nickname_" + id);
         player_nickname.text = label;
         player_nickname.fontSize = 13;
         player_nickname.color = "White";
@@ -52,6 +55,10 @@ export class Hud {
         entity_labels.addControl(player_nickname);
         player_nickname.linkWithMesh(mesh);
         player_nickname.linkOffsetY = 15;
+
+        room.send("updateNickname", {
+            nickname: label
+        })
     }
 
     public static pickOrCreateEntityLabels(scene: BABYLON.Scene) {
