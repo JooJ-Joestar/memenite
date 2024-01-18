@@ -11,6 +11,7 @@ export class Player extends BABYLON.TransformNode {
     private scene: BABYLON.Scene;
     // If this is the current player, assigns inputs to it.
     private input: any = null;
+    private nickname: string = "Noname";
 
     //Camera
     private camRoot: BABYLON.TransformNode = new BABYLON.TransformNode('camRoot');
@@ -54,15 +55,6 @@ export class Player extends BABYLON.TransformNode {
         this.room = room;
         this.player_ref = player_ref;
 
-        // Assign controls to this player if it is the current one.
-        if (is_current === true) {
-            this.input = new PlayerInput(scene);
-            this.hud = new Hud(scene, room);
-
-            // Despite the dumb name, anything that needs to be checked like inputs, triggers, animations and stuff are registered in here.
-            this.activatePlayerCamera();
-        }
-
         // Picks attributes according to the character.
         let attributes: any = null;
         switch (character) {
@@ -77,6 +69,17 @@ export class Player extends BABYLON.TransformNode {
         // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
         this.mesh = BABYLON.MeshBuilder.CreateBox(session_id, attributes.mesh, scene);
         this.mesh.position.set(attributes.position.x, attributes.position.y, attributes.position.z);
+
+        // Assign controls to this player if it is the current one.
+        if (is_current === true) {
+            this.input = new PlayerInput(scene);
+            this.hud = new Hud(scene, room, this);
+
+            // Despite the dumb name, anything that needs to be checked like inputs, triggers, animations and stuff are registered in here.
+            this.activatePlayerCamera();
+        } else {
+            Hud.addLabel(this.scene, this.nickname, this.mesh);
+        }
 
         // Don't ask me.
         this.camRoot.rotate(BABYLON.Axis.Y, -0.75);
