@@ -34,16 +34,7 @@ export class Hud {
                 field_nickname.isVisible = false;
                 btn_ready.isVisible = false;
                 player.nickname = field_nickname.text;
-
-                const player_nickname = new TextBlock();
-                player_nickname.text = player.nickname;
-                player_nickname.fontSize = 13;
-                player_nickname.color = "White";
-                player_nickname.shadowColor = "#000";
-                player_nickname.shadowBlur = 5;
-                entity_labels.addControl(player_nickname);
-                player_nickname.linkWithMesh(player.mesh);
-                player_nickname.linkOffsetY = 15;
+                Hud.addLabel(player.scene, player.nickname, player.mesh);
             });
         }
         afterHudIsImported(this.player, entity_labels);
