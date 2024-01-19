@@ -88,7 +88,8 @@ export class Level1 {
                         sessionId,
                         player,
                         is_current_player,
-                        player.character
+                        player.character,
+                        player.nickname
                     );
 
                     // If for whatever reason you want to check straight outta the server who is connected, uncomment

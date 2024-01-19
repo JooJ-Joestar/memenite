@@ -49,12 +49,17 @@ export class Player extends BABYLON.TransformNode {
         player_ref: any,
         is_current: boolean,
         character: string,
+        nickname?: string
     ) {
         super(session_id, scene);
         this.scene = scene;
         this.room = room;
         this.player_ref = player_ref;
         this.session_id = session_id;
+
+        if (nickname) {
+            this.nickname = nickname;
+        }
 
         // Picks attributes according to the character.
         let attributes: any = null;
