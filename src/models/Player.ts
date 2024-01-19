@@ -196,4 +196,14 @@ export class Player extends BABYLON.TransformNode {
         // console.log(targ);
         // this.mesh.rotationQuaternion = BABYLON.Quaternion.Slerp(this.mesh.rotationQuaternion, targ, 10 * this.deltaTime);
     }
+
+    public dispose() {
+        this.mesh.dispose();
+        this.camRoot.dispose();
+        this.yTilt.dispose();
+        delete this.player_ref;
+        Hud.removeLabel(this.scene, "nickname_" + this.session_id);
+        super.dispose();
+        return true;
+    }
 }

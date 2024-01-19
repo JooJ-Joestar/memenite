@@ -112,6 +112,10 @@ export class Level1 {
                 });
             });
 
+            room.onMessage("player_left", (client: any) => {
+                this.playerEntities[client.sessionId].dispose();
+            });
+
             room.onMessage("nickname_updated", (client: any) => {
                 this.playerEntities[client.sessionId].nickname = client.nickname;
                 Hud.removeLabel(this.scene, "nickname_" + client.sessionId);
