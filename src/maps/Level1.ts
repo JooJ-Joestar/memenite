@@ -4,6 +4,7 @@ import { Player } from '../models/Player';
 import { PlayerInput } from '../models/PlayerInput';
 import type { PlayerAttributes } from '../types/PlayerAttributes';
 import { COLYSEUS_URL } from '../AppOne';
+import { Hud } from "../models/Hud";
 
 export class Level1 {
     private scene: any;
@@ -95,6 +96,18 @@ export class Level1 {
                     // room.state.players.forEach(element => {
                     //     console.log(element.session_id);
                     // })
+                });
+
+                room.onMessage("nickname_updated", (client: any) => {
+                    this.playerEntities[client.sessionId].nickname = client.nickname;
+                    Hud.removeLabel(this.scene, "nickname_" + client.sessionId);
+                    Hud.addLabel(
+                        this.scene,
+                        client.nickname,
+                        this.playerEntities[client.sessionId].mesh,
+                        client.sessionId,
+                        this.playerEntities[client.sessionId].room
+                    );
                 });
 
                 // This is part of what is responsible for smoothing player movement, and is one of the things that should be moved
