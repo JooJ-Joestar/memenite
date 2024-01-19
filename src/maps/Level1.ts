@@ -99,18 +99,6 @@ export class Level1 {
                     // })
                 });
 
-                room.onMessage("nickname_updated", (client: any) => {
-                    this.playerEntities[client.sessionId].nickname = client.nickname;
-                    Hud.removeLabel(this.scene, "nickname_" + client.sessionId);
-                    Hud.addLabel(
-                        this.scene,
-                        client.nickname,
-                        this.playerEntities[client.sessionId].mesh,
-                        client.sessionId,
-                        this.playerEntities[client.sessionId].room
-                    );
-                });
-
                 // This is part of what is responsible for smoothing player movement, and is one of the things that should be moved
                 // somewhere else. Perhaps Player.
                 this.playerEntities[sessionId].mesh_next_position = this.playerEntities[sessionId].mesh.position.clone();
@@ -122,6 +110,18 @@ export class Level1 {
                     // this.playerEntities[sessionId].mesh.position.set(player.x, player.y, player.z);
 
                 });
+            });
+
+            room.onMessage("nickname_updated", (client: any) => {
+                this.playerEntities[client.sessionId].nickname = client.nickname;
+                Hud.removeLabel(this.scene, "nickname_" + client.sessionId);
+                Hud.addLabel(
+                    this.scene,
+                    client.nickname,
+                    this.playerEntities[client.sessionId].mesh,
+                    client.sessionId,
+                    this.playerEntities[client.sessionId].room
+                );
             });
 
             // Dumb stuff. Ignore it for now.
