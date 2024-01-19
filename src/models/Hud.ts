@@ -55,7 +55,14 @@ export class Hud {
         entity_labels.addControl(player_nickname);
         player_nickname.linkWithMesh(mesh);
         player_nickname.linkOffsetY = 15;
+    }
 
+    public static removeLabel (scene: BABYLON.Scene, label_id: string) {
+        let entity_labels = Hud.pickOrCreateEntityLabels(scene);
+        let label = entity_labels.getControlByName(label_id);
+        if (label) {
+            label.dispose();
+        }
     }
 
     public static pickOrCreateEntityLabels(scene: BABYLON.Scene) {
