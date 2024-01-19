@@ -35,7 +35,7 @@ export class Hud {
                 btn_ready.isVisible = false;
                 player.nickname = field_nickname.text;
                 Hud.addLabel(player.scene, player.nickname, player.mesh, player.session_id, player.room);
-                player.room.send("updateNickname", {
+                player.room.send("update_nickname", {
                     nickname: player.nickname
                 })
             });
@@ -56,9 +56,6 @@ export class Hud {
         player_nickname.linkWithMesh(mesh);
         player_nickname.linkOffsetY = 15;
 
-        room.send("updateNickname", {
-            nickname: label
-        })
     }
 
     public static pickOrCreateEntityLabels(scene: BABYLON.Scene) {
