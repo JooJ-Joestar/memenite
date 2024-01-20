@@ -3,9 +3,19 @@ import * as PlayerAttributes from '../types/PlayerAttributes';
 import { Hud } from './Hud';
 import { PlayerInput } from './PlayerInput';
 
+export const animations: any = {
+    "up": {start: 9, end: 11, rest: 10},
+    "down": {start: 0, end: 2, rest: 1},
+    "left": {start: 3, end: 5, rest: 4},
+    "right": {start: 6, end: 8, rest: 7},
+};
+
 export class Player extends BABYLON.TransformNode {
     // Mesh that represents the player.
     private mesh: BABYLON.Mesh;
+    private sprite_manager: Sprite;
+    private sprite: BABYLON.Sprite;
+    private animation_playing: string = "none";
     // Target mesh for movement smoothing.
     private mesh_next_position: any;
     private scene: BABYLON.Scene;
@@ -72,9 +82,23 @@ export class Player extends BABYLON.TransformNode {
             break;
         }
 
+        this.sprite_manager = new BABYLON.SpriteManager(
+            "manager_" + session_id,
+            "../../assets/sprites/amogus_red.png",
+            1,
+            {width: 87, height: 107},
+            this.scene
+        );
+        this.sprite = new BABYLON.Sprite("player_" + session_id, this.sprite_manager);
+        this.sprite.cellIndex = 1;
+        this.sprite.width = (87 / 100) * 1.5;
+        this.sprite.height= (107 / 100) * 1.5;
+        this.sprite.position = new BABYLON.Vector3(attributes.position.x, attributes.position.y, attributes.position.z);
+
         // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
         this.mesh = BABYLON.MeshBuilder.CreateBox(session_id, attributes.mesh, scene);
-        this.mesh.position.set(attributes.position.x, attributes.position.y, attributes.position.z);
+        this.mesh.isVisible = false;
+        this.mesh.position.set(attributes.position.x, attributes.position.y + 0.3, attributes.position.z);
 
         // Assign controls to this player if it is the current one.
         if (is_current === true) {
@@ -180,6 +204,9 @@ export class Player extends BABYLON.TransformNode {
             y: this.mesh.position.y,
             z: this.mesh.position.z,
         })
+        this.sprite.position.x = this.mesh.position.x;
+        this.sprite.position.y = this.mesh.position.y;
+        this.sprite.position.z = this.mesh.position.z;
         // console.log(this.mesh.position);
         // console.log(this.moveDirection);
 
@@ -195,6 +222,28 @@ export class Player extends BABYLON.TransformNode {
         // let targ = BABYLON.Quaternion.FromEulerAngles(0, angle, 0);
         // console.log(targ);
         // this.mesh.rotationQuaternion = BABYLON.Quaternion.Slerp(this.mesh.rotationQuaternion, targ, 10 * this.deltaTime);
+
+        // console.log(this.moveDirection);
+        if (this.moveDirection._z > 0 && Math.abs(this.moveDirection._z) > Math.abs(this.moveDirection._x)) {
+            this.play_animation("up");
+        } else if (this.moveDirection._z < 0 && Math.abs(this.moveDirection._z) > Math.abs(this.moveDirection._x)) {
+            this.play_animation("down");
+        } else if (this.moveDirection._x > 0 && Math.abs(this.moveDirection._x) > Math.abs(this.moveDirection._z)) {
+            this.play_animation("right");
+        } else if (this.moveDirection._x < 0 && Math.abs(this.moveDirection._x) > Math.abs(this.moveDirection._z)) {
+            this.play_animation("left");
+        }
+    }
+
+    public play_animation (animation: string) {
+        if (!animations[animation] || this.animation_playing == animation) return false;
+
+        this.animation_playing = animation;
+        this.sprite.playAnimation(animations[animation].start, animations[animation].end, false, 100, () => {
+            this.animation_playing = "none";
+            this.sprite.cellIndex = animations[animation].rest;
+        });
+        return true;
     }
 
     public dispose() {
