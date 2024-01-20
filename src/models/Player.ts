@@ -13,7 +13,7 @@ export const animations: any = {
 export class Player extends BABYLON.TransformNode {
     // Mesh that represents the player.
     private mesh: BABYLON.Mesh;
-    private sprite_manager: Sprite;
+    private sprite_manager: BABYLON.SpriteManager;
     private sprite: BABYLON.Sprite;
     private animation_playing: string = "none";
     // Target mesh for movement smoothing.
