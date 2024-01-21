@@ -129,6 +129,7 @@ export class Hud {
             // console.log(leftPuck.floatTop);
 
             this.movement_x = leftPuck.floatLeft;
+            this.movement_z = leftPuck.floatTop;
         });
 
         leftThumbContainer.onPointerUpObservable.add((coordinates) => {
@@ -137,6 +138,8 @@ export class Hud {
             leftPuck.isDown = false;
             leftPuck.isVisible = false;
             leftThumbContainer.alpha = 0.4;
+            this.movement_x = 0;
+            this.movement_z = 0;
         });
 
         leftThumbContainer.onPointerMoveObservable.add((coordinates) => {
@@ -150,6 +153,7 @@ export class Hud {
                 // console.log(leftPuck.floatLeft);
                 // console.log(leftPuck.floatTop);
 
+                this.movement_x = leftPuck.floatLeft;
                 this.movement_z = leftPuck.floatTop;
             }
         });

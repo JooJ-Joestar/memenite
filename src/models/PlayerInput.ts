@@ -43,7 +43,8 @@ export class PlayerInput {
 
         //add to the scene an observable that calls updateFromKeyboard before rendering
         scene.onBeforeRenderObservable.add(() => {
-            this.updateFromKeyboard();
+            // this.updateFromKeyboard();
+            this.updateFromUi();
         });
 
         // Set up Mobile Controls if on mobile device
@@ -105,4 +106,14 @@ export class PlayerInput {
         // }
     }
 
+    private updateFromUi () {
+        if (this.ui.movement_x != 0) {
+            // console.log(this.ui.movement_x);
+            this.horizontal = this.ui.movement_x / 125;
+        } else this.horizontal = 0;
+        if (this.ui.movement_z != 0) {
+            // console.log(this.ui.movement_z);
+            this.vertical = (this.ui.movement_z / 125) * -1;
+        } else this.vertical = 0;
+    }
 }
