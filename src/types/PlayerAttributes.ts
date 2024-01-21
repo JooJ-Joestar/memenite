@@ -16,6 +16,9 @@ export type PlayerAttributes = {
         bottomBaseAt?: number;
         updatable?: boolean;
     },
+    sprite?: {
+        path?: string
+    },
     position: {
         x: number,
         y: number,
@@ -23,7 +26,7 @@ export type PlayerAttributes = {
     }
 };
 
-export const kek_options: PlayerAttributes = {
+export const red_options: PlayerAttributes = {
     mesh: {
         size: 1,
         width: 1,
@@ -37,6 +40,9 @@ export const kek_options: PlayerAttributes = {
             new Color4(1, 0, 0, 1),
             new Color4(1, 0, 0, 1),
         ],
+    },
+    sprite: {
+        path: "../../assets/sprites/amogus_red.png"
     },
     position: {
         x: -6.5,
@@ -45,7 +51,7 @@ export const kek_options: PlayerAttributes = {
     }
 };
 
-export const husband_options: PlayerAttributes = {
+export const green_options: PlayerAttributes = {
     mesh: {
         size: 1,
         width: 1,
@@ -59,32 +65,13 @@ export const husband_options: PlayerAttributes = {
             new Color4(0, 1, 0, 1),
             new Color4(0, 1, 0, 1),
         ],
+    },
+    sprite: {
+        path: "../../assets/sprites/amogus_green.png"
     },
     position: {
         x: 7.5,
         y: 0.5,
         z: -6.5
-    }
-};
-
-export const wife_options: PlayerAttributes = {
-    mesh: {
-        size: 1,
-        width: 1,
-        height: 1,
-        depth: 1,
-        faceColors: [
-            new Color4(0, 0, 1, 1),
-            new Color4(0, 0, 1, 1),
-            new Color4(0, 0, 1, 1),
-            new Color4(0, 0, 1, 1),
-            new Color4(0, 0, 1, 1),
-            new Color4(0, 0, 1, 1),
-        ],
-    },
-    position: {
-        x: 6.5,
-        y: 0.5,
-        z: -7.5
     }
 };
