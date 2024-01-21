@@ -224,15 +224,16 @@ export class Player extends BABYLON.TransformNode {
         // let targ = BABYLON.Quaternion.FromEulerAngles(0, angle, 0);
         // console.log(targ);
         // this.mesh.rotationQuaternion = BABYLON.Quaternion.Slerp(this.mesh.rotationQuaternion, targ, 10 * this.deltaTime);
+    }
 
-        // console.log(this.moveDirection);
-        if (this.moveDirection._z > 0 && Math.abs(this.moveDirection._z) > Math.abs(this.moveDirection._x)) {
+    public check_animation (x: number, z: number) {
+        if (z > 0 && Math.abs(z) > Math.abs(x)) {
             this.play_animation("up");
-        } else if (this.moveDirection._z < 0 && Math.abs(this.moveDirection._z) > Math.abs(this.moveDirection._x)) {
+        } else if (z < 0 && Math.abs(z) > Math.abs(x)) {
             this.play_animation("down");
-        } else if (this.moveDirection._x > 0 && Math.abs(this.moveDirection._x) > Math.abs(this.moveDirection._z)) {
+        } else if (x > 0 && Math.abs(x) > Math.abs(z)) {
             this.play_animation("right");
-        } else if (this.moveDirection._x < 0 && Math.abs(this.moveDirection._x) > Math.abs(this.moveDirection._z)) {
+        } else if (x < 0 && Math.abs(x) > Math.abs(z)) {
             this.play_animation("left");
         }
     }

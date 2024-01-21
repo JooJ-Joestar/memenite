@@ -104,7 +104,9 @@ export class Level1 {
                 this.playerEntities[sessionId].mesh_next_position = this.playerEntities[sessionId].mesh.position.clone();
                 player.onChange(() => {
                     // With interpolation
+                    this.playerEntities[sessionId].check_animation(player.x_movement, player.z_movement);
                     this.playerEntities[sessionId].mesh_next_position.set(player.x, player.y, player.z);
+                    this.playerEntities[sessionId].sprite.position.set(player.x, player.y, player.z);
 
                     // Without interpolation
                     // this.playerEntities[sessionId].mesh.position.set(player.x, player.y, player.z);
