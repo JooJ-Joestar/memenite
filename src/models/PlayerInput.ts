@@ -3,7 +3,7 @@ import { Hud } from './Hud';
 
 export class PlayerInput {
     public inputMap: any;
-    private _scene: BABYLON.Scene;
+    private scene: BABYLON.Scene;
 
     //simple movement
     public horizontal: number = 0;
@@ -17,7 +17,7 @@ export class PlayerInput {
     public dashing: boolean = false;
 
     //Mobile Input trackers
-    private _ui: Hud;
+    private ui: Hud;
     public mobileLeft: boolean = false;
     public mobileRight: boolean = false;
     public mobileUp: boolean = false;
@@ -25,19 +25,19 @@ export class PlayerInput {
     private _mobileJump: boolean = false;
     private _mobileDash: boolean = false;
 
-    constructor(scene: BABYLON.Scene) {
+    constructor(scene: BABYLON.Scene, ui: Hud) {
 
-        this._scene = scene;
-        // this._ui = ui;
+        this.scene = scene;
+        this.ui = ui;
 
         //scene action manager to detect inputs
-        this._scene.actionManager = new BABYLON.ActionManager(this._scene);
+        this.scene.actionManager = new BABYLON.ActionManager(this.scene);
 
         this.inputMap = {};
-        this._scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyDownTrigger, (evt) => {
+        this.scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyDownTrigger, (evt) => {
             this.inputMap[evt.sourceEvent.key] = evt.sourceEvent.type == "keydown";
         }));
-        this._scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyUpTrigger, (evt) => {
+        this.scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyUpTrigger, (evt) => {
             this.inputMap[evt.sourceEvent.key] = evt.sourceEvent.type == "keydown";
         }));
 
