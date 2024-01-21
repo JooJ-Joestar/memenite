@@ -29,7 +29,7 @@ export class Hud {
         var ui = AdvancedDynamicTexture.CreateFullscreenUI("UI", true, this.scene);
         var entity_labels = Hud.pickOrCreateEntityLabels(this.scene);
 
-        let import_hud = ui.parseFromSnippetAsync("#0QWKF2#4");
+        let import_hud = ui.parseFromSnippetAsync("#0QWKF2#7");
         async function afterHudIsImported(player: any, entity_labels: any) {
             const result = await import_hud;
             console.log(ui.getDescendants());
@@ -86,8 +86,8 @@ export class Hud {
         let yAddPos = 0;
         let xAddRot = 0;
         let yAddRot = 0;
-        let sideJoystickOffset = 150;
-        let bottomJoystickOffset = -50;
+        let sideJoystickOffset = 35;
+        let bottomJoystickOffset = -55;
         let translateTransform;
         let adt = AdvancedDynamicTexture.CreateFullscreenUI("controls_ui");
 
