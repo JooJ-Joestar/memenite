@@ -203,6 +203,8 @@ export class Player extends BABYLON.TransformNode {
             x: this.mesh.position.x,
             y: this.mesh.position.y,
             z: this.mesh.position.z,
+            x_movement: this.moveDirection._x,
+            z_movement: this.moveDirection._z,
         })
         this.sprite.position.x = this.mesh.position.x;
         this.sprite.position.y = this.mesh.position.y;
