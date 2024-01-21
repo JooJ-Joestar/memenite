@@ -75,16 +75,16 @@ export class Player extends BABYLON.TransformNode {
         let attributes: any = null;
         switch (character) {
             case "kek":
-                attributes = PlayerAttributes.kek_options;
+                attributes = PlayerAttributes.red_options;
             break;
             case "husband": default:
-                attributes = PlayerAttributes.husband_options;
+                attributes = PlayerAttributes.green_options;
             break;
         }
 
         this.sprite_manager = new BABYLON.SpriteManager(
             "manager_" + session_id,
-            "../../assets/sprites/amogus_red.png",
+            attributes.sprite.path,
             1,
             {width: 87, height: 107},
             this.scene
