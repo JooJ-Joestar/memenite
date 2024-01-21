@@ -106,8 +106,8 @@ export class Player extends BABYLON.TransformNode {
 
         // Assign controls to this player if it is the current one.
         if (is_current === true) {
-            this.input = new PlayerInput(scene);
             this.hud = new Hud(scene, room, this);
+            this.input = new PlayerInput(scene, this.hud);
 
             // Despite the dumb name, anything that needs to be checked like inputs, triggers, animations and stuff are registered in here.
             this.activatePlayerCamera(attributes);
