@@ -65,7 +65,7 @@ export class AppOne {
         });
 
         // Starts overlay debugger as default.
-        this.debug();
+        // this.debug();
 
         // Game engine loop that will render each frame.
         // I have little idea on how this works but don't worry about it.
