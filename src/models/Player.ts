@@ -19,11 +19,13 @@ export class Player extends BABYLON.TransformNode {
     // Target mesh for movement smoothing.
     private mesh_next_position: any;
     private scene: BABYLON.Scene;
+    private engine: any;
     // If this is the current player, assigns inputs to it.
     private input: any = null;
     private nickname: string = "Noname";
 
     //Camera
+    private camera: any = false;
     private camRoot: BABYLON.TransformNode = new BABYLON.TransformNode('camRoot');
     private yTilt: BABYLON.TransformNode = new BABYLON.TransformNode('yTilt');
 
@@ -59,10 +61,12 @@ export class Player extends BABYLON.TransformNode {
         player_ref: any,
         is_current: boolean,
         character: string,
-        nickname?: string
+        nickname?: string,
+        engine?: any
     ) {
         super(session_id, scene);
         this.scene = scene;
+        this.engine = engine;
         this.room = room;
         this.player_ref = player_ref;
         this.session_id = session_id;
@@ -106,7 +110,7 @@ export class Player extends BABYLON.TransformNode {
             this.hud = new Hud(scene, room, this);
 
             // Despite the dumb name, anything that needs to be checked like inputs, triggers, animations and stuff are registered in here.
-            this.activatePlayerCamera();
+            this.activatePlayerCamera(attributes);
         } else {
             Hud.addLabel(this.scene, this.nickname, this.mesh, this.session_id, this.room);
         }
@@ -122,7 +126,28 @@ export class Player extends BABYLON.TransformNode {
         // this.animatePlayer();
     }
 
-    public activatePlayerCamera()/*: BABYLON.UniversalCamera*/ {
+    public activatePlayerCamera(attributes: any)/*: BABYLON.UniversalCamera*/ {
+        // Setting up camera to follow player.
+        this.camera = new BABYLON.ArcRotateCamera(
+            "player_camera",
+            5.5,
+            1.0,
+            30,
+            new BABYLON.Vector3(attributes.position.x, attributes.position.y, attributes.position.z),
+            this.scene
+        );
+        this.camera.mode = BABYLON.ArcRotateCamera.ORTHOGRAPHIC_CAMERA;
+        const rect: any = this.engine.getRenderingCanvasClientRect();
+        const aspect = rect.height / rect.width;
+        // In this example we'll set the distance based on the camera's radius.
+        // Will we? I don't remember. Anyways, just use the debugger to find a cool placement for the camera.
+        this.camera.orthoLeft   = -this.camera.radius;
+        this.camera.orthoRight  =  this.camera.radius;
+        this.camera.orthoBottom = -this.camera.radius * aspect;
+        this.camera.orthoTop    =  this.camera.radius * aspect;
+
+        this.scene.activeCamera = this.camera;
+
         this.scene.registerBeforeRender(() => {
             this.beforeRenderUpdate();
             // this.updateCamera();)
@@ -209,6 +234,9 @@ export class Player extends BABYLON.TransformNode {
         this.sprite.position.x = this.mesh.position.x;
         this.sprite.position.y = this.mesh.position.y;
         this.sprite.position.z = this.mesh.position.z;
+        this.camera.setTarget(new BABYLON.Vector3(this.sprite.position.x, this.sprite.position.y, this.sprite.position.z));
+        // console.log(this.camera.position());
+        this.camera.setPosition(new BABYLON.Vector3(15 + this.sprite.position.x, 15, -15 + this.sprite.position.z));
         // console.log(this.mesh.position);
         // console.log(this.moveDirection);
 

@@ -8,6 +8,7 @@ import { Hud } from "../models/Hud";
 
 export class Level1 {
     private scene: any;
+    private engine: any;
 
     // We DO NOT need to save the colliders somewhere as Babylon.js will handle them automatically, but I wanted
     // a quick way of knowing which element was a collider so one can quickly hide them during debugging.
@@ -20,8 +21,9 @@ export class Level1 {
     // Connects to the Colyseus backend.
     colyseusSDK: Colyseus.Client = new Colyseus.Client(COLYSEUS_URL);
 
-    constructor(scene: BABYLON.Scene) {
+    constructor(scene: BABYLON.Scene, engine: any) {
         this.scene = scene;
+        this.engine = engine;
 
         // The first parameter can be used to specify which mesh to import. Here we import all meshes.
         // And I was dumb here. I could have included the colliding objects in the same file, but I didn't,
@@ -89,7 +91,8 @@ export class Level1 {
                         player,
                         is_current_player,
                         player.character,
-                        player.nickname
+                        player.nickname,
+                        this.engine
                     );
 
                     // If for whatever reason you want to check straight outta the server who is connected, uncomment

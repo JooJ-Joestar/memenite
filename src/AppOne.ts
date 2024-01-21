@@ -111,7 +111,7 @@ export class AppOne {
         // Or leave it there for the game jam, it's not like it's that dumb anyways.
         //
         // Also, remember what I mentioned about having to parse the scene property everywhere? The ride starts here.
-        var level = new Level1(this.scene);
+        var level = new Level1(this.scene, this.engine);
 
         // We don't have to deal with anything else here unless we want to.
     }
