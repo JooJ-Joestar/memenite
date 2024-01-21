@@ -253,6 +253,8 @@ export class Player extends BABYLON.TransformNode {
         this.mesh.dispose();
         this.camRoot.dispose();
         this.yTilt.dispose();
+        this.sprite.dispose();
+        this.sprite_manager.dispose();
         delete this.player_ref;
         Hud.removeLabel(this.scene, "nickname_" + this.session_id);
         super.dispose();
