@@ -116,7 +116,7 @@ export class Player extends BABYLON.TransformNode {
         }
 
         // Don't ask me.
-        this.camRoot.rotate(BABYLON.Axis.Y, -0.75);
+        this.camRoot.rotate(BABYLON.Axis.Y, -1.5);
     }
 
     //--GAME UPDATES--
@@ -130,10 +130,10 @@ export class Player extends BABYLON.TransformNode {
         // Setting up camera to follow player.
         this.camera = new BABYLON.ArcRotateCamera(
             "player_camera",
-            5.5,
-            1.0,
+            0,
+            0.75,
             30,
-            new BABYLON.Vector3(attributes.position.x, attributes.position.y, attributes.position.z),
+            this.mesh.position,
             this.scene
         );
         this.camera.mode = BABYLON.ArcRotateCamera.ORTHOGRAPHIC_CAMERA;
@@ -198,6 +198,7 @@ export class Player extends BABYLON.TransformNode {
 
         //--MOVEMENTS BASED ON CAMERA (as it rotates)--
         let fwd = this.camRoot.forward;
+        // console.log(fwd);
         let right = this.camRoot.right;
         let correctedVertical = fwd.scaleInPlace(this.v);
         let correctedHorizontal = right.scaleInPlace(this.h);
@@ -234,9 +235,9 @@ export class Player extends BABYLON.TransformNode {
         this.sprite.position.x = this.mesh.position.x;
         this.sprite.position.y = this.mesh.position.y;
         this.sprite.position.z = this.mesh.position.z;
-        this.camera.setTarget(new BABYLON.Vector3(this.sprite.position.x, this.sprite.position.y, this.sprite.position.z));
+        this.camera.setTarget(this.mesh.position);
         // console.log(this.camera.position());
-        this.camera.setPosition(new BABYLON.Vector3(15 + this.sprite.position.x, 15, -15 + this.sprite.position.z));
+        this.camera.setPosition(new BABYLON.Vector3(15 + this.sprite.position.x, 15, this.sprite.position.z));
         // console.log(this.mesh.position);
         // console.log(this.moveDirection);
 

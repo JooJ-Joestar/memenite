@@ -81,7 +81,15 @@ export class AppOne {
         // This creates and positions a free camera (non-mesh)
         // Yeah, bunch of stuff regarding the camera. Mess around to figure stuff out or look at the docs, I have no idea
         // how to explain these.
-        var camera = new BABYLON.ArcRotateCamera("Camera", 5.5, 1.0, 30, BABYLON.Vector3.Zero(), scene);
+        var camera = new BABYLON.ArcRotateCamera(
+            "Camera",
+            0,
+            0.75,
+            30,
+            new BABYLON.Vector3(0,0,0),
+            this.scene
+        );
+
         camera.mode = BABYLON.ArcRotateCamera.ORTHOGRAPHIC_CAMERA;
         const rect: any = this.engine.getRenderingCanvasClientRect();
         const aspect = rect.height / rect.width;
