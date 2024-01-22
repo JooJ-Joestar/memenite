@@ -257,13 +257,13 @@ export class Player extends BABYLON.TransformNode {
 
     public check_animation (x: number, z: number) {
         if (z > 0 && Math.abs(z) > Math.abs(x)) {
-            this.play_animation("up");
-        } else if (z < 0 && Math.abs(z) > Math.abs(x)) {
-            this.play_animation("down");
-        } else if (x > 0 && Math.abs(x) > Math.abs(z)) {
             this.play_animation("right");
-        } else if (x < 0 && Math.abs(x) > Math.abs(z)) {
+        } else if (z < 0 && Math.abs(z) > Math.abs(x)) {
             this.play_animation("left");
+        } else if (x > 0 && Math.abs(x) > Math.abs(z)) {
+            this.play_animation("down");
+        } else if (x < 0 && Math.abs(x) > Math.abs(z)) {
+            this.play_animation("up");
         }
     }
 
