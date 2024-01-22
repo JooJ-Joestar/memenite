@@ -122,7 +122,7 @@ export class Hud {
             leftPuck.isVisible = true;
             leftPuck.floatLeft = coordinates.x - (leftThumbContainer._currentMeasure.width * .5) - sideJoystickOffset;
             leftPuck.left = leftPuck.floatLeft;
-            leftPuck.floatTop = adt._canvas.height - coordinates.y - (leftThumbContainer._currentMeasure.height * .5) + bottomJoystickOffset;
+            leftPuck.floatTop = coordinates.y - (leftThumbContainer._currentMeasure.height * .5) + bottomJoystickOffset;
             leftPuck.top = leftPuck.floatTop * -1;
             leftPuck.isDown = true;
             leftThumbContainer.alpha = 0.9;
