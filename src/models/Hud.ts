@@ -1,4 +1,5 @@
 import * as BABYLON from '@babylonjs/core';
+import { Color3, Color4 } from '@babylonjs/core';
 import { AdvancedDynamicTexture, Button, Control, Ellipse, TextBlock } from '@babylonjs/gui';
 import { Player } from './Player';
 
@@ -91,7 +92,7 @@ export class Hud {
         let translateTransform;
         let adt = AdvancedDynamicTexture.CreateFullscreenUI("controls_ui");
 
-        let leftThumbContainer = this.makeThumbArea("leftThumb", 2, "blue", null);
+        let leftThumbContainer = this.makeThumbArea("leftThumb", 2, "white", "grey");
         leftThumbContainer.height = "200px";
         leftThumbContainer.width = "200px";
         leftThumbContainer.isPointerBlocker = true;
@@ -101,7 +102,7 @@ export class Hud {
         leftThumbContainer.left = sideJoystickOffset;
         leftThumbContainer.top = bottomJoystickOffset;
 
-        let leftInnerThumbContainer = this.makeThumbArea("leftInnterThumb", 4, "blue", null);
+        let leftInnerThumbContainer = this.makeThumbArea("leftInnterThumb", 4, "white", null);
         leftInnerThumbContainer.height = "80px";
         leftInnerThumbContainer.width = "80px";
         leftInnerThumbContainer.isPointerBlocker = true;
@@ -109,7 +110,7 @@ export class Hud {
         leftInnerThumbContainer.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
 
 
-        let leftPuck = this.makeThumbArea("leftPuck", 0, "blue", "blue");
+        let leftPuck = this.makeThumbArea("leftPuck", 0, "blue", null);
         leftPuck.height = "30px";
         leftPuck.width = "30px";
         leftPuck.isPointerBlocker = true;
