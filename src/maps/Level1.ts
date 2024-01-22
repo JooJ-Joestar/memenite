@@ -117,6 +117,24 @@ export class Level1 {
                 });
             });
 
+            room.onMessage("timer", (client: any) => {
+                let ui = this.scene.getTextureByName("UI");
+                let timer = ui.getControlByName("timer");
+
+                if (client.phase == 1) {
+                    timer.text = "Starts in " + client.timer;
+                    return;
+                }
+                if (client.phase == 2) {
+                    timer.text = "Time left: " + client.timer;
+                    return;
+                }
+                if (client.phase == 3) {
+                    timer.text = "Restarts in " + client.timer;
+                    return;
+                }
+            });
+
             room.onMessage("player_left", (client: any) => {
                 this.playerEntities[client.sessionId].dispose();
             });
