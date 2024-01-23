@@ -40,6 +40,7 @@ export class Player extends BABYLON.TransformNode {
     public dashTime: number = 0;
 
     //player movement vars
+    private pause: boolean = true;
     private deltaTime: number = 0;
     private h: number = 0;
     private v: number = 0;
@@ -156,6 +157,10 @@ export class Player extends BABYLON.TransformNode {
     }
 
     private updateFromControls(): void {
+        if (this.pause === true) {
+            return;
+        }
+
         this.deltaTime = this.scene.getEngine().getDeltaTime() / 1000.0;
 
         this.moveDirection = BABYLON.Vector3.Zero();

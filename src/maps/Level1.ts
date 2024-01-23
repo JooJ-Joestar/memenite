@@ -18,6 +18,8 @@ export class Level1 {
     // This should probably be moved somewhere else, maybe even have a class of it's own.
     public playerEntities: any = {};
 
+    private current_player_id: string = "";
+
     // Connects to the Colyseus backend.
     colyseusSDK: Colyseus.Client = new Colyseus.Client(COLYSEUS_URL);
 
@@ -77,6 +79,7 @@ export class Level1 {
                 console.log("New player " + sessionId);
                 // Might be dumb to think about it, but your own connections passes here too. So you have to check for it.
                 is_current_player = sessionId === room.sessionId;
+                this.current_player_id = sessionId;
 
                 player.listen("ready", () => {
                     // There is a bug going on where the ready confirmation is sent twice, so here all you have to do is
@@ -122,10 +125,12 @@ export class Level1 {
                 let timer = ui.getControlByName("timer");
 
                 if (client.phase == 1) {
+                    this.playerEntities[this.current_player_id].pause = true;
                     timer.text = "Starts in " + client.timer;
                     return;
                 }
                 if (client.phase == 2) {
+                    this.playerEntities[this.current_player_id].pause = false;
                     timer.text = "Time left: " + client.timer;
                     return;
                 }
