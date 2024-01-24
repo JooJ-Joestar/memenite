@@ -184,40 +184,6 @@ export class Player extends BABYLON.TransformNode {
         this.h = this.input.horizontal; //right, x
         this.v = this.input.vertical; //fwd, z
 
-        //tutorial, if the player moves for the first time
-        // if((this.h != 0 || this.v != 0) && !this.tutorial_move){
-        //     this.tutorial_move = true;
-        // }
-
-        //--DASHING--
-        //limit dash to once per ground/platform touch
-        //can only dash when in the air
-        // if (this.input.dashing && !this._dashPressed && this._canDash && !this._grounded) {
-        //     this._canDash = false;
-        //     this._dashPressed = true;
-
-        //     //sfx and animations
-        //     this._currentAnim = this._dash;
-        //     this._dashingSfx.play();
-
-        //     //tutorial, if the player dashes for the first time
-        //     if(!this.tutorial_dash){
-        //         this.tutorial_dash = true;
-        //     }
-        // }
-
-        // let dashFactor = 1;
-        //if you're dashing, scale movement
-        // if (this._dashPressed) {
-        //     if (this.dashTime > Player.DASH_TIME) {
-        //         this.dashTime = 0;
-        //         this._dashPressed = false;
-        //     } else {
-        //         dashFactor = Player.DASH_FACTOR;
-        //     }
-        //     this.dashTime++;
-        // }
-
         //--MOVEMENTS BASED ON CAMERA (as it rotates)--
         let fwd = this.camRoot.forward;
         // console.log(fwd);
