@@ -134,6 +134,7 @@ export class Player extends BABYLON.TransformNode {
         if (!weapon) {
             weapon = this.weapon_selected;
         }
+        // @ts-ignore
         this[weapon].sprite.position = new BABYLON.Vector3(this.sprite.position.x, this.sprite.position.y, this.sprite.position.z);
     }
 
@@ -237,7 +238,8 @@ export class Player extends BABYLON.TransformNode {
         // }
 
         // rotation based on input & the camera angle
-        // let angle = Math.atan2(this.input.horizontalAxis, this.input.verticalAxis);
+        let angle = Math.atan2(this.input.vertical, this.input.horizontal);
+        // console.log(angle);
         // angle += this.camRoot.rotation.y;
         // let targ = BABYLON.Quaternion.FromEulerAngles(0, angle, 0);
         // console.log(targ);
