@@ -18,12 +18,6 @@ export class PlayerInput {
 
     //Mobile Input trackers
     private ui: Hud;
-    public mobileLeft: boolean = false;
-    public mobileRight: boolean = false;
-    public mobileUp: boolean = false;
-    public mobileDown: boolean = false;
-    private mobileJump: boolean = false;
-    private mobileDash: boolean = false;
 
     constructor(scene: BABYLON.Scene, ui: Hud) {
 
