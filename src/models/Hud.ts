@@ -30,12 +30,13 @@ export class Hud {
         var ui = AdvancedDynamicTexture.CreateFullscreenUI("UI", true, this.scene);
         var entity_labels = Hud.pickOrCreateEntityLabels(this.scene);
 
-        let import_hud = ui.parseFromSnippetAsync("#0QWKF2#8");
+        let import_hud = ui.parseFromSnippetAsync("#0QWKF2#10");
         async function afterHudIsImported(player: any, entity_labels: any) {
             const result = await import_hud;
             console.log(ui.getDescendants());
             const field_nickname: any = ui.getControlByName("nickname");
             const btn_ready: any = ui.getControlByName("ready");
+            const btn_fire: any = ui.getControlByName("fire");
 
             btn_ready.onPointerUpObservable.add(() => {
                 field_nickname.isVisible = false;
@@ -45,6 +46,13 @@ export class Hud {
                 player.room.send("update_nickname", {
                     nickname: player.nickname
                 })
+            });
+
+            btn_fire.onPointerUpObservable.add(() => {
+                player[player.weapon_selected].fire();
+                // player.room.send("update_nickname", {
+                //     nickname: player.nickname
+                // })
             });
         }
         afterHudIsImported(this.player, entity_labels);
