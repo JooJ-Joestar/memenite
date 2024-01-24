@@ -30,7 +30,7 @@ export class Hud {
         var ui = AdvancedDynamicTexture.CreateFullscreenUI("UI", true, this.scene);
         var entity_labels = Hud.pickOrCreateEntityLabels(this.scene);
 
-        let import_hud = ui.parseFromSnippetAsync("#0QWKF2#7");
+        let import_hud = ui.parseFromSnippetAsync("#0QWKF2#8");
         async function afterHudIsImported(player: any, entity_labels: any) {
             const result = await import_hud;
             console.log(ui.getDescendants());

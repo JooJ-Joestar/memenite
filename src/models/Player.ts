@@ -1,7 +1,9 @@
 import * as BABYLON from '@babylonjs/core';
+import { crowbar } from '../attributes/Crowbar';
 import * as PlayerAttributes from '../types/PlayerAttributes';
 import { Hud } from './Hud';
 import { PlayerInput } from './PlayerInput';
+import { Weapon } from './Weapon';
 
 export const animations: any = {
     "up": {start: 9, end: 11, rest: 10},
@@ -54,6 +56,11 @@ export class Player extends BABYLON.TransformNode {
     private room: any = null;
 
     private hud: any = null;
+
+    private weapon_selected: string = "weapon_melee";
+    private weapon_melee: Weapon|boolean = false;
+    private weapon_ranged: Weapon|boolean = false;
+    private weapon_special: Weapon|boolean = false;
 
     constructor (
         room: any,
@@ -116,8 +123,18 @@ export class Player extends BABYLON.TransformNode {
             Hud.addLabel(this.scene, this.nickname, this.mesh, this.session_id, this.room);
         }
 
+        this.weapon_melee = new Weapon(this.scene, this.session_id, crowbar);
+        this.adjustWeaponPosition();
+
         // Don't ask me.
         this.camRoot.rotate(BABYLON.Axis.Y, -1.5);
+    }
+
+    private adjustWeaponPosition(weapon?: string) {
+        if (!weapon) {
+            weapon = this.weapon_selected;
+        }
+        this[weapon].sprite.position = new BABYLON.Vector3(this.sprite.position.x, this.sprite.position.y, this.sprite.position.z);
     }
 
     //--GAME UPDATES--
@@ -240,6 +257,7 @@ export class Player extends BABYLON.TransformNode {
         this.sprite.position.x = this.mesh.position.x;
         this.sprite.position.y = this.mesh.position.y;
         this.sprite.position.z = this.mesh.position.z;
+        this.adjustWeaponPosition();
         this.camera.setTarget(this.mesh.position);
         // console.log(this.camera.position());
         this.camera.setPosition(new BABYLON.Vector3(15 + this.sprite.position.x, 15, this.sprite.position.z));

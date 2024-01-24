@@ -3,7 +3,9 @@ import { WeaponAttributes } from "../types/WeaponAttributes";
 export const crowbar: WeaponAttributes = {
     name: "Crowbar",
     sprite: {
-        path: "",
+        path: "../../assets/sprites/crowbar.png",
+        width: 577,
+        height: 152
     },
     // sound?: {
     //     fire_path?: string,

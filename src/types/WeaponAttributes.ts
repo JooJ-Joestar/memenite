@@ -2,6 +2,8 @@ export type WeaponAttributes = {
     name: string,
     sprite: {
         path: string,
+        width: number,
+        height: number
     },
     sound?: {
         fire_path?: string,
