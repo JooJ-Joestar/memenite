@@ -59,6 +59,12 @@ export class Missile {
         missile_mesh.position.z = this.parent.z;
         missile_mesh.rotate(new BABYLON.Vector3(0,1,0), this.parent.angle);
 
+        console.log(target_mesh.position);
+
+        this.scene.registerBeforeRender(() => {
+            missile_mesh.position = BABYLON.Vector3.Lerp(missile_mesh.position, target_mesh.position, 0.30);
+        });
+
         setTimeout(() => {
             missile_mesh.dispose();
             target_mesh.dispose();
