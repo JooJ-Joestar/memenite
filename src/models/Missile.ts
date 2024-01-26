@@ -6,6 +6,13 @@ export class Missile {
     private scene: BABYLON.Scene;
     private parent: Weapon;
 
+    // @ts-ignore
+    public missile_mesh: BABYLON.Mesh;
+    // @ts-ignore
+    public target_mesh: BABYLON.Mesh;
+    // @ts-ignore
+    public pivot: BABYLON.Mesh;
+
     constructor (
         scene: BABYLON.Scene,
         parent: Weapon
@@ -76,15 +83,18 @@ export class Missile {
         pivot.position.x = current_position.x;
         pivot.position.z = current_position.z;
 
-        this.scene.registerBeforeRender(() => {
-            missile_mesh.position = BABYLON.Vector3.Lerp(missile_mesh.position, target_mesh.position, 0.30);
-        });
-
         setTimeout(() => {
             missile_mesh.dispose();
             target_mesh.dispose();
             pivot.dispose();
+            delete window.__LEVEL__.missile_entities[id];
         }, (this.parent.attributes.missile.distance / this.parent.attributes.missile.speed) * 100);
+
+        this.target_mesh = target_mesh;
+        this.missile_mesh = missile_mesh;
+        this.pivot = pivot;
+
+        window.__LEVEL__.missile_entities[id] = this;
 
         return true;
     }

@@ -123,7 +123,7 @@ export class Player extends BABYLON.TransformNode {
             Hud.addLabel(this.scene, this.nickname, this.mesh, this.session_id, this.room);
         }
 
-        this.weapon_melee = new Weapon(this.scene, this.session_id, crowbar);
+        this.weapon_melee = new Weapon(this.scene, this.session_id, crowbar, is_current);
         this.adjustWeaponPosition();
 
         // Don't ask me.

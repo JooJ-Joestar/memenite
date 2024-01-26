@@ -6,6 +6,8 @@ import type { PlayerAttributes } from '../types/PlayerAttributes';
 import { COLYSEUS_URL } from '../AppOne';
 import { Hud } from "../models/Hud";
 
+declare var __LEVEL__: Level1;
+
 export class Level1 {
     private scene: any;
     private engine: any;
@@ -17,13 +19,19 @@ export class Level1 {
     // Now THIS is required. We need to quickly know the properties of everyone connected.
     // This should probably be moved somewhere else, maybe even have a class of it's own.
     public playerEntities: any = {};
+    public missile_entities: any = {};
 
     private current_player_id: string = "";
 
     // Connects to the Colyseus backend.
     colyseusSDK: Colyseus.Client = new Colyseus.Client(COLYSEUS_URL);
 
-    constructor(scene: BABYLON.Scene, engine: any) {
+    constructor(
+        scene?: BABYLON.Scene,
+        engine?: any
+    ) {
+        // @ts-ignore
+        window.__LEVEL__ = this;
         this.scene = scene;
         this.engine = engine;
 
@@ -170,6 +178,18 @@ export class Level1 {
                 // This Lerp function is very interesting, it smooths movement between position and target.
                 // Change the float value to whatever suits you.
                 entity.position = BABYLON.Vector3.Lerp(entity.position, targetPosition, 0.30);
+            }
+
+            for (let missile_id in this.missile_entities) {
+                let missile = this.missile_entities[missile_id];
+
+                missile.missile_mesh.position = BABYLON.Vector3.Lerp(missile.missile_mesh.position, missile.target_mesh.position, 0.30);
+                // for (let idx in window.__LEVEL__.playerEntities) {
+                //     console.log(idx);
+                //     if (target_mesh.intersectsMesh(window.__LEVEL__.playerEntities[idx].mesh)) {
+                //         console.log("hit");
+                //     }
+                // }
             }
         });
     }

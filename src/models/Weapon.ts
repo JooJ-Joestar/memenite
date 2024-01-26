@@ -16,10 +16,13 @@ export class Weapon {
     public x: number = 0;
     public z: number = 0;
 
+    public is_current: boolean = false;
+
     constructor (
         scene: BABYLON.Scene,
         session_id: string,
-        attributes: WeaponAttributes
+        attributes: WeaponAttributes,
+        is_current?: boolean
     ) {
         this.scene = scene;
         this.attributes = attributes;
@@ -35,6 +38,10 @@ export class Weapon {
         this.sprite.cellIndex = 0;
         this.sprite.width = (this.attributes.sprite.width / 100);
         this.sprite.height = (this.attributes.sprite.height / 100);
+
+        if (is_current === true) {
+            this.is_current = true;
+        }
     }
 
     fire (current_position: Vector3, angle: number) {
