@@ -17,8 +17,10 @@ export class Missile {
     }
 
     fire (current_position: Vector3, angle: number) {
+        const id = Math.round(Math.random() * 999999);
+
         const missile_mesh = BABYLON.MeshBuilder.CreateBox(
-            "missile_" + (Math.random() * 999999),
+            "missile_" + id,
             {
                 width: 1,
                 height: 1,
@@ -36,7 +38,7 @@ export class Missile {
         );
 
         const target_mesh = BABYLON.MeshBuilder.CreateBox(
-            "missile_" + (Math.random() * 999999),
+            "missile_" + id,
             {
                 width: 1,
                 height: 1,
