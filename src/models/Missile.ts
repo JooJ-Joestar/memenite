@@ -38,7 +38,7 @@ export class Missile {
         );
 
         const target_mesh = BABYLON.MeshBuilder.CreateBox(
-            "missile_" + id,
+            "target_" + id,
             {
                 width: 1,
                 height: 1,
@@ -54,14 +54,27 @@ export class Missile {
             },
             this.scene
         );
-        target_mesh.position.x = missile_mesh.position.x;
-        target_mesh.position.z = missile_mesh.position.z + this.parent.attributes.missile.distance;
-        target_mesh.parent = missile_mesh;
-        missile_mesh.position.x = this.parent.x;
-        missile_mesh.position.z = this.parent.z;
-        missile_mesh.rotate(new BABYLON.Vector3(0,1,0), this.parent.angle);
 
-        console.log(target_mesh.position);
+        const pivot = BABYLON.MeshBuilder.CreateBox(
+            "pivot_" + id,
+            {
+                width: 1,
+                height: 1,
+                depth: 1,
+            },
+            this.scene
+        );
+        // pivot.position = current_position;
+        // target_mesh.position = current_position;
+        // target_mesh.position.z = current_position.z + this.parent.attributes.missile.distance;
+        target_mesh.position.z = target_mesh.position.z + this.parent.attributes.missile.distance;
+
+        target_mesh.parent = pivot;
+        missile_mesh.parent = pivot;
+        pivot.rotate(new Vector3(0, 1, 0), this.parent.angle);
+
+        pivot.position.x = current_position.x;
+        pivot.position.z = current_position.z;
 
         this.scene.registerBeforeRender(() => {
             missile_mesh.position = BABYLON.Vector3.Lerp(missile_mesh.position, target_mesh.position, 0.30);
@@ -70,6 +83,7 @@ export class Missile {
         setTimeout(() => {
             missile_mesh.dispose();
             target_mesh.dispose();
+            pivot.dispose();
         }, (this.parent.attributes.missile.distance / this.parent.attributes.missile.speed) * 100);
 
         return true;
