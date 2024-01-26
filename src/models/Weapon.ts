@@ -11,6 +11,10 @@ export class Weapon {
     private sprite_manager: BABYLON.SpriteManager;
     private sprite: BABYLON.Sprite;
 
+    private angle: number = 0;
+    private x: number = 0;
+    private z: number = 0;
+
     constructor (
         scene: BABYLON.Scene,
         session_id: string,
@@ -72,13 +76,16 @@ export class Weapon {
             this.scene
         );
         target_mesh.position.x = missile_mesh.position.x;
-        target_mesh.position.y = missile_mesh.position.y;
         target_mesh.position.z = missile_mesh.position.z + this.attributes.missile.distance;
+        target_mesh.parent = missile_mesh;
+        missile_mesh.position.x = this.x;
+        missile_mesh.position.z = this.z;
+        missile_mesh.rotate(new BABYLON.Vector3(0,1,0), this.angle);
 
         setTimeout(() => {
             missile_mesh.dispose();
             target_mesh.dispose();
-        }, (this.attributes.missile.distance / this.attributes.missile.speed) * 1000)
+        }, (this.attributes.missile.distance / this.attributes.missile.speed) * 100);
 
         setTimeout(() => {
             this.cooldown = false;
