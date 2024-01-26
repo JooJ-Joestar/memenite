@@ -184,12 +184,14 @@ export class Level1 {
                 let missile = this.missile_entities[missile_id];
 
                 missile.missile_mesh.position = BABYLON.Vector3.Lerp(missile.missile_mesh.position, missile.target_mesh.position, 0.30);
-                // for (let idx in window.__LEVEL__.playerEntities) {
-                //     console.log(idx);
-                //     if (target_mesh.intersectsMesh(window.__LEVEL__.playerEntities[idx].mesh)) {
-                //         console.log("hit");
-                //     }
-                // }
+                for (let session_id in this.playerEntities) {
+                    if (session_id == this.current_player_id) continue;
+                    let player = this.playerEntities[session_id].mesh;
+
+                    if (player.intersectsMesh(missile.missile_mesh, false)) {
+                        console.log("hit");
+                    }
+                }
             }
         });
     }
