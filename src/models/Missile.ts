@@ -1,39 +1,22 @@
 import * as BABYLON from '@babylonjs/core'
 import { Color4, Vector3 } from '@babylonjs/core';
-import { WeaponAttributes } from "../types/WeaponAttributes";
+import { Weapon } from './Weapon';
 
-export class Weapon {
+export class Missile {
     private scene: BABYLON.Scene;
-
-    private angle: number = 0;
-    private x: number = 0;
-    private z: number = 0;
+    private parent: Weapon;
 
     constructor (
         scene: BABYLON.Scene,
-        session_id: string,
-        attributes: WeaponAttributes
+        parent: Weapon
     ) {
         this.scene = scene;
-        this.attributes = attributes;
+        this.parent = parent;
 
-        this.sprite_manager = new BABYLON.SpriteManager(
-            "weapon_manager_" + session_id + "_" + this.attributes.name,
-            this.attributes.sprite.path,
-            1,
-            {width: this.attributes.sprite.width, height: this.attributes.sprite.height},
-            this.scene
-        );
-        this.sprite = new BABYLON.Sprite("player_" + session_id + "_weapon_" + this.attributes.name, this.sprite_manager);
-        this.sprite.cellIndex = 0;
-        this.sprite.width = (this.attributes.sprite.width / 100);
-        this.sprite.height = (this.attributes.sprite.height / 100);
+        this.fire(new Vector3(this.parent.x, 0, this.parent.z), this.parent.angle);
     }
 
     fire (current_position: Vector3, angle: number) {
-        if (this.cooldown === true) return false;
-        this.cooldown = true;
-
         const missile_mesh = BABYLON.MeshBuilder.CreateBox(
             "missile_" + (Math.random() * 999999),
             {
@@ -70,20 +53,17 @@ export class Weapon {
             this.scene
         );
         target_mesh.position.x = missile_mesh.position.x;
-        target_mesh.position.z = missile_mesh.position.z + this.attributes.missile.distance;
+        target_mesh.position.z = missile_mesh.position.z + this.parent.attributes.missile.distance;
         target_mesh.parent = missile_mesh;
-        missile_mesh.position.x = this.x;
-        missile_mesh.position.z = this.z;
-        missile_mesh.rotate(new BABYLON.Vector3(0,1,0), this.angle);
+        missile_mesh.position.x = this.parent.x;
+        missile_mesh.position.z = this.parent.z;
+        missile_mesh.rotate(new BABYLON.Vector3(0,1,0), this.parent.angle);
 
         setTimeout(() => {
             missile_mesh.dispose();
             target_mesh.dispose();
-        }, (this.attributes.missile.distance / this.attributes.missile.speed) * 100);
+        }, (this.parent.attributes.missile.distance / this.parent.attributes.missile.speed) * 100);
 
-        setTimeout(() => {
-            this.cooldown = false;
-        }, this.attributes.cooldown);
         return true;
     }
 }

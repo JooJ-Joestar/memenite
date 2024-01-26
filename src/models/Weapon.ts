@@ -1,6 +1,7 @@
 import * as BABYLON from '@babylonjs/core'
 import { Color4, Vector3 } from '@babylonjs/core';
 import { WeaponAttributes } from "../types/WeaponAttributes";
+import { Missile } from './Missile';
 
 export class Weapon {
     private scene: BABYLON.Scene;
@@ -40,52 +41,7 @@ export class Weapon {
         if (this.cooldown === true) return false;
         this.cooldown = true;
 
-        const missile_mesh = BABYLON.MeshBuilder.CreateBox(
-            "missile_" + (Math.random() * 999999),
-            {
-                width: 1,
-                height: 1,
-                depth: 1,
-                faceColors: [
-                    new Color4(0, 0, 1, 1),
-                    new Color4(0, 0, 1, 1),
-                    new Color4(0, 0, 1, 1),
-                    new Color4(0, 0, 1, 1),
-                    new Color4(0, 0, 1, 1),
-                    new Color4(0, 0, 1, 1),
-                ]
-            },
-            this.scene
-        );
-
-        const target_mesh = BABYLON.MeshBuilder.CreateBox(
-            "missile_" + (Math.random() * 999999),
-            {
-                width: 1,
-                height: 1,
-                depth: 1,
-                faceColors: [
-                    new Color4(0, 1, 0, 1),
-                    new Color4(0, 1, 0, 1),
-                    new Color4(0, 1, 0, 1),
-                    new Color4(0, 1, 0, 1),
-                    new Color4(0, 1, 0, 1),
-                    new Color4(0, 1, 0, 1),
-                ]
-            },
-            this.scene
-        );
-        target_mesh.position.x = missile_mesh.position.x;
-        target_mesh.position.z = missile_mesh.position.z + this.attributes.missile.distance;
-        target_mesh.parent = missile_mesh;
-        missile_mesh.position.x = this.x;
-        missile_mesh.position.z = this.z;
-        missile_mesh.rotate(new BABYLON.Vector3(0,1,0), this.angle);
-
-        setTimeout(() => {
-            missile_mesh.dispose();
-            target_mesh.dispose();
-        }, (this.attributes.missile.distance / this.attributes.missile.speed) * 100);
+        const missile = new Missile(this.scene, this);
 
         setTimeout(() => {
             this.cooldown = false;
