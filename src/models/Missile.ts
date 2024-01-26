@@ -5,15 +5,9 @@ import { WeaponAttributes } from "../types/WeaponAttributes";
 export class Weapon {
     private scene: BABYLON.Scene;
 
-    public attributes: WeaponAttributes;
-    private cooldown: boolean = false;
-
-    private sprite_manager: BABYLON.SpriteManager;
-    private sprite: BABYLON.Sprite;
-
-    public angle: number = 0;
-    public x: number = 0;
-    public z: number = 0;
+    private angle: number = 0;
+    private x: number = 0;
+    private z: number = 0;
 
     constructor (
         scene: BABYLON.Scene,
