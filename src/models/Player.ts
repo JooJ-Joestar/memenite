@@ -121,25 +121,28 @@ export class Player extends BABYLON.TransformNode {
             {width: 256, height: 256},
             this.scene
         );
-        this.sprite = new BABYLON.Sprite("player_" + session_id, this.sprite_manager);
-        this.sprite.cellIndex = 1;
-        this.sprite.width = 3;
-        this.sprite.height= 3;
-        this.sprite.position = new BABYLON.Vector3(attributes.position.x, attributes.position.y + 1.25, attributes.position.z);
-
-        // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
-        this.mesh = BABYLON.MeshBuilder.CreateBox(session_id, attributes.mesh, scene);
-        this.mesh.isVisible = false;
-        this.mesh.position.set(attributes.position.x, attributes.position.y + 0.3, attributes.position.z);
 
         // Assign controls to this player if it is the current one.
         if (is_current === true) {
             this.hud = new Hud(scene, room, this);
             this.input = new PlayerInput(scene, this.hud);
+            this.respawn();
 
             // Despite the dumb name, anything that needs to be checked like inputs, triggers, animations and stuff are registered in here.
             this.activatePlayerCamera(attributes);
         } else {
+            this.sprite = new BABYLON.Sprite("player_" + this.session_id, this.sprite_manager);
+            this.sprite.cellIndex = 1;
+            this.sprite.width = 3;
+            this.sprite.height= 3;
+            this.sprite.position = new BABYLON.Vector3(0, 1.25, 0);
+            this.sprite.isVisible = false;
+
+            // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
+            this.mesh = BABYLON.MeshBuilder.CreateBox(this.session_id);
+            this.mesh.isVisible = true;
+            this.mesh.position.set(0, 0.3, 0);
+
             Hud.addLabel(this.scene, this.nickname, this.mesh, this.session_id, this.room);
         }
 
@@ -336,8 +339,22 @@ export class Player extends BABYLON.TransformNode {
     respawn () {
         let index = Math.round(Math.random() * (Player.RESPAWN_AREAS.length - 1));
         let x = this.generateRandomInteger(Player.RESPAWN_AREAS[index].min_x, Player.RESPAWN_AREAS[index].max_x);
-        let y = this.generateRandomInteger(Player.RESPAWN_AREAS[index].min_z, Player.RESPAWN_AREAS[index].max_z);
-        // this.pause = false;
+        let z = this.generateRandomInteger(Player.RESPAWN_AREAS[index].min_z, Player.RESPAWN_AREAS[index].max_z);
+
+        this.sprite = new BABYLON.Sprite("player_" + this.session_id, this.sprite_manager);
+        this.sprite.cellIndex = 1;
+        this.sprite.width = 3;
+        this.sprite.height= 3;
+        this.sprite.position = new BABYLON.Vector3(x, 1.25, z);
+        this.sprite.isVisible = false;
+
+        // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
+        this.mesh = BABYLON.MeshBuilder.CreateBox(this.session_id);
+        this.mesh.isVisible = true;
+        this.mesh.position.set(x, 0.3, z);
+        this.pause = false;
+
+        Hud.addLabel(this.scene, this.nickname, this.mesh, this.session_id, this.room);
     }
 
     generateRandomInteger(min: number, max: number) {
