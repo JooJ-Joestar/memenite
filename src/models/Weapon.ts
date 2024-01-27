@@ -50,6 +50,8 @@ export class Weapon {
 
         const missile = new Missile(this.scene, this);
 
+        // TODO audio
+
         setTimeout(() => {
             this.cooldown = false;
         }, this.attributes.cooldown);
