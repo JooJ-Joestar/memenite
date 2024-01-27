@@ -9,6 +9,8 @@ export class Missile {
 
     private speed: number = 0;
     private distance: number = 0;
+    private angle: number = 0;
+    private weapon_name: string = '';
 
     private id: any;
     // @ts-ignore
@@ -29,6 +31,7 @@ export class Missile {
             this.parent = parent;
             this.speed = this.parent.attributes.missile.speed;
             this.distance = this.parent.attributes.missile.distance;
+            this.weapon_name = this.parent.attributes.name;
             this.fire(new Vector3(this.parent.x, 0, this.parent.z), this.parent.angle);
             return;
         }

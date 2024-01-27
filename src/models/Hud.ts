@@ -51,7 +51,7 @@ export class Hud {
             btn_fire.onPointerUpObservable.add(() => {
                 player[player.weapon_selected].fire();
                 player.room.send("player_fired", {
-                    weapon_selected: player.weapon_selected,
+                    weapon_selected: player[player.weapon_selected].attributes.name,
                     position: {
                         x: player.mesh.position.x,
                         z: player.mesh.position.z,
