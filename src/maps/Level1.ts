@@ -5,6 +5,7 @@ import { PlayerInput } from '../models/PlayerInput';
 import type { PlayerAttributes } from '../types/PlayerAttributes';
 import { COLYSEUS_URL } from '../AppOne';
 import { Hud } from "../models/Hud";
+import { Missile } from "../models/Missile";
 
 declare var __LEVEL__: Level1;
 
@@ -20,6 +21,7 @@ export class Level1 {
     // This should probably be moved somewhere else, maybe even have a class of it's own.
     public playerEntities: any = {};
     public missile_entities: any = {};
+    public missile_entities_no_collisions: any = {};
 
     private current_player_id: string = "";
 
@@ -122,7 +124,7 @@ export class Level1 {
                     // With interpolation
                     this.playerEntities[sessionId].check_animation(player.x_movement, player.z_movement);
                     this.playerEntities[sessionId].mesh_next_position.set(player.x, player.y, player.z);
-                    this.playerEntities[sessionId].sprite.position.set(player.x, player.y, player.z);
+                    this.playerEntities[sessionId].sprite.position.set(player.x, player.y + 1.25, player.z);
 
                     // Without interpolation
                     // this.playerEntities[sessionId].mesh.position.set(player.x, player.y, player.z);
@@ -134,20 +136,20 @@ export class Level1 {
                 let ui = this.scene.getTextureByName("UI");
                 let timer = ui.getControlByName("timer");
 
-                if (client.phase == 1) {
-                    this.playerEntities[this.current_player_id].pause = true;
-                    timer.text = "Starts in " + client.timer;
-                    return;
-                }
-                if (client.phase == 2) {
-                    this.playerEntities[this.current_player_id].pause = false;
-                    timer.text = "Time left: " + client.timer;
-                    return;
-                }
-                if (client.phase == 3) {
-                    timer.text = "Restarts in " + client.timer;
-                    return;
-                }
+                // if (client.phase == 1) {
+                //     this.playerEntities[this.current_player_id].pause = true;
+                //     timer.text = "Starts in " + client.timer;
+                //     return;
+                // }
+                // if (client.phase == 2) {
+                //     this.playerEntities[this.current_player_id].pause = false;
+                //     timer.text = "Time left: " + client.timer;
+                //     return;
+                // }
+                // if (client.phase == 3) {
+                //     timer.text = "Restarts in " + client.timer;
+                //     return;
+                // }
             });
 
             room.onMessage("player_left", (client: any) => {
@@ -164,6 +166,15 @@ export class Level1 {
                     client.sessionId,
                     this.playerEntities[client.sessionId].room
                 );
+            });
+
+            room.onMessage("player_fired", (client: any) => {
+                const missile = new Missile(this.scene, null, client.data);
+            });
+
+            room.onMessage("player_scored_hit", (client: any) => {
+                console.log("player_scored_hit");
+                console.log(client);
             });
 
             // Dumb stuff. Ignore it for now.
@@ -191,9 +202,20 @@ export class Level1 {
                     let player = this.playerEntities[session_id].mesh;
 
                     if (player.intersectsMesh(missile.missile_mesh, false)) {
-                        console.log("hit");
+                        this.playerEntities[this.current_player_id].room.send("player_scored_hit", {
+                            "player_attacker": this.current_player_id,
+                            "player_victim": session_id,
+                            "weapon":missile.weapon_name
+                        });
+                        missile.dispose();
                     }
                 }
+            }
+
+            for (let missile_id in this.missile_entities_no_collisions) {
+                let missile = this.missile_entities_no_collisions[missile_id];
+
+                missile.missile_mesh.position = BABYLON.Vector3.Lerp(missile.missile_mesh.position, missile.target_mesh.position, 0.30);
             }
         });
     }
