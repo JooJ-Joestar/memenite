@@ -42,7 +42,7 @@ export class Player extends BABYLON.TransformNode {
     public dashTime: number = 0;
 
     //player movement vars
-    private pause: boolean = true;
+    private pause: boolean = false;
     private deltaTime: number = 0;
     private h: number = 0;
     private v: number = 0;
