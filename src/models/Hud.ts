@@ -50,9 +50,14 @@ export class Hud {
 
             btn_fire.onPointerUpObservable.add(() => {
                 player[player.weapon_selected].fire();
-                // player.room.send("update_nickname", {
-                //     nickname: player.nickname
-                // })
+                player.room.send("player_fired", {
+                    weapon_selected: player.weapon_selected,
+                    position: {
+                        x: player.mesh.position.x,
+                        z: player.mesh.position.z,
+                    },
+                    angle: player[player.weapon_selected].angle
+                })
             });
         }
         afterHudIsImported(this.player, entity_labels);
