@@ -30,8 +30,8 @@ export class Hud {
         var ui = AdvancedDynamicTexture.CreateFullscreenUI("UI", true, this.scene);
         var entity_labels = Hud.pickOrCreateEntityLabels(this.scene);
 
-        let import_hud = ui.parseFromSnippetAsync("#0QWKF2#10");
-        // let import_hud = ui.parseFromSnippetAsync("#RWAE82#8");
+        // let import_hud = ui.parseFromSnippetAsync("#0QWKF2#10");
+        let import_hud = ui.parseFromSnippetAsync("#RWAE82#11");
         async function afterHudIsImported(player: any, entity_labels: any) {
             const result = await import_hud;
             console.log(ui.getDescendants());
@@ -39,7 +39,16 @@ export class Hud {
             const btn_ready: any = ui.getControlByName("ready");
             const btn_fire: any = ui.getControlByName("fire");
 
+            const retangulo_menu: any = ui.getControlByName("retangulo_menu");
+            const retangulo_gameplay: any = ui.getControlByName("retangulo_gameplay");
+
+            retangulo_menu.isVisible = true;
+            retangulo_gameplay.isVisible = false;
+
             btn_ready.onPointerUpObservable.add(() => {
+                retangulo_menu.isVisible = false;
+                retangulo_gameplay.isVisible = true;
+
                 field_nickname.isVisible = false;
                 btn_ready.isVisible = false;
                 player.nickname = field_nickname.text;
