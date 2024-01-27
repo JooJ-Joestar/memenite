@@ -13,6 +13,23 @@ export const animations: any = {
 };
 
 export class Player extends BABYLON.TransformNode {
+    static RESPAWN_COOLDOWN = 3000;
+
+    static RESPAWN_AREAS = [
+        {
+            min_x: 1,
+            max_x: 5,
+            min_z: 1,
+            max_z: 5
+        },
+        {
+            min_x: -1,
+            max_x: -5,
+            min_z: -1,
+            max_z: -5
+        }
+    ];
+
     // Mesh that represents the player.
     private mesh: BABYLON.Mesh;
     private sprite_manager: BABYLON.SpriteManager;
@@ -310,9 +327,20 @@ export class Player extends BABYLON.TransformNode {
                 killer: killer
             });
         }
+
+        setTimeout(() => {
+            this.respawn();
+        }, Player.RESPAWN_COOLDOWN);
     }
 
     respawn () {
+        let index = Math.round(Math.random() * (Player.RESPAWN_AREAS.length - 1));
+        let x = this.generateRandomInteger(Player.RESPAWN_AREAS[index].min_x, Player.RESPAWN_AREAS[index].max_x);
+        let y = this.generateRandomInteger(Player.RESPAWN_AREAS[index].min_z, Player.RESPAWN_AREAS[index].max_z);
+        // this.pause = false;
+    }
 
+    generateRandomInteger(min: number, max: number) {
+        return Math.floor(min + Math.random()*(max - min + 1))
     }
 }
