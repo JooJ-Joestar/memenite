@@ -25,6 +25,7 @@ export class Player extends BABYLON.TransformNode {
     // If this is the current player, assigns inputs to it.
     private input: any = null;
     private nickname: string = "Noname";
+    private hitpoints: number = 100;
 
     //Camera
     private camera: any = false;
@@ -54,6 +55,7 @@ export class Player extends BABYLON.TransformNode {
     private session_id: string = "";
     private player_ref: any = null;
     private room: any = null;
+    private is_current: boolean = false;
 
     private hud: any = null;
 
@@ -78,6 +80,7 @@ export class Player extends BABYLON.TransformNode {
         this.room = room;
         this.player_ref = player_ref;
         this.session_id = session_id;
+        this.is_current = is_current;
 
         if (nickname) {
             this.nickname = nickname;
@@ -220,7 +223,7 @@ export class Player extends BABYLON.TransformNode {
             z: this.mesh.position.z,
             x_movement: this.moveDirection._x,
             z_movement: this.moveDirection._z,
-        })
+        });
         this.sprite.position.x = this.mesh.position.x;
         this.sprite.position.y = this.mesh.position.y + 1.25;
         this.sprite.position.z = this.mesh.position.z;
@@ -286,5 +289,30 @@ export class Player extends BABYLON.TransformNode {
         Hud.removeLabel(this.scene, "nickname_" + this.session_id);
         super.dispose();
         return true;
+    }
+
+    take_damage (amt: number, killer: string) {
+        this.hitpoints -= amt;
+        if (this.hitpoints <= 0) {
+            this.hitpoints = 0;
+            this.die(killer);
+        }
+        console.log(this.hitpoints);
+    }
+
+    die (killer: string) {
+        this.pause = true;
+        this.mesh.dispose()
+        this.sprite.dispose();
+        if (this.is_current === true) {
+            this.room.send("player_died", {
+                session_id: this.session_id,
+                killer: killer
+            });
+        }
+    }
+
+    respawn () {
+
     }
 }

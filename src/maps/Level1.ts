@@ -6,6 +6,7 @@ import type { PlayerAttributes } from '../types/PlayerAttributes';
 import { COLYSEUS_URL } from '../AppOne';
 import { Hud } from "../models/Hud";
 import { Missile } from "../models/Missile";
+import { available_weapons } from "../attributes/AvailableWeapons";
 
 declare var __LEVEL__: Level1;
 
@@ -173,8 +174,9 @@ export class Level1 {
             });
 
             room.onMessage("player_scored_hit", (client: any) => {
-                console.log("player_scored_hit");
-                console.log(client);
+                if (client.data.player_victim != this.current_player_id) return;
+                let damage = available_weapons[client.data.weapon].damage;
+                this.playerEntities[this.current_player_id].take_damage(damage, client.sessionId);
             });
 
             // Dumb stuff. Ignore it for now.
