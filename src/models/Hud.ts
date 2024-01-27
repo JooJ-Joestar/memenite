@@ -1,6 +1,7 @@
 import * as BABYLON from '@babylonjs/core';
 import { Color3, Color4 } from '@babylonjs/core';
 import { AdvancedDynamicTexture, Button, Control, Ellipse, TextBlock } from '@babylonjs/gui';
+import { available_characters } from '../types/PlayerAttributes';
 import { Player } from './Player';
 
 export class Hud {
@@ -17,6 +18,8 @@ export class Hud {
     public controls_ui: any;
 
     public hp: any = null;
+
+    public current_character_idx: number = 0;
 
     constructor(
         scene: any,
@@ -43,11 +46,30 @@ export class Hud {
 
             const retangulo_menu: any = ui.getControlByName("retangulo_menu");
             const retangulo_gameplay: any = ui.getControlByName("retangulo_gameplay");
+            const anterior: any = ui.getControlByName("anterior");
+            const proximo: any = ui.getControlByName("proximo");
+            const menu_personagem: any = ui.getControlByName("menu_personagem");
             const hp: any = ui.getControlByName("vida_slider");
             player.hud.hp = hp;
 
             retangulo_menu.isVisible = true;
             retangulo_gameplay.isVisible = false;
+
+            anterior.onPointerUpObservable.add(() => {
+                player.hud.current_character_idx--;
+                if (player.hud.current_character_idx < 0) {
+                    player.hud.current_character_idx = available_characters.length - 1;
+                }
+                menu_personagem.source = "../../assets/sprites/" + available_characters[player.hud.current_character_idx].name + ".png";
+            });
+
+            proximo.onPointerUpObservable.add(() => {
+                player.hud.current_character_idx++;
+                if (player.hud.current_character_idx >= available_characters.length) {
+                    player.hud.current_character_idx = 0;
+                }
+                menu_personagem.source = "../../assets/sprites/" + available_characters[player.hud.current_character_idx].name + ".png";
+            });
 
             btn_ready.onPointerUpObservable.add(() => {
                 retangulo_menu.isVisible = false;
