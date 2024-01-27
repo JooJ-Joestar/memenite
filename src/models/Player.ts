@@ -6,7 +6,7 @@ import { PlayerInput } from './PlayerInput';
 import { Weapon } from './Weapon';
 
 export const animations: any = {
-    "up": {start: 9, end: 11, rest: 10},
+    "up": {start: 0, end: 2, rest: 1},
     "down": {start: 0, end: 2, rest: 1},
     "left": {start: 3, end: 5, rest: 4},
     "right": {start: 6, end: 8, rest: 7},
@@ -98,14 +98,14 @@ export class Player extends BABYLON.TransformNode {
             "manager_" + session_id,
             attributes.sprite.path,
             1,
-            {width: 87, height: 107},
+            {width: 256, height: 256},
             this.scene
         );
         this.sprite = new BABYLON.Sprite("player_" + session_id, this.sprite_manager);
         this.sprite.cellIndex = 1;
-        this.sprite.width = (87 / 100) * 1.5;
-        this.sprite.height= (107 / 100) * 1.5;
-        this.sprite.position = new BABYLON.Vector3(attributes.position.x, attributes.position.y, attributes.position.z);
+        this.sprite.width = 3;
+        this.sprite.height= 3;
+        this.sprite.position = new BABYLON.Vector3(attributes.position.x, attributes.position.y + 1.25, attributes.position.z);
 
         // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
         this.mesh = BABYLON.MeshBuilder.CreateBox(session_id, attributes.mesh, scene);
@@ -131,11 +131,11 @@ export class Player extends BABYLON.TransformNode {
     }
 
     private adjustWeaponPosition(weapon?: string) {
-        if (!weapon) {
-            weapon = this.weapon_selected;
-        }
+        // if (!weapon) {
+        //     weapon = this.weapon_selected;
+        // }
         // @ts-ignore
-        this[weapon].sprite.position = new BABYLON.Vector3(this.sprite.position.x, this.sprite.position.y, this.sprite.position.z);
+        // this[weapon].sprite.position = new BABYLON.Vector3(this.sprite.position.x, this.sprite.position.y, this.sprite.position.z);
     }
 
     //--GAME UPDATES--
@@ -222,7 +222,7 @@ export class Player extends BABYLON.TransformNode {
             z_movement: this.moveDirection._z,
         })
         this.sprite.position.x = this.mesh.position.x;
-        this.sprite.position.y = this.mesh.position.y;
+        this.sprite.position.y = this.mesh.position.y + 1.25;
         this.sprite.position.z = this.mesh.position.z;
         this.adjustWeaponPosition();
         this.camera.setTarget(this.mesh.position);

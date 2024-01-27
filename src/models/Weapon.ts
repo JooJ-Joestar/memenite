@@ -34,10 +34,10 @@ export class Weapon {
             {width: this.attributes.sprite.width, height: this.attributes.sprite.height},
             this.scene
         );
-        this.sprite = new BABYLON.Sprite("player_" + session_id + "_weapon_" + this.attributes.name, this.sprite_manager);
-        this.sprite.cellIndex = 0;
-        this.sprite.width = (this.attributes.sprite.width / 100);
-        this.sprite.height = (this.attributes.sprite.height / 100);
+        // this.sprite = new BABYLON.Sprite("player_" + session_id + "_weapon_" + this.attributes.name, this.sprite_manager);
+        // this.sprite.cellIndex = 0;
+        // this.sprite.width = (this.attributes.sprite.width / 100);
+        // this.sprite.height = (this.attributes.sprite.height / 100);
 
         if (is_current === true) {
             this.is_current = true;
