@@ -42,7 +42,7 @@ export const red_options: PlayerAttributes = {
         ],
     },
     sprite: {
-        path: "../../assets/sprites/amogus_red.png"
+        path: "../../assets/sprites/pepe.png"
     },
     position: {
         x: -6.5,
