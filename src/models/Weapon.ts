@@ -34,6 +34,10 @@ export class Weapon {
             {width: this.attributes.sprite.width, height: this.attributes.sprite.height},
             this.scene
         );
+
+        this.attributes.sound = this.attributes.sound ?? {};
+        this.attributes.sound.fire_path = '../../assets/audio/gun-audio.mp3';
+        
         // this.sprite = new BABYLON.Sprite("player_" + session_id + "_weapon_" + this.attributes.name, this.sprite_manager);
         // this.sprite.cellIndex = 0;
         // this.sprite.width = (this.attributes.sprite.width / 100);

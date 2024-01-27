@@ -11,6 +11,7 @@ export class Missile {
     private distance: number = 0;
     private angle: number = 0;
     private weapon_name: string = '';
+    private gun_sound?: string =  '../../assets/audio/gun-audio.mp3';
 
     private id: any;
     // @ts-ignore
@@ -32,6 +33,7 @@ export class Missile {
             this.speed = this.parent.attributes.missile.speed;
             this.distance = this.parent.attributes.missile.distance;
             this.weapon_name = this.parent.attributes.name;
+            this.gun_sound = this.parent.attributes.sound?.fire_path ?? this.gun_sound;
             this.fire(new Vector3(this.parent.x, 0, this.parent.z), this.parent.angle);
             return;
         }
@@ -97,6 +99,13 @@ export class Missile {
         // target_mesh.position.z = current_position.z + this.parent.attributes.missile.distance;
         target_mesh.position.z = target_mesh.position.z + this.distance;
 
+        const gunShot = new BABYLON.Sound("gunShot", this.gun_sound, this.scene, null, {
+            loop: false,
+            autoplay: true,
+            spatialSound: true,
+        });
+        gunShot.attachToMesh(pivot);
+        
         target_mesh.parent = pivot;
         missile_mesh.parent = pivot;
         pivot.rotate(new Vector3(0, 1, 0), angle);
