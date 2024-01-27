@@ -41,7 +41,7 @@ export class Player extends BABYLON.TransformNode {
     private engine: any;
     // If this is the current player, assigns inputs to it.
     private input: any = null;
-    private nickname: string = "Noname";
+    private nickname: string = "";
     private hitpoints: number = 100;
 
     //Camera
@@ -136,11 +136,11 @@ export class Player extends BABYLON.TransformNode {
             this.sprite.width = 3;
             this.sprite.height= 3;
             this.sprite.position = new BABYLON.Vector3(0, 1.25, 0);
-            this.sprite.isVisible = false;
+            this.sprite.isVisible = true;
 
             // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
             this.mesh = BABYLON.MeshBuilder.CreateBox(this.session_id);
-            this.mesh.isVisible = true;
+            this.mesh.isVisible = false;
             this.mesh.position.set(0, 0.3, 0);
 
             Hud.addLabel(this.scene, this.nickname, this.mesh, this.session_id, this.room);
@@ -346,11 +346,11 @@ export class Player extends BABYLON.TransformNode {
         this.sprite.width = 3;
         this.sprite.height= 3;
         this.sprite.position = new BABYLON.Vector3(x, 1.25, z);
-        this.sprite.isVisible = false;
+        this.sprite.isVisible = true;
 
         // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
         this.mesh = BABYLON.MeshBuilder.CreateBox(this.session_id);
-        this.mesh.isVisible = true;
+        this.mesh.isVisible = false;
         this.mesh.position.set(x, 0.3, z);
         this.pause = false;
 

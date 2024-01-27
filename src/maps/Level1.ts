@@ -202,7 +202,7 @@ export class Level1 {
             for (let missile_id in this.missile_entities) {
                 let missile = this.missile_entities[missile_id];
 
-                missile.missile_mesh.position = BABYLON.Vector3.Lerp(missile.missile_mesh.position, missile.target_mesh.position, 0.30);
+                missile.missile_mesh.position = BABYLON.Vector3.Lerp(missile.missile_mesh.position, missile.target_mesh.position, 0.05);
                 for (let session_id in this.playerEntities) {
                     if (session_id == this.current_player_id) continue;
                     let player = this.playerEntities[session_id].mesh;
@@ -221,7 +221,7 @@ export class Level1 {
             for (let missile_id in this.missile_entities_no_collisions) {
                 let missile = this.missile_entities_no_collisions[missile_id];
 
-                missile.missile_mesh.position = BABYLON.Vector3.Lerp(missile.missile_mesh.position, missile.target_mesh.position, 0.30);
+                missile.missile_mesh.position = BABYLON.Vector3.Lerp(missile.missile_mesh.position, missile.target_mesh.position, 0.05);
             }
         });
     }

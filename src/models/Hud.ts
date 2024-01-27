@@ -77,7 +77,7 @@ export class Hud {
         player_nickname.shadowBlur = 5;
         entity_labels.addControl(player_nickname);
         player_nickname.linkWithMesh(mesh);
-        player_nickname.linkOffsetY = -27;
+        player_nickname.linkOffsetY = -60;
     }
 
     public static removeLabel (scene: BABYLON.Scene, label_id: string) {
