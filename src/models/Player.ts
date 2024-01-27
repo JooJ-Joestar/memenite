@@ -131,12 +131,7 @@ export class Player extends BABYLON.TransformNode {
             // Despite the dumb name, anything that needs to be checked like inputs, triggers, animations and stuff are registered in here.
             this.activatePlayerCamera(attributes);
         } else {
-            this.sprite = new BABYLON.Sprite("player_" + this.session_id, this.sprite_manager);
-            this.sprite.cellIndex = 1;
-            this.sprite.width = 3;
-            this.sprite.height= 3;
-            this.sprite.position = new BABYLON.Vector3(0, 1.25, 0);
-            this.sprite.isVisible = true;
+            this.set_sprite();
 
             // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
             this.mesh = BABYLON.MeshBuilder.CreateBox(this.session_id);
@@ -374,5 +369,14 @@ export class Player extends BABYLON.TransformNode {
 
     generateRandomInteger(min: number, max: number) {
         return Math.floor(min + Math.random()*(max - min + 1))
+    }
+
+    set_sprite (x: number = 0, z: number = 0) {
+        this.sprite = new BABYLON.Sprite("player_" + this.session_id, this.sprite_manager);
+        this.sprite.cellIndex = 1;
+        this.sprite.width = 3;
+        this.sprite.height= 3;
+        this.sprite.position = new BABYLON.Vector3(x, 1.25, z);
+        this.sprite.isVisible = true;
     }
 }

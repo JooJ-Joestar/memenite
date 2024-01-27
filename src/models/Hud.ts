@@ -80,7 +80,8 @@ export class Hud {
                 player.nickname = field_nickname.text;
                 Hud.addLabel(player.scene, player.nickname, player.mesh, player.session_id, player.room);
                 player.room.send("update_nickname", {
-                    nickname: player.nickname
+                    nickname: player.nickname,
+                    character: available_characters[player.hud.current_character_idx].name,
                 })
             });
 
