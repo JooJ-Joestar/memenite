@@ -7,7 +7,6 @@ export type PlayerAttributes = {
         height?: number;
         depth?: number;
         faceUV?: Vector4[];
-        faceColors?: Color4[];
         sideOrientation?: number;
         frontUVs?: Vector4;
         backUVs?: Vector4;
@@ -26,20 +25,18 @@ export type PlayerAttributes = {
     }
 };
 
+export const available_characters = [
+    {name: "the_rock"},
+    {name: "doge"},
+    {name: "pepe"},
+];
+
 export const red_options: PlayerAttributes = {
     mesh: {
         size: 1,
         width: 1,
         height: 1,
         depth: 1,
-        faceColors: [
-            new Color4(1, 0, 0, 1),
-            new Color4(1, 0, 0, 1),
-            new Color4(1, 0, 0, 1),
-            new Color4(1, 0, 0, 1),
-            new Color4(1, 0, 0, 1),
-            new Color4(1, 0, 0, 1),
-        ],
     },
     sprite: {
         path: "../../assets/sprites/the_rock.png"
@@ -57,14 +54,6 @@ export const green_options: PlayerAttributes = {
         width: 1,
         height: 1,
         depth: 1,
-        faceColors: [
-            new Color4(0, 1, 0, 1),
-            new Color4(0, 1, 0, 1),
-            new Color4(0, 1, 0, 1),
-            new Color4(0, 1, 0, 1),
-            new Color4(0, 1, 0, 1),
-            new Color4(0, 1, 0, 1),
-        ],
     },
     sprite: {
         path: "../../assets/sprites/doge.png"
