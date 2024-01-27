@@ -107,12 +107,12 @@ export class AppOne {
 
         // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
         // Yeah, lights are good.
-        var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
+        var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 10, 0), scene);
         // const light = new BABYLON.PointLight("pointLight", new BABYLON.Vector3(0, 1, 0), scene);
         // const shadowGenerator = new BABYLON.ShadowGenerator(1024, light);
 
         // Default intensity is 1. Let's dim the light a small amount
-        light.intensity = 0.7;
+        light.intensity = 1.1;
 
         // After the very basics are ready, we will load the level.
         // Please note that there is a lot of dumb stuff in Level1 right now. I should refactor it ASAP.

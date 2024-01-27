@@ -67,7 +67,7 @@ export const green_options: PlayerAttributes = {
         ],
     },
     sprite: {
-        path: "../../assets/sprites/amogus_green.png"
+        path: "../../assets/sprites/doge.png"
     },
     position: {
         x: 7.5,
