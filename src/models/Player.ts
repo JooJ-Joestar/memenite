@@ -81,6 +81,9 @@ export class Player extends BABYLON.TransformNode {
     private weapon_ranged: Weapon|boolean = false;
     private weapon_special: Weapon|boolean = false;
 
+    //sounds
+    private hitToked: string = '../../assets/audio/hit-audio-1.mp3';
+
     constructor (
         room: any,
         scene: BABYLON.Scene,
@@ -312,6 +315,12 @@ export class Player extends BABYLON.TransformNode {
     }
 
     take_damage (amt: number, killer: string) {
+        const hitToked = new BABYLON.Sound("hitToked_" + + Math.round(Math.random() * 999999), this.hitToked, this.scene, null, {
+            loop: false,
+            autoplay: true,
+            spatialSound: true,
+        });
+
         this.hitpoints -= amt;
         if (this.hitpoints <= 0) {
             this.hitpoints = 0;
