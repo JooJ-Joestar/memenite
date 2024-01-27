@@ -87,7 +87,9 @@ export class Level1 {
                 console.log("New player " + sessionId);
                 // Might be dumb to think about it, but your own connections passes here too. So you have to check for it.
                 is_current_player = sessionId === room.sessionId;
-                this.current_player_id = sessionId;
+                if (is_current_player === true) {
+                    this.current_player_id = sessionId;
+                }
 
                 player.listen("ready", () => {
                     // There is a bug going on where the ready confirmation is sent twice, so here all you have to do is
