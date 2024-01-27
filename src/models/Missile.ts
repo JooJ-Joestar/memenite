@@ -6,6 +6,9 @@ export class Missile {
     private scene: BABYLON.Scene;
     private parent: Weapon;
 
+    private speed: number = 0;
+    private distance: number = 0;
+
     // @ts-ignore
     public missile_mesh: BABYLON.Mesh;
     // @ts-ignore
@@ -15,12 +18,20 @@ export class Missile {
 
     constructor (
         scene: BABYLON.Scene,
-        parent: Weapon
+        parent?: Weapon,
+        attributes?: any
     ) {
         this.scene = scene;
-        this.parent = parent;
 
-        this.fire(new Vector3(this.parent.x, 0, this.parent.z), this.parent.angle);
+        if (parent) {
+            this.parent = parent;
+            this.speed = this.parent.attributes.missile.speed;
+            this.distance = this.parent.attributes.missile.distance;
+            this.fire(new Vector3(this.parent.x, 0, this.parent.z), this.parent.angle);
+            return;
+        }
+
+        this.fire(new Vector3(attributes.position.x, 0, attributes.position.z), attributes.angle);
     }
 
     fire (current_position: Vector3, angle: number) {
@@ -74,11 +85,11 @@ export class Missile {
         // pivot.position = current_position;
         // target_mesh.position = current_position;
         // target_mesh.position.z = current_position.z + this.parent.attributes.missile.distance;
-        target_mesh.position.z = target_mesh.position.z + this.parent.attributes.missile.distance;
+        target_mesh.position.z = target_mesh.position.z + this.distance;
 
         target_mesh.parent = pivot;
         missile_mesh.parent = pivot;
-        pivot.rotate(new Vector3(0, 1, 0), this.parent.angle);
+        pivot.rotate(new Vector3(0, 1, 0), angle);
 
         pivot.position.x = current_position.x;
         pivot.position.z = current_position.z;
@@ -88,7 +99,7 @@ export class Missile {
             target_mesh.dispose();
             pivot.dispose();
             delete window.__LEVEL__.missile_entities[id];
-        }, (this.parent.attributes.missile.distance / this.parent.attributes.missile.speed) * 100);
+        }, (this.distance / this.speed) * 100);
 
         this.target_mesh = target_mesh;
         this.missile_mesh = missile_mesh;
