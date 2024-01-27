@@ -124,8 +124,8 @@ export class Hud {
 
 
         let leftPuck = this.makeThumbArea("leftPuck", 0, "blue", null);
-        leftPuck.height = "30px";
-        leftPuck.width = "30px";
+        leftPuck.height = "5px";
+        leftPuck.width = "5px";
         leftPuck.isPointerBlocker = true;
         leftPuck.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
         leftPuck.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
@@ -135,8 +135,12 @@ export class Hud {
             leftPuck.isVisible = true;
             leftPuck.floatLeft = coordinates.x - (leftThumbContainer._currentMeasure.width * .5) - sideJoystickOffset;
             leftPuck.left = leftPuck.floatLeft;
-            leftPuck.floatTop = coordinates.y - (leftThumbContainer._currentMeasure.height * .5) + bottomJoystickOffset;
-            leftPuck.top = leftPuck.floatTop * -1;
+            yAddPos = adt._canvas.height - coordinates.y - (leftThumbContainer._currentMeasure.height * .5) + bottomJoystickOffset;
+            leftPuck.floatTop = yAddPos * -1;
+            leftPuck.top = leftPuck.floatTop;
+            
+            //leftPuck.floatTop = coordinates.y - (leftThumbContainer._currentMeasure.height * .5) + bottomJoystickOffset;
+            //leftPuck.top = leftPuck.floatTop * -1;
             leftPuck.isDown = true;
             leftThumbContainer.alpha = 0.9;
             // console.log(leftPuck.floatLeft);
