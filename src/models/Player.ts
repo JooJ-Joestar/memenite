@@ -300,7 +300,7 @@ export class Player extends BABYLON.TransformNode {
         console.log(this.hitpoints);
     }
 
-    die (killer: string) {
+    die (killer?: string) {
         this.pause = true;
         this.mesh.dispose()
         this.sprite.dispose();

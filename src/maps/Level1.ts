@@ -179,6 +179,10 @@ export class Level1 {
                 this.playerEntities[this.current_player_id].take_damage(damage, client.sessionId);
             });
 
+            room.onMessage("player_died", (client: any) => {
+                this.playerEntities[client.sessionId].die();
+            });
+
             // Dumb stuff. Ignore it for now.
             room.onMessage("player_ready", (client: any) => {
                 // TODO?
