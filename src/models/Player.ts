@@ -1,5 +1,5 @@
 import * as BABYLON from '@babylonjs/core';
-import { crowbar } from '../attributes/Crowbar';
+import { crowbar } from '../attributes/AvailableWeapons';
 import * as PlayerAttributes from '../types/PlayerAttributes';
 import { Hud } from './Hud';
 import { PlayerInput } from './PlayerInput';
