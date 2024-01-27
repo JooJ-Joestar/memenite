@@ -317,7 +317,18 @@ export class Player extends BABYLON.TransformNode {
             this.hitpoints = 0;
             this.die(killer);
         }
+        this.hud.hp.value = this.hitpoints;
         console.log(this.hitpoints);
+    }
+
+    take_life (amt: number) {
+        this.hitpoints += amt;
+        if (this.hitpoints > 100) {
+            this.hitpoints = 100;
+        }
+        if (this.hud.hp) {
+            this.hud.hp.value = this.hitpoints;
+        }
     }
 
     die (killer?: string) {
@@ -353,6 +364,10 @@ export class Player extends BABYLON.TransformNode {
         this.mesh.isVisible = false;
         this.mesh.position.set(x, 0.3, z);
         this.pause = false;
+
+        if (this.hud) {
+            this.take_life(100);
+        }
 
         Hud.addLabel(this.scene, this.nickname, this.mesh, this.session_id, this.room);
     }

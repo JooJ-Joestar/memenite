@@ -11,7 +11,7 @@ export const crowbar: WeaponAttributes = {
     //     fire_path?: string,
     //     hit_path?: string,
     // },
-    damage: 100,
+    damage: 50,
     cooldown: 250,
     missile: {
         distance: 20,

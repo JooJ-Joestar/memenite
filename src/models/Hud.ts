@@ -16,6 +16,8 @@ export class Hud {
     public ui: AdvancedDynamicTexture;
     public controls_ui: any;
 
+    public hp: any = null;
+
     constructor(
         scene: any,
         room: any,
@@ -41,6 +43,8 @@ export class Hud {
 
             const retangulo_menu: any = ui.getControlByName("retangulo_menu");
             const retangulo_gameplay: any = ui.getControlByName("retangulo_gameplay");
+            const hp: any = ui.getControlByName("vida_slider");
+            player.hud.hp = hp;
 
             retangulo_menu.isVisible = true;
             retangulo_gameplay.isVisible = false;
