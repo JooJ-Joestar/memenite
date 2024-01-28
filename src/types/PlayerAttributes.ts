@@ -44,6 +44,9 @@ export const available_characters = [
     {name: "bike"},
     {name: "menes"},
     {name: "spoder"},
+    {name: "007"},
+    {name: "shrek"},
+    {name: "jester"},
 ];
 
 // export const red_options: PlayerAttributes = {

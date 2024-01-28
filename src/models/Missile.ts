@@ -3,6 +3,15 @@ import { Color4, Vector3 } from '@babylonjs/core';
 import { available_weapons } from '../attributes/AvailableWeapons';
 import { Weapon } from './Weapon';
 
+export const throwables = [
+    {name: "throw_barrel"},
+    {name: "throw_chair"},
+    {name: "throw_desk"},
+    {name: "throw_fridge"},
+    {name: "throw_rock"},
+    {name: "throw_shelf"},
+];
+
 export class Missile {
     private scene: BABYLON.Scene;
     private parent: Weapon;
@@ -51,23 +60,32 @@ export class Missile {
         const id = Math.round(Math.random() * 999999);
         this.id = id;
 
-        const missile_mesh = BABYLON.MeshBuilder.CreateBox(
-            "missile_" + id,
-            {
-                width: 1,
-                height: 1,
-                depth: 1,
-                faceColors: [
-                    new Color4(0, 0, 1, 1),
-                    new Color4(0, 0, 1, 1),
-                    new Color4(0, 0, 1, 1),
-                    new Color4(0, 0, 1, 1),
-                    new Color4(0, 0, 1, 1),
-                    new Color4(0, 0, 1, 1),
-                ]
-            },
-            this.scene
-        );
+        let idx = Math.round(Math.random() * (throwables.length - 1));
+        let name = throwables[idx].name;
+        const missile_mesh = this.scene.getMeshByName(name).clone("missile_" + id, null);
+        missile_mesh.isVisible = true;
+        missile_mesh.position.x = 0;
+        missile_mesh.position.y = 2;
+        missile_mesh.position.z = 0;
+        missile_mesh.rotate(new Vector3(Math.random(), Math.random(), Math.random()), Math.random() * 3.14);
+
+        // const missile_mesh = BABYLON.MeshBuilder.CreateBox(
+        //     "missile_" + id,
+        //     {
+        //         width: 1,
+        //         height: 1,
+        //         depth: 1,
+        //         faceColors: [
+        //             new Color4(0, 0, 1, 1),
+        //             new Color4(0, 0, 1, 1),
+        //             new Color4(0, 0, 1, 1),
+        //             new Color4(0, 0, 1, 1),
+        //             new Color4(0, 0, 1, 1),
+        //             new Color4(0, 0, 1, 1),
+        //         ]
+        //     },
+        //     this.scene
+        // );
 
         const target_mesh = BABYLON.MeshBuilder.CreateBox(
             "target_" + id,

@@ -1,0 +1,94 @@
+Exporter version: 3.3.2, Blender version: 3.6.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  C:\Users\jorge\OneDrive\Documentos\Babylon.js\slippery-surprise\assets\maps\level-1\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently enabled collection
+	processing begun of mesh:  throw_chair
+		processing begun of material:  PLASTICO MESA
+		num positions      :  1438
+		num normals        :  1438
+		num tangents       :  0
+		num uvs            :  2876
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  536
+		WARNING: # of 0 area faces found:  24
+	processing begun of mesh:  throw_barrel
+		processing begun of material:  MADEIRA.001
+		num positions      :  805
+		num normals        :  805
+		num tangents       :  0
+		num uvs            :  1610
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  316
+	processing begun of mesh:  throw_fridge
+		processing begun of material:  METAL GELADEIRA
+		processing begun of material:  BORRACHA PEGADOR
+		processing begun of multimaterial:  throwables.Multimaterial#0
+		num positions      :  196
+		num normals        :  196
+		num tangents       :  0
+		num uvs            :  392
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  104
+	processing begun of mesh:  throw_shelf
+		processing begun of material:  MADEIRA
+		num positions      :  370
+		num normals        :  370
+		num tangents       :  0
+		num uvs            :  740
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  202
+	processing begun of mesh:  throw_desk
+		processing begun of material:  PLASTICO MESA.001
+		num positions      :  197
+		num normals        :  197
+		num tangents       :  0
+		num uvs            :  394
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  92
+	processing begun of mesh:  throw_rock
+		processing begun of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  throw_house
+		processing begun of material:  chale
+		processing begun of material:  telhado
+		processing begun of multimaterial:  throwables.Multimaterial#1
+		num positions      :  259
+		num normals        :  259
+		num tangents       :  0
+		num uvs            :  518
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  106
+========= Writing of JSON file started =========
+	writing mesh:  throw_chair
+	writing mesh:  throw_barrel
+	writing mesh:  throw_fridge
+	writing mesh:  throw_shelf
+	writing mesh:  throw_desk
+	writing mesh:  throw_rock
+	writing mesh:  throw_house
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.2193 secs

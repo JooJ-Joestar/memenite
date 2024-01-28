@@ -49,6 +49,8 @@ export class Level1 {
         // This one is mostly useless.
         let import_mesh = BABYLON.SceneLoader.ImportMeshAsync("", "/assets/maps/level-1/", "final.babylon", scene, function (newMeshes) {
         });
+        let import_throwables = BABYLON.SceneLoader.ImportMeshAsync("", "/assets/maps/level-1/", "throwables.babylon", scene, function (newMeshes) {
+        });
 
         // This needs to run async, otherwise it will run before the mesh finishes importing.
         // Adds colliders to the colliders array.

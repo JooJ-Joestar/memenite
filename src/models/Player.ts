@@ -144,7 +144,7 @@ export class Player extends BABYLON.TransformNode {
     private weapon_ranged: Weapon|boolean = false;
     private weapon_special: Weapon|boolean = false;
 
-    public character: string = "doge";
+    public character: string = "pepe";
 
     constructor (
         room: any,
@@ -290,7 +290,7 @@ export class Player extends BABYLON.TransformNode {
             z_movement: this.moveDirection._z,
         });
         this.sprite.position.x = this.mesh.position.x;
-        this.sprite.position.y = this.mesh.position.y + 1.45;
+        this.sprite.position.y = this.mesh.position.y + 1.70;
         this.sprite.position.z = this.mesh.position.z;
         this.adjustWeaponPosition();
         this.camera.setTarget(this.mesh.position);
@@ -403,7 +403,7 @@ export class Player extends BABYLON.TransformNode {
         this.set_sprite();
 
         // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
-        this.mesh = BABYLON.MeshBuilder.CreateBox("player_" + this.session_id, {height: 5});
+        this.mesh = BABYLON.MeshBuilder.CreateBox("player_" + this.session_id, {width: 2, height: 5, depth: 2});
         this.mesh.isVisible = false;
         this.mesh.position.set(x, 0.3, z);
         this.pause = false;
