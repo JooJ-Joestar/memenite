@@ -57,7 +57,9 @@ export class Hud {
             retangulo_gameplay.isVisible = false;
             retangulo_ranking.isVisible = false;
 
-            menu_personagem.source = "../../assets/sprites/" + available_characters[0].name + ".png";
+            player.hud.current_character_idx = Math.round(Math.random() * (available_characters.length - 1));
+            console.log(player.hud.current_character_idx);
+            menu_personagem.source = "../../assets/sprites/" + available_characters[player.hud.current_character_idx].name + ".png";
 
             anterior.onPointerUpObservable.add(() => {
                 player.hud.current_character_idx--;
@@ -119,7 +121,7 @@ export class Hud {
         player_nickname.shadowBlur = 5;
         entity_labels.addControl(player_nickname);
         player_nickname.linkWithMesh(mesh);
-        player_nickname.linkOffsetY = -60;
+        player_nickname.linkOffsetY = -80;
     }
 
     public static removeLabel (scene: BABYLON.Scene, label_id: string) {

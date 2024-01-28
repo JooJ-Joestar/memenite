@@ -27,6 +27,7 @@ export type PlayerAttributes = {
 
 export const available_characters = [
     {name: "pepe"},
+    {name: "amogus"},
     {name: "dollynho"},
     {name: "barriguinha_mole"},
     {name: "Corote"},
@@ -38,6 +39,11 @@ export const available_characters = [
     {name: "skibdy"},
     {name: "spritesheet"},
     {name: "taunt_guy"},
+    {name: "sanic"},
+    {name: "nyancat"},
+    {name: "bike"},
+    {name: "menes"},
+    {name: "spoder"},
 ];
 
 // export const red_options: PlayerAttributes = {
