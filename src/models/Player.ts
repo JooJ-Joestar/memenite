@@ -290,7 +290,7 @@ export class Player extends BABYLON.TransformNode {
             z_movement: this.moveDirection._z,
         });
         this.sprite.position.x = this.mesh.position.x;
-        this.sprite.position.y = this.mesh.position.y + 1.25;
+        this.sprite.position.y = this.mesh.position.y + 1.45;
         this.sprite.position.z = this.mesh.position.z;
         this.adjustWeaponPosition();
         this.camera.setTarget(this.mesh.position);
