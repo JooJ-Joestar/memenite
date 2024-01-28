@@ -41,30 +41,30 @@ export class Level1 {
         // The first parameter can be used to specify which mesh to import. Here we import all meshes.
         // And I was dumb here. I could have included the colliding objects in the same file, but I didn't,
         // and the following import is dumb and not required.
-        BABYLON.SceneLoader.ImportMesh("", "/assets/maps/level-1/", "objetos.babylon", scene, function (newMeshes) {
+        // BABYLON.SceneLoader.ImportMesh("", "/assets/maps/level-1/", "final.babylon", scene, function (newMeshes) {
             // Set the target of the camera to the first imported mesh
             // camera.target = newMeshes[0];
-        });
+        // });
 
         // This one is mostly useless.
-        // let import_mesh = BABYLON.SceneLoader.ImportMeshAsync("", "/assets/maps/level-1/", "level-1-colliders.babylon", scene, function (newMeshes) {
-        // });
+        let import_mesh = BABYLON.SceneLoader.ImportMeshAsync("", "/assets/maps/level-1/", "final.babylon", scene, function (newMeshes) {
+        });
 
         // This needs to run async, otherwise it will run before the mesh finishes importing.
         // Adds colliders to the colliders array.
-        // async function afterMeshIsImported(colliders: BABYLON.AbstractMesh[]) {
-        //     const result = await import_mesh;
-        //     for (let i in result.meshes) {
-        //         if (result.meshes[i].name.indexOf("collider") == -1) return;
+        async function afterMeshIsImported(colliders: BABYLON.AbstractMesh[]) {
+            const result = await import_mesh;
+            for (let i in result.meshes) {
+                if (result.meshes[i].name.indexOf("collider") == -1) continue;
 
-        //         // Should be changed to true when not in dev mode.
-        //         // result.meshes[i].isVisible = false;
-        //         result.meshes[i].isPickable = true;
-        //         result.meshes[i].checkCollisions = true;
-        //         colliders.push(result.meshes[i]);
-        //     }
-        // }
-        // afterMeshIsImported(this.colliders);
+                // Should be changed to true when not in dev mode.
+                // result.meshes[i].isVisible = false;
+                result.meshes[i].isPickable = true;
+                result.meshes[i].checkCollisions = true;
+                colliders.push(result.meshes[i]);
+            }
+        }
+        afterMeshIsImported(this.colliders);
 
         // Listens for SHIFT CTRL ALT C. When pressed, makes colliders invisible.
         // For debug purposes only. Disable when live.
@@ -158,7 +158,10 @@ export class Level1 {
             });
 
             room.onMessage("nickname_updated", (client: any) => {
+                console.log(client);
                 this.playerEntities[client.sessionId].nickname = client.nickname;
+                this.playerEntities[client.sessionId].character = client.character
+                this.playerEntities[client.sessionId].set_sprite();
                 Hud.removeLabel(this.scene, "nickname_" + client.sessionId);
                 Hud.addLabel(
                     this.scene,

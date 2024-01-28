@@ -103,11 +103,11 @@ export class PlayerInput {
     private updateFromUi () {
         if (this.ui.movement_x != 0) {
             // console.log(this.ui.movement_x);
-            this.horizontal = this.ui.movement_x / 125;
+            this.horizontal = this.ui.movement_x / 130;
         } else this.horizontal = 0;
         if (this.ui.movement_z != 0) {
             // console.log(this.ui.movement_z);
-            this.vertical = (this.ui.movement_z / 125) * -1;
+            this.vertical = (this.ui.movement_z / 130) * -1;
         } else this.vertical = 0;
     }
 }

@@ -26,41 +26,50 @@ export type PlayerAttributes = {
 };
 
 export const available_characters = [
+    {name: "pepe"},
+    {name: "dollynho"},
+    {name: "barriguinha_mole"},
+    {name: "Corote"},
     {name: "the_rock"},
     {name: "doge"},
-    {name: "pepe"},
+    {name: "kek"},
+    {name: "maxwell"},
+    {name: "polish_cow"},
+    {name: "skibdy"},
+    {name: "spritesheet"},
+    {name: "taunt_guy"},
 ];
 
-export const red_options: PlayerAttributes = {
-    mesh: {
-        size: 1,
-        width: 1,
-        height: 1,
-        depth: 1,
-    },
-    sprite: {
-        path: "../../assets/sprites/the_rock.png"
-    },
-    position: {
-        x: -6.5,
-        y: 0.5,
-        z: 6.5
-    }
-};
+// export const red_options: PlayerAttributes = {
+//     mesh: {
+//         size: 1,
+//         width: 1,
+//         height: 1,
+//         depth: 1,
+//     },
+//     sprite: {
+//         path: "../../assets/sprites/the_rock.png"
+//     },
+//     position: {
+//         x: -6.5,
+//         y: 0.5,
+//         z: 6.5
+//     }
+// };
 
-export const green_options: PlayerAttributes = {
-    mesh: {
-        size: 1,
-        width: 1,
-        height: 1,
-        depth: 1,
-    },
-    sprite: {
-        path: "../../assets/sprites/doge.png"
-    },
-    position: {
-        x: 7.5,
-        y: 0.5,
-        z: -6.5
-    }
-};
+// export const green_options: PlayerAttributes = {
+//     mesh: {
+//         size: 1,
+//         width: 1,
+//         height: 1,
+//         depth: 1,
+//     },
+//     sprite: {
+//         path: "../../assets/sprites/doge.png"
+//     },
+//     position: {
+//         x: 7.5,
+//         y: 0.5,
+//         z: -6.5
+//     }
+// };

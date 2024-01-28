@@ -36,7 +36,7 @@ export class Hud {
         var entity_labels = Hud.pickOrCreateEntityLabels(this.scene);
 
         // let import_hud = ui.parseFromSnippetAsync("#0QWKF2#10");
-        let import_hud = ui.parseFromSnippetAsync("#RWAE82#11");
+        let import_hud = ui.parseFromSnippetAsync("#RWAE82#12");
         async function afterHudIsImported(player: any, entity_labels: any) {
             const result = await import_hud;
             console.log(ui.getDescendants());
@@ -46,6 +46,7 @@ export class Hud {
 
             const retangulo_menu: any = ui.getControlByName("retangulo_menu");
             const retangulo_gameplay: any = ui.getControlByName("retangulo_gameplay");
+            const retangulo_ranking: any = ui.getControlByName("retangulo_ranking");
             const anterior: any = ui.getControlByName("anterior");
             const proximo: any = ui.getControlByName("proximo");
             const menu_personagem: any = ui.getControlByName("menu_personagem");
@@ -54,6 +55,9 @@ export class Hud {
 
             retangulo_menu.isVisible = true;
             retangulo_gameplay.isVisible = false;
+            retangulo_ranking.isVisible = false;
+
+            menu_personagem.source = "../../assets/sprites/" + available_characters[0].name + ".png";
 
             anterior.onPointerUpObservable.add(() => {
                 player.hud.current_character_idx--;
@@ -78,6 +82,8 @@ export class Hud {
                 field_nickname.isVisible = false;
                 btn_ready.isVisible = false;
                 player.nickname = field_nickname.text;
+                player.character = available_characters[player.hud.current_character_idx].name;
+                player.set_sprite();
                 Hud.addLabel(player.scene, player.nickname, player.mesh, player.session_id, player.room);
                 player.room.send("update_nickname", {
                     nickname: player.nickname,

@@ -111,6 +111,7 @@ export class Missile {
 
         target_mesh.parent = pivot;
         missile_mesh.parent = pivot;
+        missile_mesh.checkCollisions = true;
         pivot.rotate(new Vector3(0, 1, 0), angle);
 
         pivot.position.x = current_position.x;

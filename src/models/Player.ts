@@ -17,22 +17,85 @@ export class Player extends BABYLON.TransformNode {
 
     static RESPAWN_AREAS = [
         {
-            min_x: 1,
-            max_x: 5,
-            min_z: 1,
-            max_z: 5
+            min_x: -20,
+            max_x: -40,
+            min_z: -106,
+            max_z: -144
         },
         {
-            min_x: -1,
-            max_x: -5,
-            min_z: -1,
-            max_z: -5
-        }
+            min_x: 44,
+            max_x: 57,
+            min_z: -83,
+            max_z: -170
+        },
+        {
+            min_x: 2,
+            max_x: 31,
+            min_z: -80,
+            max_z: -75
+        },
+        {
+            min_x: -22,
+            max_x: -32,
+            min_z: -79,
+            max_z: -67
+        },
+        {
+            min_x: -11,
+            max_x: -31,
+            min_z: -49,
+            max_z: -30
+        },
+        {
+            min_x: -28,
+            max_x: -21,
+            min_z: 11,
+            max_z: 21
+        },
+        {
+            min_x: -42,
+            max_x: -22,
+            min_z: 25,
+            max_z: 40
+        },
+        {
+            min_x: -42,
+            max_x: -20,
+            min_z: 47,
+            max_z: 64
+        },
+        {
+            min_x: -21,
+            max_x: -41,
+            min_z: 106,
+            max_z: 95
+        },
+        {
+            min_x: 20,
+            max_x: 32,
+            min_z: 11,
+            max_z: 24
+        },
+        {
+            min_x: 65,
+            max_x: 34,
+            min_z: 88,
+            max_z: 81
+        },
+        {
+            min_x: 51,
+            max_x: 36,
+            min_z: -56,
+            max_z: -23
+        },
     ];
 
     // Mesh that represents the player.
+    // @ts-ignore
     private mesh: BABYLON.Mesh;
+    // @ts-ignore
     private sprite_manager: BABYLON.SpriteManager;
+    // @ts-ignore
     private sprite: BABYLON.Sprite;
     private animation_playing: string = "none";
     // Target mesh for movement smoothing.
@@ -81,6 +144,8 @@ export class Player extends BABYLON.TransformNode {
     private weapon_ranged: Weapon|boolean = false;
     private weapon_special: Weapon|boolean = false;
 
+    public character: string = "doge";
+
     constructor (
         room: any,
         scene: BABYLON.Scene,
@@ -105,22 +170,6 @@ export class Player extends BABYLON.TransformNode {
 
         // Picks attributes according to the character.
         let attributes: any = null;
-        switch (character) {
-            case "kek":
-                attributes = PlayerAttributes.red_options;
-            break;
-            case "husband": default:
-                attributes = PlayerAttributes.green_options;
-            break;
-        }
-
-        this.sprite_manager = new BABYLON.SpriteManager(
-            "manager_" + session_id,
-            attributes.sprite.path,
-            1,
-            {width: 256, height: 256},
-            this.scene
-        );
 
         // Assign controls to this player if it is the current one.
         if (is_current === true) {
@@ -134,7 +183,7 @@ export class Player extends BABYLON.TransformNode {
             this.set_sprite();
 
             // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
-            this.mesh = BABYLON.MeshBuilder.CreateBox(this.session_id);
+            this.mesh = BABYLON.MeshBuilder.CreateBox("player_" + this.session_id, {height: 5});
             this.mesh.isVisible = false;
             this.mesh.position.set(0, 0.3, 0);
 
@@ -232,6 +281,7 @@ export class Player extends BABYLON.TransformNode {
         this.moveDirection = this.moveDirection.scaleInPlace(this.inputAmt * Player.PLAYER_SPEED);
         // console.log(this.moveDirection);
         this.mesh.moveWithCollisions(this.moveDirection);
+        this.mesh.position.y = 0;
         this.room.send("updatePosition", {
             x: this.mesh.position.x,
             y: this.mesh.position.y,
@@ -245,7 +295,7 @@ export class Player extends BABYLON.TransformNode {
         this.adjustWeaponPosition();
         this.camera.setTarget(this.mesh.position);
         // console.log(this.camera.position());
-        this.camera.setPosition(new BABYLON.Vector3(15 + this.sprite.position.x, 15, this.sprite.position.z));
+        this.camera.setPosition(new BABYLON.Vector3(30 + this.sprite.position.x, 30, this.sprite.position.z));
         // console.log(this.mesh.position);
         // console.log(this.moveDirection);
 
@@ -344,18 +394,16 @@ export class Player extends BABYLON.TransformNode {
 
     respawn () {
         let index = Math.round(Math.random() * (Player.RESPAWN_AREAS.length - 1));
-        let x = this.generateRandomInteger(Player.RESPAWN_AREAS[index].min_x, Player.RESPAWN_AREAS[index].max_x);
-        let z = this.generateRandomInteger(Player.RESPAWN_AREAS[index].min_z, Player.RESPAWN_AREAS[index].max_z);
+        let x = Player.RESPAWN_AREAS[index].min_x; // this.generateRandomInteger(Player.RESPAWN_AREAS[index].min_x, Player.RESPAWN_AREAS[index].max_x);
+        let z = Player.RESPAWN_AREAS[index].min_z; // this.generateRandomInteger(Player.RESPAWN_AREAS[index].min_z, Player.RESPAWN_AREAS[index].max_z);
 
-        this.sprite = new BABYLON.Sprite("player_" + this.session_id, this.sprite_manager);
-        this.sprite.cellIndex = 1;
-        this.sprite.width = 3;
-        this.sprite.height= 3;
-        this.sprite.position = new BABYLON.Vector3(x, 1.25, z);
-        this.sprite.isVisible = true;
+        x *= 2;
+        z *= 2;
+
+        this.set_sprite();
 
         // This is temporary, as this box is only a representation of the player. Should be changed for a model or sprite later on.
-        this.mesh = BABYLON.MeshBuilder.CreateBox(this.session_id);
+        this.mesh = BABYLON.MeshBuilder.CreateBox("player_" + this.session_id, {height: 5});
         this.mesh.isVisible = false;
         this.mesh.position.set(x, 0.3, z);
         this.pause = false;
@@ -372,10 +420,25 @@ export class Player extends BABYLON.TransformNode {
     }
 
     set_sprite (x: number = 0, z: number = 0) {
+        if (this.sprite_manager) {
+            this.sprite_manager.dispose();
+        }
+        if (this.sprite) {
+            this.sprite.dispose();
+        }
+
+        this.sprite_manager = new BABYLON.SpriteManager(
+            "manager_" + this.session_id,
+            "../../assets/sprites/" + this.character + ".png",
+            1,
+            {width: 256, height: 256},
+            this.scene
+        );
+
         this.sprite = new BABYLON.Sprite("player_" + this.session_id, this.sprite_manager);
         this.sprite.cellIndex = 1;
-        this.sprite.width = 3;
-        this.sprite.height= 3;
+        this.sprite.width = 5;
+        this.sprite.height= 5;
         this.sprite.position = new BABYLON.Vector3(x, 1.25, z);
         this.sprite.isVisible = true;
     }
