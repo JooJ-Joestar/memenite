@@ -363,7 +363,14 @@ export class Player extends BABYLON.TransformNode {
             this.die(killer);
         }
         this.hud.hp.value = this.hitpoints;
-        console.log(this.hitpoints);
+
+        const bonk = new BABYLON.Sound("bonk_" + Math.round(Math.random() * 999999), '../../assets/audio/bonk.mp3', this.scene, null, {
+            loop: false,
+            autoplay: true,
+            spatialSound: true,
+        });
+        bonk.attachToMesh(this.mesh);
+        bonk.maxDistance = 50;
     }
 
     take_life (amt: number) {

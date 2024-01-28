@@ -20,7 +20,7 @@ export class Missile {
     private distance: number = 0;
     private angle: number = 0;
     private weapon_name: string = '';
-    private gun_sound?: string =  '../../assets/audio/gun-audio.mp3';
+    private gun_sound?: string =  '../../assets/audio/whoosh.mp3';
 
     private id: any;
     // @ts-ignore
@@ -104,6 +104,7 @@ export class Missile {
             },
             this.scene
         );
+        target_mesh.isVisible = false;
 
         const pivot = BABYLON.MeshBuilder.CreateBox(
             "pivot_" + id,
@@ -114,6 +115,7 @@ export class Missile {
             },
             this.scene
         );
+        pivot.isVisible = false;
         // pivot.position = current_position;
         // target_mesh.position = current_position;
         // target_mesh.position.z = current_position.z + this.parent.attributes.missile.distance;
@@ -123,8 +125,10 @@ export class Missile {
             loop: false,
             autoplay: true,
             spatialSound: true,
+            distanceModel: "exponential",
+            rolloffFactor: 1.075,
         });
-        gunshot.attachToMesh(pivot);
+        gunshot.attachToMesh(missile_mesh);
         this.gunshot = gunshot;
 
         target_mesh.parent = pivot;
@@ -137,7 +141,7 @@ export class Missile {
 
         setTimeout(() => {
             this.dispose();
-        }, (this.distance / this.speed) * 100);
+        }, 1000);
 
         this.target_mesh = target_mesh;
         this.missile_mesh = missile_mesh;
