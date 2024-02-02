@@ -10,6 +10,7 @@ export class Weapon {
     private cooldown: boolean = false;
 
     private sprite_manager: BABYLON.SpriteManager;
+    // @ts-ignore
     private sprite: BABYLON.Sprite;
 
     public angle: number = 0;

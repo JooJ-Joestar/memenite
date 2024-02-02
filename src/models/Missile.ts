@@ -14,6 +14,7 @@ export const throwables = [
 
 export class Missile {
     private scene: BABYLON.Scene;
+    // @ts-ignore
     private parent: Weapon;
 
     private speed: number = 0;
@@ -62,11 +63,17 @@ export class Missile {
 
         let idx = Math.round(Math.random() * (throwables.length - 1));
         let name = throwables[idx].name;
+        // @ts-ignore
         const missile_mesh = this.scene.getMeshByName(name).clone("missile_" + id, null);
+        // @ts-ignore
         missile_mesh.isVisible = true;
+        // @ts-ignore
         missile_mesh.position.x = 0;
+        // @ts-ignore
         missile_mesh.position.y = 2;
+        // @ts-ignore
         missile_mesh.position.z = 0;
+        // @ts-ignore
         missile_mesh.rotate(new Vector3(Math.random(), Math.random(), Math.random()), Math.random() * 3.14);
 
         // const missile_mesh = BABYLON.MeshBuilder.CreateBox(
@@ -128,11 +135,14 @@ export class Missile {
             distanceModel: "exponential",
             rolloffFactor: 1.075,
         });
+        // @ts-ignore
         gunshot.attachToMesh(missile_mesh);
         this.gunshot = gunshot;
 
         target_mesh.parent = pivot;
+        // @ts-ignore
         missile_mesh.parent = pivot;
+        // @ts-ignore
         missile_mesh.checkCollisions = true;
         pivot.rotate(new Vector3(0, 1, 0), angle);
 
@@ -144,12 +154,15 @@ export class Missile {
         }, 1000);
 
         this.target_mesh = target_mesh;
+        // @ts-ignore
         this.missile_mesh = missile_mesh;
         this.pivot = pivot;
 
         if (this.parent) {
+            // @ts-ignore
             window.__LEVEL__.missile_entities[id] = this;
         } else {
+            // @ts-ignore
             window.__LEVEL__.missile_entities_no_collisions[id] = this;
         }
 
@@ -163,8 +176,10 @@ export class Missile {
         this.gunshot.dispose();
 
         if (this.parent) {
+            // @ts-ignore
             delete window.__LEVEL__.missile_entities[this.id];
         } else {
+            // @ts-ignore
             delete window.__LEVEL__.missile_entities_no_collisions[this.id];
         }
     }

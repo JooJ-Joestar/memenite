@@ -178,26 +178,35 @@ export class Hud {
 
         leftThumbContainer.onPointerDownObservable.add((coordinates) => {
             leftPuck.isVisible = true;
+            // @ts-ignore
             leftPuck.floatLeft = coordinates.x - (leftThumbContainer._currentMeasure.width * .5) - sideJoystickOffset;
+            // @ts-ignore
             leftPuck.left = leftPuck.floatLeft;
+            // @ts-ignore
             yAddPos = adt._canvas.height - coordinates.y - (leftThumbContainer._currentMeasure.height * .5) + bottomJoystickOffset;
+            // @ts-ignore
             leftPuck.floatTop = yAddPos * -1;
+            // @ts-ignore
             leftPuck.top = leftPuck.floatTop;
 
             //leftPuck.floatTop = coordinates.y - (leftThumbContainer._currentMeasure.height * .5) + bottomJoystickOffset;
             //leftPuck.top = leftPuck.floatTop * -1;
+            // @ts-ignore
             leftPuck.isDown = true;
             leftThumbContainer.alpha = 0.9;
             // console.log(leftPuck.floatLeft);
             // console.log(leftPuck.floatTop);
 
+            // @ts-ignore
             this.movement_x = leftPuck.floatLeft;
+            // @ts-ignore
             this.movement_z = leftPuck.floatTop;
         });
 
         leftThumbContainer.onPointerUpObservable.add((coordinates) => {
             xAddPos = 0;
             yAddPos = 0;
+            // @ts-ignore
             leftPuck.isDown = false;
             leftPuck.isVisible = false;
             leftThumbContainer.alpha = 0.4;
@@ -206,17 +215,25 @@ export class Hud {
         });
 
         leftThumbContainer.onPointerMoveObservable.add((coordinates) => {
+            // @ts-ignore
             if (leftPuck.isDown) {
                 xAddPos = coordinates.x - (leftThumbContainer._currentMeasure.width * .5) - sideJoystickOffset;
+                // @ts-ignore
                 yAddPos = adt._canvas.height - coordinates.y - (leftThumbContainer._currentMeasure.height * .5) + bottomJoystickOffset;
+                // @ts-ignore
                 leftPuck.floatLeft = xAddPos;
+                // @ts-ignore
                 leftPuck.floatTop = yAddPos * -1;
+                // @ts-ignore
                 leftPuck.left = leftPuck.floatLeft;
+                // @ts-ignore
                 leftPuck.top = leftPuck.floatTop;
                 // console.log(leftPuck.floatLeft);
                 // console.log(leftPuck.floatTop);
 
+            // @ts-ignore
                 this.movement_x = leftPuck.floatLeft;
+                // @ts-ignore
                 this.movement_z = leftPuck.floatTop;
             }
         });
