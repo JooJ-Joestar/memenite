@@ -196,5 +196,7 @@ export class Level1 {
                 missile.missile_mesh.position = BABYLON.Vector3.Lerp(missile.missile_mesh.position, missile.target_mesh.position, 0.05);
             }
         });
+
+        return this;
     }
 }

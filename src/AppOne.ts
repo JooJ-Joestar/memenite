@@ -17,6 +17,7 @@ export class AppOne {
     // You will have to parse this thing along to classes, functions and variables almost all the time
     // so whatever is computed is registered in here and shown in the screen.
     scene: BABYLON.Scene;
+    public level: any;
 
     constructor(readonly canvas_element: HTMLCanvasElement) {
         // It appears to be useless to save the canvas to a property, but I'm doing so just in case.
@@ -105,7 +106,7 @@ export class AppOne {
         // Or leave it there for the game jam, it's not like it's that dumb anyways.
         //
         // Also, remember what I mentioned about having to parse the scene property everywhere? The ride starts here.
-        var level = new Level1(this.scene, this.engine);
+        this.level = new Level1(this.scene, this.engine);
 
         // We don't have to deal with anything else here unless we want to.
     }
