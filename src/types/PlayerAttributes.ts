@@ -48,37 +48,3 @@ export const available_characters = [
     {name: "shrek"},
     {name: "jester"},
 ];
-
-// export const red_options: PlayerAttributes = {
-//     mesh: {
-//         size: 1,
-//         width: 1,
-//         height: 1,
-//         depth: 1,
-//     },
-//     sprite: {
-//         path: "../../assets/sprites/the_rock.png"
-//     },
-//     position: {
-//         x: -6.5,
-//         y: 0.5,
-//         z: 6.5
-//     }
-// };
-
-// export const green_options: PlayerAttributes = {
-//     mesh: {
-//         size: 1,
-//         width: 1,
-//         height: 1,
-//         depth: 1,
-//     },
-//     sprite: {
-//         path: "../../assets/sprites/doge.png"
-//     },
-//     position: {
-//         x: 7.5,
-//         y: 0.5,
-//         z: -6.5
-//     }
-// };

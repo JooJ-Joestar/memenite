@@ -5,15 +5,6 @@ import { Level1 } from './maps/Level1';
 import {Player} from './models/Player';
 import { PlayerAttributes } from './types/PlayerAttributes';
 
-//enum for states
-// Not used for now.
-enum State {
-    START = 0,
-    GAME = 1,
-    LOSE = 2,
-    CUTSCENE = 3
-}
-
 // Colyseus URL for multiplayer connection.
 export const COLYSEUS_URL = 'ws://localhost:2567';
 
@@ -27,14 +18,9 @@ export class AppOne {
     // so whatever is computed is registered in here and shown in the screen.
     scene: BABYLON.Scene;
 
-    // Not used for now.
-    state: number = 0;
-    readonly canvas: HTMLCanvasElement;
-
     constructor(readonly canvas_element: HTMLCanvasElement) {
         // It appears to be useless to save the canvas to a property, but I'm doing so just in case.
-        this.canvas = canvas_element;
-        this.engine = new BABYLON.Engine(this.canvas);
+        this.engine = new BABYLON.Engine(canvas_element);
 
         this.scene = new BABYLON.Scene(this.engine);
         window.addEventListener('resize', () => {

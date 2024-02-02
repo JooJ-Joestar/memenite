@@ -124,7 +124,6 @@ export class Player extends BABYLON.TransformNode {
 
     //player movement vars
     private pause: boolean = false;
-    private deltaTime: number = 0;
     private h: number = 0;
     private v: number = 0;
 
@@ -141,8 +140,6 @@ export class Player extends BABYLON.TransformNode {
 
     private weapon_selected: string = "weapon_melee";
     private weapon_melee: Weapon|boolean = false;
-    private weapon_ranged: Weapon|boolean = false;
-    private weapon_special: Weapon|boolean = false;
 
     public character: string = "pepe";
 
@@ -191,25 +188,14 @@ export class Player extends BABYLON.TransformNode {
         }
 
         this.weapon_melee = new Weapon(this.scene, this.session_id, crowbar, is_current);
-        this.adjustWeaponPosition();
 
         // Don't ask me.
         this.camRoot.rotate(BABYLON.Axis.Y, -1.5);
     }
 
-    private adjustWeaponPosition(weapon?: string) {
-        // if (!weapon) {
-        //     weapon = this.weapon_selected;
-        // }
-        // @ts-ignore
-        // this[weapon].sprite.position = new BABYLON.Vector3(this.sprite.position.x, this.sprite.position.y, this.sprite.position.z);
-    }
-
     //--GAME UPDATES--
     private beforeRenderUpdate(): void {
         this.updateFromControls();
-        // this.updateGroundDetection();
-        // this.animatePlayer();
     }
 
     public activatePlayerCamera(attributes: any)/*: BABYLON.UniversalCamera*/ {
@@ -238,7 +224,6 @@ export class Player extends BABYLON.TransformNode {
             this.beforeRenderUpdate();
             // this.updateCamera();)
         })
-        // return this.camera;
     }
 
     private updateFromControls(): void {
@@ -246,22 +231,18 @@ export class Player extends BABYLON.TransformNode {
             return;
         }
 
-        this.deltaTime = this.scene.getEngine().getDeltaTime() / 1000.0;
-
         this.moveDirection = BABYLON.Vector3.Zero();
         this.h = this.input.horizontal; //right, x
         this.v = this.input.vertical; //fwd, z
 
         //--MOVEMENTS BASED ON CAMERA (as it rotates)--
         let fwd = this.camRoot.forward;
-        // console.log(fwd);
         let right = this.camRoot.right;
         let correctedVertical = fwd.scaleInPlace(this.v);
         let correctedHorizontal = right.scaleInPlace(this.h);
 
         //movement based off of camera's view
         let move = correctedHorizontal.addInPlace(correctedVertical);
-        // console.log(move);
 
         //clear y so that the character doesnt fly up, normalize for next step, taking into account whether we've DASHED or not
         this.moveDirection = new BABYLON.Vector3((move).normalize().x /** dashFactor*/, 0, (move).normalize().z /** dashFactor*/);
@@ -276,10 +257,7 @@ export class Player extends BABYLON.TransformNode {
             this.inputAmt = inputMag;
         }
         //final movement that takes into consideration the inputs
-        // console.log(this.inputAmt);
-        // console.log(this.inputAmt);
         this.moveDirection = this.moveDirection.scaleInPlace(this.inputAmt * Player.PLAYER_SPEED);
-        // console.log(this.moveDirection);
         this.mesh.moveWithCollisions(this.moveDirection);
         this.mesh.position.y = 0;
         this.room.send("updatePosition", {
@@ -292,18 +270,9 @@ export class Player extends BABYLON.TransformNode {
         this.sprite.position.x = this.mesh.position.x;
         this.sprite.position.y = this.mesh.position.y + 1.70;
         this.sprite.position.z = this.mesh.position.z;
-        this.adjustWeaponPosition();
-        this.camera.setTarget(this.mesh.position);
-        // console.log(this.camera.position());
-        this.camera.setPosition(new BABYLON.Vector3(30 + this.sprite.position.x, 30, this.sprite.position.z));
-        // console.log(this.mesh.position);
-        // console.log(this.moveDirection);
 
-        //check if there is movement to determine if rotation is needed
-        // let input = new BABYLON.Vector3(this.input.horizontalAxis, 0, this.input.verticalAxis); //along which axis is the direction
-        // if (input.length() == 0) {//if there's no input detected, prevent rotation and keep player in same rotation
-        //     return;
-        // }
+        this.camera.setTarget(this.mesh.position);
+        this.camera.setPosition(new BABYLON.Vector3(30 + this.sprite.position.x, 30, this.sprite.position.z));
 
         // rotation based on input & the camera angle
         let angle = Math.atan2(this.input.vertical, this.input.horizontal);
@@ -315,10 +284,6 @@ export class Player extends BABYLON.TransformNode {
         this[this.weapon_selected].x = this.mesh.position.x;
         // @ts-ignore
         this[this.weapon_selected].z = this.mesh.position.z;
-        // angle += this.camRoot.rotation.y;
-        // let targ = BABYLON.Quaternion.FromEulerAngles(0, angle, 0);
-        // console.log(targ);
-        // this.mesh.rotationQuaternion = BABYLON.Quaternion.Slerp(this.mesh.rotationQuaternion, targ, 10 * this.deltaTime);
     }
 
     public check_animation (x: number, z: number) {
@@ -401,8 +366,8 @@ export class Player extends BABYLON.TransformNode {
 
     respawn () {
         let index = Math.round(Math.random() * (Player.RESPAWN_AREAS.length - 1));
-        let x = Player.RESPAWN_AREAS[index].min_x; // this.generateRandomInteger(Player.RESPAWN_AREAS[index].min_x, Player.RESPAWN_AREAS[index].max_x);
-        let z = Player.RESPAWN_AREAS[index].min_z; // this.generateRandomInteger(Player.RESPAWN_AREAS[index].min_z, Player.RESPAWN_AREAS[index].max_z);
+        let x = Player.RESPAWN_AREAS[index].min_x;
+        let z = Player.RESPAWN_AREAS[index].min_z;
 
         x *= 2;
         z *= 2;
@@ -420,10 +385,6 @@ export class Player extends BABYLON.TransformNode {
         }
 
         Hud.addLabel(this.scene, this.nickname, this.mesh, this.session_id, this.room);
-    }
-
-    generateRandomInteger(min: number, max: number) {
-        return Math.floor(min + Math.random()*(max - min + 1))
     }
 
     set_sprite (x: number = 0, z: number = 0) {

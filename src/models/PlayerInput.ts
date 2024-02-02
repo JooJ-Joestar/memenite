@@ -84,20 +84,6 @@ export class PlayerInput {
             this.horizontal = 0;
             this.horizontalAxis = 0;
         }
-
-        //dash
-        // if ((this.inputMap["Shift"] || this.mobileDash) /*&& !this.ui.gamePaused*/) {
-        //     this.dashing = true;
-        // } else {
-        //     this.dashing = false;
-        // }
-
-        //Jump Checks (SPACE)
-        // if ((this.inputMap[" "] || this.mobileJump) /*&& !this.ui.gamePaused*/) {
-        //     this.jumpKeyDown = true;
-        // } else {
-        //     this.jumpKeyDown = false;
-        // }
     }
 
     private updateFromUi () {

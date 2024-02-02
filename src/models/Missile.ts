@@ -76,38 +76,12 @@ export class Missile {
         // @ts-ignore
         missile_mesh.rotate(new Vector3(Math.random(), Math.random(), Math.random()), Math.random() * 3.14);
 
-        // const missile_mesh = BABYLON.MeshBuilder.CreateBox(
-        //     "missile_" + id,
-        //     {
-        //         width: 1,
-        //         height: 1,
-        //         depth: 1,
-        //         faceColors: [
-        //             new Color4(0, 0, 1, 1),
-        //             new Color4(0, 0, 1, 1),
-        //             new Color4(0, 0, 1, 1),
-        //             new Color4(0, 0, 1, 1),
-        //             new Color4(0, 0, 1, 1),
-        //             new Color4(0, 0, 1, 1),
-        //         ]
-        //     },
-        //     this.scene
-        // );
-
         const target_mesh = BABYLON.MeshBuilder.CreateBox(
             "target_" + id,
             {
                 width: 1,
                 height: 1,
                 depth: 1,
-                faceColors: [
-                    new Color4(0, 1, 0, 1),
-                    new Color4(0, 1, 0, 1),
-                    new Color4(0, 1, 0, 1),
-                    new Color4(0, 1, 0, 1),
-                    new Color4(0, 1, 0, 1),
-                    new Color4(0, 1, 0, 1),
-                ]
             },
             this.scene
         );
@@ -123,9 +97,6 @@ export class Missile {
             this.scene
         );
         pivot.isVisible = false;
-        // pivot.position = current_position;
-        // target_mesh.position = current_position;
-        // target_mesh.position.z = current_position.z + this.parent.attributes.missile.distance;
         target_mesh.position.z = target_mesh.position.z + this.distance;
 
         const gunshot = new BABYLON.Sound("gunshot_" + Math.round(Math.random() * 999999), this.gun_sound, this.scene, null, {

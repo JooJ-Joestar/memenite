@@ -38,15 +38,6 @@ export class Level1 {
         this.scene = scene;
         this.engine = engine;
 
-        // The first parameter can be used to specify which mesh to import. Here we import all meshes.
-        // And I was dumb here. I could have included the colliding objects in the same file, but I didn't,
-        // and the following import is dumb and not required.
-        // BABYLON.SceneLoader.ImportMesh("", "/assets/maps/level-1/", "final.babylon", scene, function (newMeshes) {
-            // Set the target of the camera to the first imported mesh
-            // camera.target = newMeshes[0];
-        // });
-
-        // This one is mostly useless.
         let import_mesh = BABYLON.SceneLoader.ImportMeshAsync("", "/assets/maps/level-1/", "final.babylon", scene, function (newMeshes) {
         });
         let import_throwables = BABYLON.SceneLoader.ImportMeshAsync("", "/assets/maps/level-1/", "throwables.babylon", scene, function (newMeshes) {
@@ -71,7 +62,6 @@ export class Level1 {
         // Listens for SHIFT CTRL ALT C. When pressed, makes colliders invisible.
         // For debug purposes only. Disable when live.
         window.addEventListener("keydown", (ev) => {
-            //Shift+Ctrl+Alt+I
             if (ev.shiftKey && ev.ctrlKey && ev.altKey && ev.key === 'C') {
                 for (let i in this.colliders) {
                     this.colliders[i].visibility = Math.abs(Math.abs(this.colliders[i].visibility) - 1);
@@ -112,12 +102,6 @@ export class Level1 {
                         player.nickname,
                         this.engine
                     );
-
-                    // If for whatever reason you want to check straight outta the server who is connected, uncomment
-                    // the code below.
-                    // room.state.players.forEach(element => {
-                    //     console.log(element.session_id);
-                    // })
                 });
 
                 // This is part of what is responsible for smoothing player movement, and is one of the things that should be moved
@@ -138,21 +122,6 @@ export class Level1 {
             room.onMessage("timer", (client: any) => {
                 let ui = this.scene.getTextureByName("UI");
                 let timer = ui.getControlByName("timer");
-
-                // if (client.phase == 1) {
-                //     this.playerEntities[this.current_player_id].pause = true;
-                //     timer.text = "Starts in " + client.timer;
-                //     return;
-                // }
-                // if (client.phase == 2) {
-                //     this.playerEntities[this.current_player_id].pause = false;
-                //     timer.text = "Time left: " + client.timer;
-                //     return;
-                // }
-                // if (client.phase == 3) {
-                //     timer.text = "Restarts in " + client.timer;
-                //     return;
-                // }
             });
 
             room.onMessage("player_left", (client: any) => {
@@ -186,11 +155,6 @@ export class Level1 {
 
             room.onMessage("player_died", (client: any) => {
                 this.playerEntities[client.sessionId].die();
-            });
-
-            // Dumb stuff. Ignore it for now.
-            room.onMessage("player_ready", (client: any) => {
-                // TODO?
             });
         });
 

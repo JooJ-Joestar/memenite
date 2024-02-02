@@ -39,11 +39,6 @@ export class Weapon {
         this.attributes.sound = this.attributes.sound ?? {};
         this.attributes.sound.fire_path = '../../assets/audio/whoosh.mp3';
 
-        // this.sprite = new BABYLON.Sprite("player_" + session_id + "_weapon_" + this.attributes.name, this.sprite_manager);
-        // this.sprite.cellIndex = 0;
-        // this.sprite.width = (this.attributes.sprite.width / 100);
-        // this.sprite.height = (this.attributes.sprite.height / 100);
-
         if (is_current === true) {
             this.is_current = true;
         }
@@ -54,8 +49,6 @@ export class Weapon {
         this.cooldown = true;
 
         const missile = new Missile(this.scene, this);
-
-        // TODO audio
 
         setTimeout(() => {
             this.cooldown = false;

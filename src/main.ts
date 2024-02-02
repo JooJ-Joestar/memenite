@@ -1,5 +1,4 @@
 import { AppOne as App } from './AppOne';
-// import { App } from './App';
 
 console.log(`main.ts starting ${App.name}`);
 window.addEventListener('DOMContentLoaded', () => {
