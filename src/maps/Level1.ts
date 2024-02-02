@@ -171,6 +171,9 @@ export class Level1 {
             for (let missile_id in this.missile_entities) {
                 let missile = this.missile_entities[missile_id];
 
+                missile.missile_mesh.rotation.x = BABYLON.Scalar.Lerp(missile.missile_mesh.position.x, missile.target_mesh.position.x + Math.random() * 0.1, 0.5);
+                missile.missile_mesh.rotation.y = BABYLON.Scalar.Lerp(missile.missile_mesh.position.y, missile.target_mesh.position.y + Math.random() * 0.1, 0.5);
+                missile.missile_mesh.rotation.z = BABYLON.Scalar.Lerp(missile.missile_mesh.position.z, missile.target_mesh.position.z + Math.random() * 0.1, 0.5);
                 missile.missile_mesh.position = BABYLON.Vector3.Lerp(missile.missile_mesh.position, missile.target_mesh.position, 0.05);
                 for (let session_id in this.playerEntities) {
                     if (session_id == this.current_player_id) continue;

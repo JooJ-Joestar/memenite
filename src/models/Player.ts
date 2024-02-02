@@ -16,78 +16,78 @@ export class Player extends BABYLON.TransformNode {
     static RESPAWN_COOLDOWN = 3000;
 
     static RESPAWN_AREAS = [
-        {
-            min_x: -20,
-            max_x: -40,
-            min_z: -106,
-            max_z: -144
-        },
-        {
-            min_x: 44,
-            max_x: 57,
-            min_z: -83,
-            max_z: -170
-        },
-        {
-            min_x: 2,
-            max_x: 31,
-            min_z: -80,
-            max_z: -75
-        },
-        {
-            min_x: -22,
-            max_x: -32,
-            min_z: -79,
-            max_z: -67
-        },
-        {
-            min_x: -11,
-            max_x: -31,
-            min_z: -49,
-            max_z: -30
-        },
+        // {
+        //     min_x: -20,
+        //     max_x: -40,
+        //     min_z: -106,
+        //     max_z: -144
+        // },
+        // {
+        //     min_x: 44,
+        //     max_x: 57,
+        //     min_z: -83,
+        //     max_z: -170
+        // },
+        // {
+        //     min_x: 2,
+        //     max_x: 31,
+        //     min_z: -80,
+        //     max_z: -75
+        // },
+        // {
+        //     min_x: -22,
+        //     max_x: -32,
+        //     min_z: -79,
+        //     max_z: -67
+        // },
+        // {
+        //     min_x: -11,
+        //     max_x: -31,
+        //     min_z: -49,
+        //     max_z: -30
+        // },
         {
             min_x: -28,
             max_x: -21,
             min_z: 11,
             max_z: 21
         },
-        {
-            min_x: -42,
-            max_x: -22,
-            min_z: 25,
-            max_z: 40
-        },
-        {
-            min_x: -42,
-            max_x: -20,
-            min_z: 47,
-            max_z: 64
-        },
-        {
-            min_x: -21,
-            max_x: -41,
-            min_z: 106,
-            max_z: 95
-        },
-        {
-            min_x: 20,
-            max_x: 32,
-            min_z: 11,
-            max_z: 24
-        },
-        {
-            min_x: 65,
-            max_x: 34,
-            min_z: 88,
-            max_z: 81
-        },
-        {
-            min_x: 51,
-            max_x: 36,
-            min_z: -56,
-            max_z: -23
-        },
+        // {
+        //     min_x: -42,
+        //     max_x: -22,
+        //     min_z: 25,
+        //     max_z: 40
+        // },
+        // {
+        //     min_x: -42,
+        //     max_x: -20,
+        //     min_z: 47,
+        //     max_z: 64
+        // },
+        // {
+        //     min_x: -21,
+        //     max_x: -41,
+        //     min_z: 106,
+        //     max_z: 95
+        // },
+        // {
+        //     min_x: 20,
+        //     max_x: 32,
+        //     min_z: 11,
+        //     max_z: 24
+        // },
+        // {
+        //     min_x: 65,
+        //     max_x: 34,
+        //     min_z: 88,
+        //     max_z: 81
+        // },
+        // {
+        //     min_x: 51,
+        //     max_x: 36,
+        //     min_z: -56,
+        //     max_z: -23
+        // },
     ];
 
     // Mesh that represents the player.
