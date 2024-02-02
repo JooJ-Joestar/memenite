@@ -8,18 +8,21 @@ import { PlayerAttributes } from './types/PlayerAttributes';
 // Colyseus URL for multiplayer connection.
 export const COLYSEUS_URL = 'ws://localhost:2567';
 
+declare var __APP__: AppOne;
+
 export class AppOne {
     // Takes care of running things I guess.
-    engine: BABYLON.Engine;
+    public engine: BABYLON.Engine;
 
     // Takes care of taking care of things. Everything related to what is happening in your screen
     // is thanks to this scene thing.
     // You will have to parse this thing along to classes, functions and variables almost all the time
     // so whatever is computed is registered in here and shown in the screen.
-    scene: BABYLON.Scene;
+    public scene: BABYLON.Scene;
     public level: any;
 
     constructor(readonly canvas_element: HTMLCanvasElement) {
+        window.__APP__ = this;
         // It appears to be useless to save the canvas to a property, but I'm doing so just in case.
         this.engine = new BABYLON.Engine(canvas_element);
 

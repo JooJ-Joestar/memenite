@@ -8,8 +8,6 @@ import { Hud } from "../models/Hud";
 import { Missile } from "../models/Missile";
 import { available_weapons } from "../attributes/AvailableWeapons";
 
-declare var __LEVEL__: Level1;
-
 export class Level1 {
     private scene: any;
     private engine: any;
@@ -27,14 +25,13 @@ export class Level1 {
     private current_player_id: string = "";
 
     // Connects to the Colyseus backend.
-    colyseusSDK: Colyseus.Client = new Colyseus.Client(COLYSEUS_URL);
+    public colyseusSDK: Colyseus.Client = new Colyseus.Client(COLYSEUS_URL);
 
     constructor(
         scene?: BABYLON.Scene,
         engine?: any
     ) {
         // @ts-ignore
-        window.__LEVEL__ = this;
         this.scene = scene;
         this.engine = engine;
 
