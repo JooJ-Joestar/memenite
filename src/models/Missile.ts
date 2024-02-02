@@ -74,7 +74,7 @@ export class Missile {
         // @ts-ignore
         missile_mesh.position.z = 0;
         // @ts-ignore
-        missile_mesh.rotate(new Vector3(Math.random(), Math.random(), Math.random()), Math.random() * 3.14);
+        missile_mesh.renderingGroupId = 1;
 
         const target_mesh = BABYLON.MeshBuilder.CreateBox(
             "target_" + id,
@@ -86,6 +86,7 @@ export class Missile {
             this.scene
         );
         target_mesh.isVisible = false;
+        target_mesh.rotate(new Vector3(Math.random(), Math.random(), Math.random()), Math.random() * 3.14);
 
         const pivot = BABYLON.MeshBuilder.CreateBox(
             "pivot_" + id,
