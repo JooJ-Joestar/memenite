@@ -132,10 +132,10 @@ export class Missile {
 
         if (this.parent) {
             // @ts-ignore
-            window.__APP__.level.missile_entities[id] = this;
+            window.__APP__.room.missiles[id] = this;
         } else {
             // @ts-ignore
-            window.__APP__.level.missile_entities_no_collisions[id] = this;
+            window.__APP__.room.missiles_no_collisions[id] = this;
         }
 
         return true;
@@ -149,10 +149,10 @@ export class Missile {
 
         if (this.parent) {
             // @ts-ignore
-            delete window.__APP__.level.missile_entities[this.id];
+            delete window.__APP__.room.missiles[this.id];
         } else {
             // @ts-ignore
-            delete window.__APP__.level.missile_entities_no_collisions[this.id];
+            delete window.__APP__.room.missiles_no_collisions[this.id];
         }
     }
 }
