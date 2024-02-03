@@ -9,9 +9,9 @@ import { PlayerAttributes } from './types/PlayerAttributes';
 // Colyseus URL for multiplayer connection.
 export const COLYSEUS_URL = 'ws://localhost:2567';
 
-declare var __APP__: AppOne;
+declare var __APP__: BabylonApp;
 
-export class AppOne {
+export class BabylonApp {
     // Takes care of running things I guess.
     public engine: BABYLON.Engine;
 
@@ -29,6 +29,7 @@ export class AppOne {
     }
 
     constructor(readonly canvas_element: HTMLCanvasElement) {
+        // @ts-ignore
         window.__APP__ = this;
         // It appears to be useless to save the canvas to a property, but I'm doing so just in case.
         this.engine = new BABYLON.Engine(canvas_element);

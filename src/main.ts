@@ -1,4 +1,4 @@
-import { AppOne as App } from './AppOne';
+import { BabylonApp as App } from './AppOne';
 
 console.log(`main.ts starting ${App.name}`);
 window.addEventListener('DOMContentLoaded', () => {
