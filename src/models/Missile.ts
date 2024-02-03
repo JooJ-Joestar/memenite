@@ -1,5 +1,6 @@
 import * as BABYLON from '@babylonjs/core'
 import { Color4, Vector3 } from '@babylonjs/core';
+import { AppOne } from '../AppOne';
 import { available_weapons } from '../attributes/AvailableWeapons';
 import { Weapon } from './Weapon';
 
@@ -131,11 +132,10 @@ export class Missile {
         this.pivot = pivot;
 
         if (this.parent) {
-            // @ts-ignore
-            window.__APP__.room.missiles[id] = this;
+            AppOne.singleton().room.missiles[id] = this;
         } else {
             // @ts-ignore
-            window.__APP__.room.missiles_no_collisions[id] = this;
+            AppOne.singleton().room.missiles_no_collisions[id] = this;
         }
 
         return true;
@@ -149,10 +149,10 @@ export class Missile {
 
         if (this.parent) {
             // @ts-ignore
-            delete window.__APP__.room.missiles[this.id];
+            delete AppOne.singleton().room.missiles[this.id];
         } else {
             // @ts-ignore
-            delete window.__APP__.room.missiles_no_collisions[this.id];
+            delete AppOne.singleton().room.missiles_no_collisions[this.id];
         }
     }
 }

@@ -3,6 +3,7 @@ import { Inspector } from '@babylonjs/inspector';
 import * as Colyseus from "colyseus.js";
 import { Level1 } from './maps/Level1';
 import {Player} from './models/Player';
+import { Room } from './models/Room';
 import { PlayerAttributes } from './types/PlayerAttributes';
 
 // Colyseus URL for multiplayer connection.
@@ -20,6 +21,12 @@ export class AppOne {
     // so whatever is computed is registered in here and shown in the screen.
     public scene: BABYLON.Scene;
     public level: any;
+    public room: Room;
+
+    static singleton () {
+        // @ts-ignore
+        return window.__APP__;
+    }
 
     constructor(readonly canvas_element: HTMLCanvasElement) {
         window.__APP__ = this;
@@ -110,6 +117,7 @@ export class AppOne {
         //
         // Also, remember what I mentioned about having to parse the scene property everywhere? The ride starts here.
         this.level = new Level1(this.scene, this.engine);
+        this.room = new Room(this.scene, this.engine);
 
         // We don't have to deal with anything else here unless we want to.
     }
