@@ -1,7 +1,7 @@
 import * as BABYLON from "@babylonjs/core";
 import * as Colyseus from "colyseus.js";
 import { Player } from '../models/Player';
-import { COLYSEUS_URL } from '../AppOne';
+import { COLYSEUS_URL } from '../BabylonApp';
 import { Hud } from "../models/Hud";
 import { Missile } from "../models/Missile";
 import { available_weapons } from "../attributes/AvailableWeapons";

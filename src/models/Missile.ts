@@ -1,6 +1,6 @@
 import * as BABYLON from '@babylonjs/core'
 import { Color4, Vector3 } from '@babylonjs/core';
-import { BabylonApp } from '../AppOne';
+import { BabylonApp } from '../BabylonApp';
 import { available_weapons } from '../attributes/AvailableWeapons';
 import { Weapon } from './Weapon';
 

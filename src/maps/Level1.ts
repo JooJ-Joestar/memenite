@@ -1,6 +1,6 @@
 import * as BABYLON from "@babylonjs/core";
 import * as Colyseus from "colyseus.js";
-import { COLYSEUS_URL } from '../AppOne';
+import { COLYSEUS_URL } from '../BabylonApp';
 
 export class Level1 {
     private scene: any;
