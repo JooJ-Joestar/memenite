@@ -134,7 +134,6 @@ export class Missile {
         if (this.parent) {
             BabylonApp.singleton().room.missiles[id] = this;
         } else {
-            // @ts-ignore
             BabylonApp.singleton().room.missiles_no_collisions[id] = this;
         }
 
@@ -148,10 +147,8 @@ export class Missile {
         this.gunshot.dispose();
 
         if (this.parent) {
-            // @ts-ignore
             delete BabylonApp.singleton().room.missiles[this.id];
         } else {
-            // @ts-ignore
             delete BabylonApp.singleton().room.missiles_no_collisions[this.id];
         }
     }

@@ -55,13 +55,10 @@ export class Room {
                     // Creates the player model.
                     this.players[sessionId] = new Player(
                         room,
-                        this.scene,
-                        sessionId,
                         player,
                         is_current_player,
                         player.character,
-                        player.nickname,
-                        this.engine
+                        player.nickname
                     );
                 });
 

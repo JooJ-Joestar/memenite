@@ -1,5 +1,6 @@
 import * as BABYLON from '@babylonjs/core';
 import { crowbar } from '../attributes/AvailableWeapons';
+import { BabylonApp } from '../BabylonApp';
 import * as PlayerAttributes from '../types/PlayerAttributes';
 import { Hud } from './Hud';
 import { PlayerInput } from './PlayerInput';
@@ -101,7 +102,6 @@ export class Player extends BABYLON.TransformNode {
     // Target mesh for movement smoothing.
     private mesh_next_position: any;
     private scene: BABYLON.Scene;
-    private engine: any;
     // If this is the current player, assigns inputs to it.
     private input: any = null;
     private nickname: string = "";
@@ -114,13 +114,6 @@ export class Player extends BABYLON.TransformNode {
 
     //const values
     private static readonly PLAYER_SPEED: number = 0.45;
-    private static readonly JUMP_FORCE: number = 0.80;
-    private static readonly GRAVITY: number = -2.8;
-    private static readonly DASH_FACTOR: number = 2.5;
-    private static readonly DASH_TIME: number = 10; //how many frames the dash lasts
-    private static readonly DOWN_TILT: BABYLON.Vector3 = new BABYLON.Vector3(0.8290313946973066, 0, 0);
-    private static readonly ORIGINAL_TILT: BABYLON.Vector3 = new BABYLON.Vector3(0.5934119456780721, 0, 0);
-    public dashTime: number = 0;
 
     //player movement vars
     private pause: boolean = false;
@@ -132,7 +125,6 @@ export class Player extends BABYLON.TransformNode {
 
     // Colyseus.js
     private session_id: string = "";
-    private player_ref: any = null;
     private room: any = null;
     private is_current: boolean = false;
 
@@ -145,19 +137,13 @@ export class Player extends BABYLON.TransformNode {
 
     constructor (
         room: any,
-        scene: BABYLON.Scene,
         session_id: string,
-        player_ref: any,
         is_current: boolean,
         character: string,
         nickname?: string,
-        engine?: any
     ) {
-        super(session_id, scene);
-        this.scene = scene;
-        this.engine = engine;
+        super(session_id, BabylonApp.singleton().scene);
         this.room = room;
-        this.player_ref = player_ref;
         this.session_id = session_id;
         this.is_current = is_current;
 
@@ -170,8 +156,8 @@ export class Player extends BABYLON.TransformNode {
 
         // Assign controls to this player if it is the current one.
         if (is_current === true) {
-            this.hud = new Hud(scene, room, this);
-            this.input = new PlayerInput(scene, this.hud);
+            this.hud = new Hud(BabylonApp.singleton().scene, room, this);
+            this.input = new PlayerInput(BabylonApp.singleton().scene, this.hud);
             this.respawn();
 
             // Despite the dumb name, anything that needs to be checked like inputs, triggers, animations and stuff are registered in here.
@@ -184,10 +170,10 @@ export class Player extends BABYLON.TransformNode {
             this.mesh.isVisible = false;
             this.mesh.position.set(0, 0.3, 0);
 
-            Hud.addLabel(this.scene, this.nickname, this.mesh, this.session_id, this.room);
+            Hud.addLabel(BabylonApp.singleton().scene, this.nickname, this.mesh, this.session_id, this.room);
         }
 
-        this.weapon_melee = new Weapon(this.scene, this.session_id, crowbar, is_current);
+        this.weapon_melee = new Weapon(BabylonApp.singleton().scene, this.session_id, crowbar, is_current);
 
         // Don't ask me.
         this.camRoot.rotate(BABYLON.Axis.Y, -1.5);
@@ -206,10 +192,10 @@ export class Player extends BABYLON.TransformNode {
             0.75,
             30,
             this.mesh.position,
-            this.scene
+            BabylonApp.singleton().scene
         );
         this.camera.mode = BABYLON.ArcRotateCamera.ORTHOGRAPHIC_CAMERA;
-        const rect: any = this.engine.getRenderingCanvasClientRect();
+        const rect: any = BabylonApp.singleton().engine.getRenderingCanvasClientRect();
         const aspect = rect.height / rect.width;
         // In this example we'll set the distance based on the camera's radius.
         // Will we? I don't remember. Anyways, just use the debugger to find a cool placement for the camera.
@@ -218,9 +204,9 @@ export class Player extends BABYLON.TransformNode {
         this.camera.orthoBottom = -this.camera.radius * aspect;
         this.camera.orthoTop    =  this.camera.radius * aspect;
 
-        this.scene.activeCamera = this.camera;
+        BabylonApp.singleton().scene.activeCamera = this.camera;
 
-        this.scene.registerBeforeRender(() => {
+        BabylonApp.singleton().scene.registerBeforeRender(() => {
             this.beforeRenderUpdate();
             // this.updateCamera();)
         })
@@ -315,8 +301,7 @@ export class Player extends BABYLON.TransformNode {
         this.yTilt.dispose();
         this.sprite.dispose();
         this.sprite_manager.dispose();
-        delete this.player_ref;
-        Hud.removeLabel(this.scene, "nickname_" + this.session_id);
+        Hud.removeLabel(BabylonApp.singleton().scene, "nickname_" + this.session_id);
         super.dispose();
         return true;
     }
@@ -329,7 +314,7 @@ export class Player extends BABYLON.TransformNode {
         }
         this.hud.hp.value = this.hitpoints;
 
-        const bonk = new BABYLON.Sound("bonk_" + Math.round(Math.random() * 999999), '../../assets/audio/bonk.mp3', this.scene, null, {
+        const bonk = new BABYLON.Sound("bonk_" + Math.round(Math.random() * 999999), '../../assets/audio/bonk.mp3', BabylonApp.singleton().scene, null, {
             loop: false,
             autoplay: true,
             spatialSound: true,
@@ -384,7 +369,7 @@ export class Player extends BABYLON.TransformNode {
             this.take_life(100);
         }
 
-        Hud.addLabel(this.scene, this.nickname, this.mesh, this.session_id, this.room);
+        Hud.addLabel(BabylonApp.singleton().scene, this.nickname, this.mesh, this.session_id, this.room);
     }
 
     set_sprite (x: number = 0, z: number = 0) {
@@ -400,7 +385,7 @@ export class Player extends BABYLON.TransformNode {
             "../../assets/sprites/" + this.character + ".png",
             1,
             {width: 256, height: 256},
-            this.scene
+            BabylonApp.singleton().scene
         );
 
         this.sprite = new BABYLON.Sprite("player_" + this.session_id, this.sprite_manager);

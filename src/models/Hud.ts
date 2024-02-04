@@ -1,6 +1,7 @@
 import * as BABYLON from '@babylonjs/core';
 import { Color3, Color4 } from '@babylonjs/core';
 import { AdvancedDynamicTexture, Button, Control, Ellipse, TextBlock } from '@babylonjs/gui';
+import { BabylonApp } from '../BabylonApp';
 import { available_characters } from '../types/PlayerAttributes';
 import { Player } from './Player';
 
@@ -86,7 +87,7 @@ export class Hud {
                 player.nickname = field_nickname.text;
                 player.character = available_characters[player.hud.current_character_idx].name;
                 player.set_sprite();
-                Hud.addLabel(player.scene, player.nickname, player.mesh, player.session_id, player.room);
+                Hud.addLabel(BabylonApp.singleton().scene, player.nickname, player.mesh, player.session_id, player.room);
                 player.room.send("update_nickname", {
                     nickname: player.nickname,
                     character: available_characters[player.hud.current_character_idx].name,
