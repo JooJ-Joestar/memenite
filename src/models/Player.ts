@@ -261,10 +261,8 @@ export class Player extends BABYLON.TransformNode {
 
         // rotation based on input & the camera angle
         let angle = Math.atan2(this.input.vertical, this.input.horizontal);
-        if (angle != 0) {
-            // @ts-ignore
-            this[this.weapon_selected].angle = angle * (-1);
-        }
+        // @ts-ignore
+        this[this.weapon_selected].angle = angle * (-1);
         // @ts-ignore
         this[this.weapon_selected].x = this.mesh.position.x;
         // @ts-ignore
