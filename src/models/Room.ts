@@ -157,4 +157,8 @@ export class Room {
 
         return this;
     }
+
+    public get_current_player () {
+        return this.players[this.current_player_id];
+    }
 }
