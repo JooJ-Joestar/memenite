@@ -119,7 +119,7 @@ export class BabylonApp {
         //
         // Also, remember what I mentioned about having to parse the scene property everywhere? The ride starts here.
         this.level = new Level1(this.scene, this.engine);
-        this.room = new Room(this.scene, this.engine);
+        this.room = new Room(this.scene);
 
         // We don't have to deal with anything else here unless we want to.
     }

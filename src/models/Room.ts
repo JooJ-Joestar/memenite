@@ -8,7 +8,6 @@ import { available_weapons } from "../attributes/AvailableWeapons";
 
 export class Room {
     private scene: any;
-    private engine: any;
 
     // We DO NOT need to save the colliders somewhere as Babylon.js will handle them automatically, but I wanted
     // a quick way of knowing which element was a collider so one can quickly hide them during debugging.
@@ -27,11 +26,9 @@ export class Room {
 
     constructor(
         scene?: BABYLON.Scene,
-        engine?: any
     ) {
         // @ts-ignore
         this.scene = scene;
-        this.engine = engine;
 
         // Connects to Colyseus and then performs some stuff.
         this.colyseusSDK.joinOrCreate("my_room").then((room: any) => {

@@ -101,7 +101,6 @@ export class Player extends BABYLON.TransformNode {
     private animation_playing: string = "none";
     // Target mesh for movement smoothing.
     private mesh_next_position: any;
-    private scene: BABYLON.Scene;
     // If this is the current player, assigns inputs to it.
     private input: any = null;
     private nickname: string = "";
