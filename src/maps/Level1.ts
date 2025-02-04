@@ -29,7 +29,7 @@ export class Level1 {
         this.scene = scene;
         this.engine = engine;
 
-        let import_mesh = BABYLON.SceneLoader.ImportMeshAsync("", "/assets/maps/level-1/", "final.babylon", scene, function (newMeshes) {
+        let import_mesh = BABYLON.SceneLoader.ImportMeshAsync("", "/assets/maps/level-1/", "objetos-v2.babylon", scene, function (newMeshes) {
         });
         let import_throwables = BABYLON.SceneLoader.ImportMeshAsync("", "/assets/maps/level-1/", "throwables.babylon", scene, function (newMeshes) {
         });
@@ -42,7 +42,7 @@ export class Level1 {
                 if (result.meshes[i].name.indexOf("collider") == -1) continue;
 
                 // Should be changed to true when not in dev mode.
-                // result.meshes[i].isVisible = false;
+                result.meshes[i].isVisible = false;
                 result.meshes[i].isPickable = true;
                 result.meshes[i].checkCollisions = true;
                 colliders.push(result.meshes[i]);

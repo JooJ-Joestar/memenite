@@ -7,7 +7,7 @@ import { Room } from './models/Room';
 import { PlayerAttributes } from './types/PlayerAttributes';
 
 // Colyseus URL for multiplayer connection.
-export const COLYSEUS_URL = 'wss://ggj24.ddns.net/';
+export const COLYSEUS_URL = 'ws://localhost:2567';
 
 declare var __APP__: BabylonApp;
 
@@ -21,6 +21,7 @@ export class BabylonApp {
     // so whatever is computed is registered in here and shown in the screen.
     public scene: BABYLON.Scene;
     public level: any;
+    // @ts-ignore
     public room: Room;
 
     static singleton () {

@@ -1,0 +1,4499 @@
+Exporter version: 3.3.2, Blender version: 3.6.1
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  C:\Users\jorge\OneDrive\Documentos\Babylon.js\slippery-surprise\assets\maps\level-1\
+			WARNING: unsupported node type(ShaderNodeLightPath) will trigger baking
+			processing texture HdrOutdoorSnowMountainsEveningClear001_HDR_1K
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently enabled collection
+	processing begun of mesh:  collider_.027
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.001
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.002
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.003
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.004
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.005
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.006
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.007
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.009
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.010
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.011
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.012
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.013
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.014
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.017
+		WARNING: No materials have been assigned: 
+		num positions      :  232
+		num normals        :  232
+		num tangents       :  0
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  96
+	processing begun of mesh:  collider_.019
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.020
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.021
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.022
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.023
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.008
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.093
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.094
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.095
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.096
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.126
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.127
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.128
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.129
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.130
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.131
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.134
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.135
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.136
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.137
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.138
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.139
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.140
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.141
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.142
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.143
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.144
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.145
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.146
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.147
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.148
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.149
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.150
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.151
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.152
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.153
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.154
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.155
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.156
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.157
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.158
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.159
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.160
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.161
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.162
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.163
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.164
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.165
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.166
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.167
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.168
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.169
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.170
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.171
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.172
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.173
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.174
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.175
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.176
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.177
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.178
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.179
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.180
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.181
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.182
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.183
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.184
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.185
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.186
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.187
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.188
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.189
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.190
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.191
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.192
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.193
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.194
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.195
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.196
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.197
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.198
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.199
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.200
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.201
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.202
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.203
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.204
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.205
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.206
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.207
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.208
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.209
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.210
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.211
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.212
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.213
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.214
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.215
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.216
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.217
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.218
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.219
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.220
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.221
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.222
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.223
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.224
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.225
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.226
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.227
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.228
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.229
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.230
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.231
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.232
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.233
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.234
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.235
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.236
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.237
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.238
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.239
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.240
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.241
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.242
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.243
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.244
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.245
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.246
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.247
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.248
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.249
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.250
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.251
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.252
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.253
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.254
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.255
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.256
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.257
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.258
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.259
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.260
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.261
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.262
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.263
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.264
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.265
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.266
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.267
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.268
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.269
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.270
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.271
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.272
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.273
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.274
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.275
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.276
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.277
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.278
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.279
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.280
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.281
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.282
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.283
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.284
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.285
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.026
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.024
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.025
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.028
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.029
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.030
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.031
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.032
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.033
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.034
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.035
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.036
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.037
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.038
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.039
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.040
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.041
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.042
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.043
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.044
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.045
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.046
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.047
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.048
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.049
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.050
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.051
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.052
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.053
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.054
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.055
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.056
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.057
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.058
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.059
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.060
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.061
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.062
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.063
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.064
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.065
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.066
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.067
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.068
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.069
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.070
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.071
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.072
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.073
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.074
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.075
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.076
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.077
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.078
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.079
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.080
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.081
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.082
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.083
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.084
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.085
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.086
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.087
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.088
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.089
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.090
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.091
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.092
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.097
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.098
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.099
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.100
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.101
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.102
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.103
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.104
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.105
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.106
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.107
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.108
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.109
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.110
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.111
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.112
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.113
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.114
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.115
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.116
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.117
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.118
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.119
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.120
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.121
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.122
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.123
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.124
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.125
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.132
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.133
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.286
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.287
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.288
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.289
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.290
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.291
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.292
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.293
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.294
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.296
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.297
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.298
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.301
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.302
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.305
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.306
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.309
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.310
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.311
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.312
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_.313
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.001
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.002
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.003
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.004
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.005
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.006
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.007
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.008
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.009
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.010
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.011
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.012
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_balcao.013
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  collider_parede
+		WARNING: No materials have been assigned: 
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  0
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MESA 1
+		processing begun of material:  TAMPINHA
+		processing begun of material:  ESTOFADO
+		processing begun of multimaterial:  objetos_v2.Multimaterial#0
+		num positions      :  1734
+		num normals        :  1734
+		num tangents       :  0
+		num uvs            :  3468
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  736
+	processing begun of mesh:  CHAO
+		processing begun of material:  Chao bar
+			processing texture piso_madeira_bar
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  PRATELEIRA
+		processing begun of material:  MADEIRA
+		num positions      :  367
+		num normals        :  367
+		num tangents       :  0
+		num uvs            :  734
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  178
+	processing begun of mesh:  MESA e CADEIRA
+		processing begun of material:  PLASTICO CADEIRA
+		processing begun of material:  PlasticABSWorn001_2K
+			processing texture textura_mesa_2_4
+		processing begun of multimaterial:  objetos_v2.Multimaterial#1
+		num positions      :  54270
+		num normals        :  54270
+		num tangents       :  0
+		num uvs            :  108540
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20410
+		WARNING: # of 0 area faces found:  852
+	processing begun of mesh:  Barril externo
+		processing begun of material:  Barril
+		num positions      :  796
+		num normals        :  796
+		num tangents       :  0
+		num uvs            :  1592
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  316
+	processing begun of mesh:  BARRIL interno
+		processing begun of material:  Barril
+		registered as also a user of material:  Barril
+		num positions      :  800
+		num normals        :  800
+		num tangents       :  0
+		num uvs            :  1600
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  316
+	processing begun of mesh:  BARRIL interno 2
+		processing begun of material:  Barril
+		registered as also a user of material:  Barril
+		num positions      :  785
+		num normals        :  785
+		num tangents       :  0
+		num uvs            :  1570
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  316
+	processing begun of mesh:  PAREDE lateral
+		processing begun of material:  Parede
+		num positions      :  248
+		num normals        :  248
+		num tangents       :  0
+		num uvs            :  496
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  96
+	processing begun of mesh:  BALCAO. v2
+		processing begun of material:  MADEIRA
+		registered as also a user of material:  MADEIRA
+		num positions      :  317
+		num normals        :  317
+		num tangents       :  0
+		num uvs            :  634
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  160
+	processing begun of mesh:  CADEIRA 1.003
+		processing begun of material:  PLASTICO CADEIRA
+		registered as also a user of material:  PLASTICO CADEIRA
+		num positions      :  1470
+		num normals        :  1470
+		num tangents       :  0
+		num uvs            :  2940
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  536
+		WARNING: # of 0 area faces found:  24
+	processing begun of mesh:  CADEIRA 1.001
+		processing begun of material:  PLASTICO CADEIRA
+		registered as also a user of material:  PLASTICO CADEIRA
+		num positions      :  5761
+		num normals        :  5761
+		num tangents       :  0
+		num uvs            :  11522
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2144
+		WARNING: # of 0 area faces found:  96
+	processing begun of mesh:  MESA 2.002
+		processing begun of material:  PlasticABSWorn001_2K
+		registered as also a user of material:  PlasticABSWorn001_2K
+		num positions      :  431
+		num normals        :  431
+		num tangents       :  0
+		num uvs            :  862
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  182
+	processing begun of mesh:  CADEIRA 1.004
+		processing begun of material:  PLASTICO CADEIRA
+		registered as also a user of material:  PLASTICO CADEIRA
+		num positions      :  1437
+		num normals        :  1437
+		num tangents       :  0
+		num uvs            :  2874
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  536
+		WARNING: # of 0 area faces found:  24
+	processing begun of mesh:  GARRAFA.001
+		processing begun of material:  cerveja
+		processing begun of material:  TAMPINHA
+		registered as also a user of material:  TAMPINHA
+		processing begun of multimaterial:  objetos_v2.Multimaterial#2
+		num positions      :  729
+		num normals        :  729
+		num tangents       :  0
+		num uvs            :  1458
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  276
+	processing begun of mesh:  GARRAFAS QUEBRADAS
+		processing begun of material:  cerveja
+		registered as also a user of material:  cerveja
+		num positions      :  2902
+		num normals        :  2902
+		num tangents       :  0
+		num uvs            :  5804
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1068
+	processing begun of mesh:  GARRAFA QUEBRADA
+		processing begun of material:  cerveja
+		registered as also a user of material:  cerveja
+		num positions      :  486
+		num normals        :  486
+		num tangents       :  0
+		num uvs            :  972
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  178
+	processing begun of mesh:  COROTE 5
+		processing begun of material:  COROTE.001
+		processing begun of material:  TAMPA COROTE
+		processing begun of material:  COROTE
+		processing begun of material:  COROTE.002
+		processing begun of material:  COROTE.003
+		processing begun of material:  COROTE.004
+		processing begun of multimaterial:  objetos_v2.Multimaterial#3
+		num positions      :  1698
+		num normals        :  1698
+		num tangents       :  0
+		num uvs            :  3396
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  596
+	processing begun of mesh:  Geladeira bebidas
+		processing begun of material:  METAL GELADEIRA
+		processing begun of material:  interior geladeira
+		processing begun of material:  BORRACHA PEGADOR
+			processing texture geladeira_
+		processing begun of multimaterial:  objetos_v2.Multimaterial#4
+		num positions      :  128
+		num normals        :  128
+		num tangents       :  0
+		num uvs            :  256
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  60
+	processing begun of mesh:  copo 1
+		processing begun of material:  Material
+			WARNING: unsupported node type(ShaderNodeBsdfGlass) will trigger baking
+			bake time:  0 min, 0.0098 secs
+		num positions      :  685
+		num normals        :  685
+		num tangents       :  0
+		num uvs            :  1370
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  276
+	processing begun of mesh:  copo 2
+		processing begun of material:  Material
+			WARNING: unsupported node type(ShaderNodeBsdfGlass) will trigger baking
+			bake time:  0 min, 0.0096 secs
+		num positions      :  678
+		num normals        :  678
+		num tangents       :  0
+		num uvs            :  1356
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  276
+	processing begun of mesh:  copo 4
+		processing begun of material:  Material
+			WARNING: unsupported node type(ShaderNodeBsdfGlass) will trigger baking
+			bake time:  0 min, 0.0094 secs
+		num positions      :  686
+		num normals        :  686
+		num tangents       :  0
+		num uvs            :  1372
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  276
+	processing begun of mesh:  copo 3
+		processing begun of material:  Material
+			WARNING: unsupported node type(ShaderNodeBsdfGlass) will trigger baking
+			bake time:  0 min, 0.0103 secs
+		num positions      :  685
+		num normals        :  685
+		num tangents       :  0
+		num uvs            :  1370
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  276
+	processing begun of mesh:  MOITA
+		processing begun of material:  moita
+		num positions      :  15669
+		num normals        :  15669
+		num tangents       :  0
+		num uvs            :  31338
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  5820
+	processing begun of mesh:  CHALE.001
+		processing begun of material:  chale
+		processing begun of material:  telhado
+		processing begun of material:  MADEIRA
+		registered as also a user of material:  MADEIRA
+		processing begun of multimaterial:  objetos_v2.Multimaterial#5
+		num positions      :  263
+		num normals        :  263
+		num tangents       :  0
+		num uvs            :  526
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  106
+	processing begun of mesh:  PEDRA.001
+		processing begun of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  8
+	processing begun of mesh:  PEDRA.003
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  PEDRA.004
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  PEDRA.005
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  PEDRA.006
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  PEDRA.007
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  PEDRA.008
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  8
+	processing begun of mesh:  PEDRA.009
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  TRONCO.003
+		processing begun of material:  MADEIRA.001
+		num positions      :  1904
+		num normals        :  1904
+		num tangents       :  0
+		num uvs            :  3808
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  744
+	processing begun of mesh:  CHAO.001
+		processing begun of material:  grama
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  CHAO.005
+		processing begun of material:  grama
+		registered as also a user of material:  grama
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  PEDRA.017
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  PEDRA.018
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  PEDRA.019
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  6
+	processing begun of mesh:  PEDRA.020
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  8
+	processing begun of mesh:  CHAO.006
+		processing begun of material:  grama
+		registered as also a user of material:  grama
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  ARVORE-02-TRONCO.150
+		processing begun of material:  MADEIRA.001
+		processing begun of material:  arvore copa
+		registered as also a user of material:  MADEIRA.001
+		processing begun of multimaterial:  objetos_v2.Multimaterial#6
+		num positions      :  13860
+		num normals        :  13860
+		num tangents       :  0
+		num uvs            :  27720
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  5208
+	processing begun of mesh:  PEDRA.027
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  PEDRA.028
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  PEDRA.030
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  CHAO.009
+		processing begun of material:  grama
+		registered as also a user of material:  grama
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  PEDRA.031
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  4
+	processing begun of mesh:  LAPIDE G.028
+		processing begun of material:  lapide 01
+		num positions      :  69
+		num normals        :  69
+		num tangents       :  0
+		num uvs            :  138
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  28
+	processing begun of mesh:  LAPIDE P.028
+		processing begun of material:  lapide 01
+		registered as also a user of material:  lapide 01
+		num positions      :  102
+		num normals        :  102
+		num tangents       :  0
+		num uvs            :  204
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  42
+	processing begun of mesh:  MONTE 01.014
+		processing begun of material:  cova
+		num positions      :  602
+		num normals        :  602
+		num tangents       :  0
+		num uvs            :  1204
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  206
+	processing begun of mesh:  MONTE 02.014
+		processing begun of material:  cova
+		registered as also a user of material:  cova
+		num positions      :  602
+		num normals        :  602
+		num tangents       :  0
+		num uvs            :  1204
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  206
+	processing begun of mesh:  ARVORE-02-TRONCO.001
+		processing begun of material:  MADEIRA.001
+		processing begun of material:  arvore copa
+		registered as also a user of material:  MADEIRA.001
+		registered as also a user of material:  arvore copa
+		processing begun of multimaterial:  objetos_v2.Multimaterial#7
+		num positions      :  14598
+		num normals        :  14598
+		num tangents       :  0
+		num uvs            :  29196
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  5580
+	processing begun of mesh:  CHALE.002
+		processing begun of material:  chale
+		processing begun of material:  telhado
+		processing begun of material:  MADEIRA
+		registered as also a user of material:  chale
+		registered as also a user of material:  telhado
+		registered as also a user of material:  MADEIRA
+		processing begun of multimaterial:  objetos_v2.Multimaterial#8
+		num positions      :  260
+		num normals        :  260
+		num tangents       :  0
+		num uvs            :  520
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  106
+	processing begun of mesh:  ARVORE-02-TRONCO.002
+		processing begun of material:  MADEIRA.001
+		processing begun of material:  arvore copa
+		registered as also a user of material:  MADEIRA.001
+		registered as also a user of material:  arvore copa
+		processing begun of multimaterial:  objetos_v2.Multimaterial#9
+		num positions      :  14287
+		num normals        :  14287
+		num tangents       :  0
+		num uvs            :  28574
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  5394
+	processing begun of mesh:  ARVORE-02-TRONCO.003
+		processing begun of material:  MADEIRA.001
+		processing begun of material:  arvore copa
+		registered as also a user of material:  MADEIRA.001
+		registered as also a user of material:  arvore copa
+		processing begun of multimaterial:  objetos_v2.Multimaterial#10
+		num positions      :  11631
+		num normals        :  11631
+		num tangents       :  0
+		num uvs            :  23262
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4402
+	processing begun of mesh:  TRONCO.001
+		processing begun of material:  MADEIRA.001
+		registered as also a user of material:  MADEIRA.001
+		num positions      :  1931
+		num normals        :  1931
+		num tangents       :  0
+		num uvs            :  3862
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  744
+	processing begun of mesh:  PEDRA.002
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  PEDRA.010
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  PEDRA.011
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  8
+	processing begun of mesh:  PEDRA.012
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  PEDRA.013
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  8
+	processing begun of mesh:  PEDRA.014
+		processing begun of material:  rocha
+		registered as also a user of material:  rocha
+		num positions      :  334
+		num normals        :  334
+		num tangents       :  0
+		num uvs            :  668
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  114
+		WARNING: # of 0 area faces found:  10
+	processing begun of mesh:  MOITA.001
+		processing begun of material:  moita
+		registered as also a user of material:  moita
+		num positions      :  15684
+		num normals        :  15684
+		num tangents       :  0
+		num uvs            :  31368
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  5820
+	processing begun of mesh:  MOITA.002
+		processing begun of material:  moita
+		registered as also a user of material:  moita
+		num positions      :  6312
+		num normals        :  6312
+		num tangents       :  0
+		num uvs            :  12624
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2328
+	processing begun of mesh:  MOITA.003
+		processing begun of material:  moita
+		registered as also a user of material:  moita
+		num positions      :  6312
+		num normals        :  6312
+		num tangents       :  0
+		num uvs            :  12624
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2328
+	processing begun of mesh:  CHALE.003
+		processing begun of material:  chale
+		processing begun of material:  telhado
+		processing begun of material:  MADEIRA
+		registered as also a user of material:  chale
+		registered as also a user of material:  telhado
+		registered as also a user of material:  MADEIRA
+		processing begun of multimaterial:  objetos_v2.Multimaterial#11
+		num positions      :  261
+		num normals        :  261
+		num tangents       :  0
+		num uvs            :  522
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  106
+	processing begun of mesh:  MAUSOLEU
+		processing begun of material:  rocha
+		processing begun of material:  tampa mausoleu
+		registered as also a user of material:  rocha
+		processing begun of multimaterial:  objetos_v2.Multimaterial#12
+		num positions      :  1742
+		num normals        :  1742
+		num tangents       :  0
+		num uvs            :  3484
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  660
+	processing begun of mesh:  CHALE
+		processing begun of material:  chale
+		processing begun of material:  telhado
+		registered as also a user of material:  chale
+		registered as also a user of material:  telhado
+		processing begun of multimaterial:  objetos_v2.Multimaterial#13
+		num positions      :  358
+		num normals        :  358
+		num tangents       :  0
+		num uvs            :  716
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  150
+	processing begun of mesh:  LAPIDES 1
+		processing begun of material:  lapide 01
+		registered as also a user of material:  lapide 01
+		num positions      :  2422
+		num normals        :  2422
+		num tangents       :  0
+		num uvs            :  4844
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  980
+	processing begun of mesh:  MONTE 01.012
+		processing begun of material:  cova
+		registered as also a user of material:  cova
+		num positions      :  8428
+		num normals        :  8428
+		num tangents       :  0
+		num uvs            :  16856
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2884
+	processing begun of mesh:  CHAO.002
+		processing begun of material:  grama.2
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  LAPIDES 2
+		processing begun of material:  lapide 01
+		registered as also a user of material:  lapide 01
+		num positions      :  2221
+		num normals        :  2221
+		num tangents       :  0
+		num uvs            :  4442
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  896
+	processing begun of mesh:  MONTE 01.001
+		processing begun of material:  cova
+		registered as also a user of material:  cova
+		num positions      :  8428
+		num normals        :  8428
+		num tangents       :  0
+		num uvs            :  16856
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2884
+	processing begun of mesh:  FLORES
+		processing begun of material:  flores
+			processing texture _225
+		num positions      :  3412
+		num normals        :  3412
+		num tangents       :  0
+		num uvs            :  6824
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1140
+		WARNING: # of 0 area faces found:  290
+	processing begun of mesh:  COROTE 5.001
+		processing begun of material:  COROTE.001
+		processing begun of material:  TAMPA COROTE
+		processing begun of material:  COROTE
+		processing begun of material:  COROTE.002
+		processing begun of material:  COROTE.003
+		processing begun of material:  COROTE.004
+		registered as also a user of material:  COROTE.001
+		registered as also a user of material:  TAMPA COROTE
+		registered as also a user of material:  COROTE
+		registered as also a user of material:  COROTE.002
+		registered as also a user of material:  COROTE.003
+		registered as also a user of material:  COROTE.004
+		processing begun of multimaterial:  objetos_v2.Multimaterial#14
+		num positions      :  1696
+		num normals        :  1696
+		num tangents       :  0
+		num uvs            :  3392
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  596
+	processing begun of mesh:  CHAO.003
+		processing begun of material:  grama.3
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  COROTE 1
+		processing begun of material:  COROTE.001
+		processing begun of material:  TAMPA COROTE
+		processing begun of material:  COROTE
+		processing begun of material:  COROTE.002
+		processing begun of material:  COROTE.003
+		processing begun of material:  COROTE.004
+		registered as also a user of material:  COROTE.001
+		registered as also a user of material:  TAMPA COROTE
+		registered as also a user of material:  COROTE
+		registered as also a user of material:  COROTE.002
+		registered as also a user of material:  COROTE.003
+		registered as also a user of material:  COROTE.004
+		processing begun of multimaterial:  objetos_v2.Multimaterial#15
+		num positions      :  1694
+		num normals        :  1694
+		num tangents       :  0
+		num uvs            :  3388
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  596
+	processing begun of mesh:  CERCA.001
+		processing begun of material:  METAL CERCA
+		num positions      :  9173
+		num normals        :  9173
+		num tangents       :  0
+		num uvs            :  18346
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  3990
+	processing begun of mesh:  TRIGO
+		processing begun of material:  pngwing.com
+			processing texture pngwing_com
+		num positions      :  360
+		num normals        :  360
+		num tangents       :  0
+		num uvs            :  720
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  180
+	processing begun of mesh:  CHAO.004
+		processing begun of material:  PISO porto
+			processing texture stylish_wooden_grunge_texture_background
+		num positions      :  16
+		num normals        :  16
+		num tangents       :  0
+		num uvs            :  32
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  16
+	processing begun of mesh:  BARRIL.003
+		processing begun of material:  Barril
+		registered as also a user of material:  Barril
+		num positions      :  2381
+		num normals        :  2381
+		num tangents       :  0
+		num uvs            :  4762
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  948
+	processing begun of mesh:  BARRIL.004
+		processing begun of material:  MADEIRA.001
+		registered as also a user of material:  MADEIRA.001
+		num positions      :  791
+		num normals        :  791
+		num tangents       :  0
+		num uvs            :  1582
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  316
+	processing begun of mesh:  BARRIL.006
+		processing begun of material:  MADEIRA.001
+		registered as also a user of material:  MADEIRA.001
+		num positions      :  799
+		num normals        :  799
+		num tangents       :  0
+		num uvs            :  1598
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  316
+	processing begun of mesh:  BARRIL.008
+		processing begun of material:  MADEIRA.001
+		registered as also a user of material:  MADEIRA.001
+		num positions      :  791
+		num normals        :  791
+		num tangents       :  0
+		num uvs            :  1582
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  316
+	processing begun of mesh:  BARRIL.010
+		processing begun of material:  Barril
+		registered as also a user of material:  Barril
+		num positions      :  6438
+		num normals        :  6438
+		num tangents       :  0
+		num uvs            :  12876
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2528
+	processing begun of mesh:  COROTE 2
+		processing begun of material:  COROTE.001
+		processing begun of material:  TAMPA COROTE
+		processing begun of material:  COROTE
+		processing begun of material:  COROTE.002
+		processing begun of material:  COROTE.003
+		processing begun of material:  COROTE.004
+		registered as also a user of material:  COROTE.001
+		registered as also a user of material:  TAMPA COROTE
+		registered as also a user of material:  COROTE
+		registered as also a user of material:  COROTE.002
+		registered as also a user of material:  COROTE.003
+		registered as also a user of material:  COROTE.004
+		processing begun of multimaterial:  objetos_v2.Multimaterial#16
+		num positions      :  1702
+		num normals        :  1702
+		num tangents       :  0
+		num uvs            :  3404
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  596
+	processing begun of mesh:  TOCO 3
+		processing begun of material:  MADEIRA.001
+		processing begun of material:  arvore copa
+		registered as also a user of material:  MADEIRA.001
+		registered as also a user of material:  arvore copa
+		processing begun of multimaterial:  objetos_v2.Multimaterial#17
+		num positions      :  4017
+		num normals        :  4017
+		num tangents       :  0
+		num uvs            :  8034
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1612
+	processing begun of mesh:  TOCO 1
+		processing begun of material:  MADEIRA.001
+		processing begun of material:  arvore copa
+		registered as also a user of material:  MADEIRA.001
+		registered as also a user of material:  arvore copa
+		processing begun of multimaterial:  objetos_v2.Multimaterial#18
+		num positions      :  5562
+		num normals        :  5562
+		num tangents       :  0
+		num uvs            :  11124
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2232
+	processing begun of mesh:  TOCO 2
+		processing begun of material:  MADEIRA.001
+		processing begun of material:  arvore copa
+		registered as also a user of material:  MADEIRA.001
+		registered as also a user of material:  arvore copa
+		processing begun of multimaterial:  objetos_v2.Multimaterial#19
+		num positions      :  1854
+		num normals        :  1854
+		num tangents       :  0
+		num uvs            :  3708
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  744
+	processing begun of mesh:  TOCO 2.001
+		processing begun of material:  MADEIRA.001
+		processing begun of material:  arvore copa
+		registered as also a user of material:  MADEIRA.001
+		registered as also a user of material:  arvore copa
+		processing begun of multimaterial:  objetos_v2.Multimaterial#20
+		num positions      :  618
+		num normals        :  618
+		num tangents       :  0
+		num uvs            :  1236
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  248
+	processing begun of mesh:  CHALE.004
+		processing begun of material:  telhado
+		processing begun of material:  casa porto
+		registered as also a user of material:  telhado
+		processing begun of multimaterial:  objetos_v2.Multimaterial#21
+		num positions      :  260
+		num normals        :  260
+		num tangents       :  0
+		num uvs            :  520
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  106
+	processing begun of mesh:  ARVORE-02-TRONCO.148
+		processing begun of material:  MADEIRA.001
+		processing begun of material:  arvore copa
+		registered as also a user of material:  MADEIRA.001
+		registered as also a user of material:  arvore copa
+		processing begun of multimaterial:  objetos_v2.Multimaterial#22
+		num positions      :  1854
+		num normals        :  1854
+		num tangents       :  0
+		num uvs            :  3708
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  744
+	processing begun of mesh:  CERCA.056
+		processing begun of material:  METAL CERCA
+		registered as also a user of material:  METAL CERCA
+		num positions      :  2205
+		num normals        :  2205
+		num tangents       :  0
+		num uvs            :  4410
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  960
+	processing begun of mesh:  CERCA.004
+		processing begun of material:  METAL CERCA
+		registered as also a user of material:  METAL CERCA
+		num positions      :  183
+		num normals        :  183
+		num tangents       :  0
+		num uvs            :  366
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  80
+	processing begun of mesh:  CERCA.005
+		processing begun of material:  METAL CERCA
+		registered as also a user of material:  METAL CERCA
+		num positions      :  183
+		num normals        :  183
+		num tangents       :  0
+		num uvs            :  366
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  80
+	processing begun of mesh:  CERCA.006
+		processing begun of material:  METAL CERCA
+		registered as also a user of material:  METAL CERCA
+		num positions      :  183
+		num normals        :  183
+		num tangents       :  0
+		num uvs            :  366
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  80
+	processing begun of mesh:  CERCA.007
+		processing begun of material:  METAL CERCA
+		registered as also a user of material:  METAL CERCA
+		num positions      :  183
+		num normals        :  183
+		num tangents       :  0
+		num uvs            :  366
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  80
+	processing begun of mesh:  CERCA.008
+		processing begun of material:  METAL CERCA
+		registered as also a user of material:  METAL CERCA
+		num positions      :  183
+		num normals        :  183
+		num tangents       :  0
+		num uvs            :  366
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  80
+	processing begun of mesh:  CHAO.008
+		processing begun of material:  Material.002
+		processing begun of material:  Material.003
+		processing begun of multimaterial:  objetos_v2.Multimaterial#23
+		num positions      :  747
+		num normals        :  747
+		num tangents       :  0
+		num uvs            :  1494
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  290
+	processing begun of mesh:  Cube
+		processing begun of material:  carro.002
+		num positions      :  48
+		num normals        :  48
+		num tangents       :  0
+		num uvs            :  96
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  Cube.001
+		processing begun of material:  carro
+		num positions      :  47
+		num normals        :  47
+		num tangents       :  0
+		num uvs            :  94
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  Cube.002
+		processing begun of material:  carro.003
+		num positions      :  47
+		num normals        :  47
+		num tangents       :  0
+		num uvs            :  94
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  Cube.003
+		processing begun of material:  carro.001
+		num positions      :  47
+		num normals        :  47
+		num tangents       :  0
+		num uvs            :  94
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  Cube.004
+		processing begun of material:  carro05
+		num positions      :  49
+		num normals        :  49
+		num tangents       :  0
+		num uvs            :  98
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  Cube.005
+		processing begun of material:  carro05
+		registered as also a user of material:  carro05
+		num positions      :  47
+		num normals        :  47
+		num tangents       :  0
+		num uvs            :  94
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  COROTE 4
+		processing begun of material:  COROTE.001
+		processing begun of material:  TAMPA COROTE
+		processing begun of material:  COROTE
+		registered as also a user of material:  COROTE.001
+		registered as also a user of material:  TAMPA COROTE
+		registered as also a user of material:  COROTE
+		processing begun of multimaterial:  objetos_v2.Multimaterial#24
+		num positions      :  1695
+		num normals        :  1695
+		num tangents       :  0
+		num uvs            :  3390
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  596
+	processing begun of mesh:  CERCA.002
+		processing begun of material:  METAL CERCA
+		registered as also a user of material:  METAL CERCA
+		num positions      :  6044
+		num normals        :  6044
+		num tangents       :  0
+		num uvs            :  12088
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2630
+	processing begun of mesh:  CERCA.003
+		processing begun of material:  METAL CERCA
+		registered as also a user of material:  METAL CERCA
+		num positions      :  6811
+		num normals        :  6811
+		num tangents       :  0
+		num uvs            :  13622
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2950
+	processing begun of mesh:  MAR
+		processing begun of material:  Material.001
+			WARNING: unsupported node type(ShaderNodeValToRGB) will trigger baking
+			WARNING: unsupported node type(ShaderNodeRGBToBW) will trigger baking
+			WARNING: Roughness channel baking required, but not possible, ignored
+			processing texture Water_002_NORM
+			processing texture Water_002_OCC
+			processing texture Water_002_ROUGH
+			Baking texture, type: DIFFUSE, mapped using: UVMap
+			processing texture MAR_baked_DIFFUSE
+			Diffuse / albeto channel baked
+			bake time:  0 min, 8.2379 secs
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+========= Writing of JSON file started =========
+	writing mesh:  collider_.027
+	writing mesh:  collider_.001
+	writing mesh:  collider_.002
+	writing mesh:  collider_.003
+	writing mesh:  collider_.004
+	writing mesh:  collider_.005
+	writing mesh:  collider_.006
+	writing mesh:  collider_.007
+	writing mesh:  collider_.009
+	writing mesh:  collider_.010
+	writing mesh:  collider_.011
+	writing mesh:  collider_.012
+	writing mesh:  collider_.013
+	writing mesh:  collider_.014
+	writing mesh:  collider_.017
+	writing mesh:  collider_.019
+	writing mesh:  collider_.020
+	writing mesh:  collider_.021
+	writing mesh:  collider_.022
+	writing mesh:  collider_.023
+	writing mesh:  collider_.008
+	writing mesh:  collider_.093
+	writing mesh:  collider_.094
+	writing mesh:  collider_.095
+	writing mesh:  collider_.096
+	writing mesh:  collider_.126
+	writing mesh:  collider_.127
+	writing mesh:  collider_.128
+	writing mesh:  collider_.129
+	writing mesh:  collider_.130
+	writing mesh:  collider_.131
+	writing mesh:  collider_.134
+	writing mesh:  collider_.135
+	writing mesh:  collider_.136
+	writing mesh:  collider_.137
+	writing mesh:  collider_.138
+	writing mesh:  collider_.139
+	writing mesh:  collider_.140
+	writing mesh:  collider_.141
+	writing mesh:  collider_.142
+	writing mesh:  collider_.143
+	writing mesh:  collider_.144
+	writing mesh:  collider_.145
+	writing mesh:  collider_.146
+	writing mesh:  collider_.147
+	writing mesh:  collider_.148
+	writing mesh:  collider_.149
+	writing mesh:  collider_.150
+	writing mesh:  collider_.151
+	writing mesh:  collider_.152
+	writing mesh:  collider_.153
+	writing mesh:  collider_.154
+	writing mesh:  collider_.155
+	writing mesh:  collider_.156
+	writing mesh:  collider_.157
+	writing mesh:  collider_.158
+	writing mesh:  collider_.159
+	writing mesh:  collider_.160
+	writing mesh:  collider_.161
+	writing mesh:  collider_.162
+	writing mesh:  collider_.163
+	writing mesh:  collider_.164
+	writing mesh:  collider_.165
+	writing mesh:  collider_.166
+	writing mesh:  collider_.167
+	writing mesh:  collider_.168
+	writing mesh:  collider_.169
+	writing mesh:  collider_.170
+	writing mesh:  collider_.171
+	writing mesh:  collider_.172
+	writing mesh:  collider_.173
+	writing mesh:  collider_.174
+	writing mesh:  collider_.175
+	writing mesh:  collider_.176
+	writing mesh:  collider_.177
+	writing mesh:  collider_.178
+	writing mesh:  collider_.179
+	writing mesh:  collider_.180
+	writing mesh:  collider_.181
+	writing mesh:  collider_.182
+	writing mesh:  collider_.183
+	writing mesh:  collider_.184
+	writing mesh:  collider_.185
+	writing mesh:  collider_.186
+	writing mesh:  collider_.187
+	writing mesh:  collider_.188
+	writing mesh:  collider_.189
+	writing mesh:  collider_.190
+	writing mesh:  collider_.191
+	writing mesh:  collider_.192
+	writing mesh:  collider_.193
+	writing mesh:  collider_.194
+	writing mesh:  collider_.195
+	writing mesh:  collider_.196
+	writing mesh:  collider_.197
+	writing mesh:  collider_.198
+	writing mesh:  collider_.199
+	writing mesh:  collider_.200
+	writing mesh:  collider_.201
+	writing mesh:  collider_.202
+	writing mesh:  collider_.203
+	writing mesh:  collider_.204
+	writing mesh:  collider_.205
+	writing mesh:  collider_.206
+	writing mesh:  collider_.207
+	writing mesh:  collider_.208
+	writing mesh:  collider_.209
+	writing mesh:  collider_.210
+	writing mesh:  collider_.211
+	writing mesh:  collider_.212
+	writing mesh:  collider_.213
+	writing mesh:  collider_.214
+	writing mesh:  collider_.215
+	writing mesh:  collider_.216
+	writing mesh:  collider_.217
+	writing mesh:  collider_.218
+	writing mesh:  collider_.219
+	writing mesh:  collider_.220
+	writing mesh:  collider_.221
+	writing mesh:  collider_.222
+	writing mesh:  collider_.223
+	writing mesh:  collider_.224
+	writing mesh:  collider_.225
+	writing mesh:  collider_.226
+	writing mesh:  collider_.227
+	writing mesh:  collider_.228
+	writing mesh:  collider_.229
+	writing mesh:  collider_.230
+	writing mesh:  collider_.231
+	writing mesh:  collider_.232
+	writing mesh:  collider_.233
+	writing mesh:  collider_.234
+	writing mesh:  collider_.235
+	writing mesh:  collider_.236
+	writing mesh:  collider_.237
+	writing mesh:  collider_.238
+	writing mesh:  collider_.239
+	writing mesh:  collider_.240
+	writing mesh:  collider_.241
+	writing mesh:  collider_.242
+	writing mesh:  collider_.243
+	writing mesh:  collider_.244
+	writing mesh:  collider_.245
+	writing mesh:  collider_.246
+	writing mesh:  collider_.247
+	writing mesh:  collider_.248
+	writing mesh:  collider_.249
+	writing mesh:  collider_.250
+	writing mesh:  collider_.251
+	writing mesh:  collider_.252
+	writing mesh:  collider_.253
+	writing mesh:  collider_.254
+	writing mesh:  collider_.255
+	writing mesh:  collider_.256
+	writing mesh:  collider_.257
+	writing mesh:  collider_.258
+	writing mesh:  collider_.259
+	writing mesh:  collider_.260
+	writing mesh:  collider_.261
+	writing mesh:  collider_.262
+	writing mesh:  collider_.263
+	writing mesh:  collider_.264
+	writing mesh:  collider_.265
+	writing mesh:  collider_.266
+	writing mesh:  collider_.267
+	writing mesh:  collider_.268
+	writing mesh:  collider_.269
+	writing mesh:  collider_.270
+	writing mesh:  collider_.271
+	writing mesh:  collider_.272
+	writing mesh:  collider_.273
+	writing mesh:  collider_.274
+	writing mesh:  collider_.275
+	writing mesh:  collider_.276
+	writing mesh:  collider_.277
+	writing mesh:  collider_.278
+	writing mesh:  collider_.279
+	writing mesh:  collider_.280
+	writing mesh:  collider_.281
+	writing mesh:  collider_.282
+	writing mesh:  collider_.283
+	writing mesh:  collider_.284
+	writing mesh:  collider_.285
+	writing mesh:  collider_.026
+	writing mesh:  collider_.024
+	writing mesh:  collider_.025
+	writing mesh:  collider_.028
+	writing mesh:  collider_.029
+	writing mesh:  collider_.030
+	writing mesh:  collider_.031
+	writing mesh:  collider_.032
+	writing mesh:  collider_.033
+	writing mesh:  collider_.034
+	writing mesh:  collider_.035
+	writing mesh:  collider_.036
+	writing mesh:  collider_.037
+	writing mesh:  collider_.038
+	writing mesh:  collider_.039
+	writing mesh:  collider_.040
+	writing mesh:  collider_.041
+	writing mesh:  collider_.042
+	writing mesh:  collider_.043
+	writing mesh:  collider_.044
+	writing mesh:  collider_.045
+	writing mesh:  collider_.046
+	writing mesh:  collider_.047
+	writing mesh:  collider_.048
+	writing mesh:  collider_.049
+	writing mesh:  collider_.050
+	writing mesh:  collider_.051
+	writing mesh:  collider_.052
+	writing mesh:  collider_.053
+	writing mesh:  collider_.054
+	writing mesh:  collider_.055
+	writing mesh:  collider_.056
+	writing mesh:  collider_.057
+	writing mesh:  collider_.058
+	writing mesh:  collider_.059
+	writing mesh:  collider_.060
+	writing mesh:  collider_.061
+	writing mesh:  collider_.062
+	writing mesh:  collider_.063
+	writing mesh:  collider_.064
+	writing mesh:  collider_.065
+	writing mesh:  collider_.066
+	writing mesh:  collider_.067
+	writing mesh:  collider_.068
+	writing mesh:  collider_.069
+	writing mesh:  collider_.070
+	writing mesh:  collider_.071
+	writing mesh:  collider_.072
+	writing mesh:  collider_.073
+	writing mesh:  collider_.074
+	writing mesh:  collider_.075
+	writing mesh:  collider_.076
+	writing mesh:  collider_.077
+	writing mesh:  collider_.078
+	writing mesh:  collider_.079
+	writing mesh:  collider_.080
+	writing mesh:  collider_.081
+	writing mesh:  collider_.082
+	writing mesh:  collider_.083
+	writing mesh:  collider_.084
+	writing mesh:  collider_.085
+	writing mesh:  collider_.086
+	writing mesh:  collider_.087
+	writing mesh:  collider_.088
+	writing mesh:  collider_.089
+	writing mesh:  collider_.090
+	writing mesh:  collider_.091
+	writing mesh:  collider_.092
+	writing mesh:  collider_.097
+	writing mesh:  collider_.098
+	writing mesh:  collider_.099
+	writing mesh:  collider_.100
+	writing mesh:  collider_.101
+	writing mesh:  collider_.102
+	writing mesh:  collider_.103
+	writing mesh:  collider_.104
+	writing mesh:  collider_.105
+	writing mesh:  collider_.106
+	writing mesh:  collider_.107
+	writing mesh:  collider_.108
+	writing mesh:  collider_.109
+	writing mesh:  collider_.110
+	writing mesh:  collider_.111
+	writing mesh:  collider_.112
+	writing mesh:  collider_.113
+	writing mesh:  collider_.114
+	writing mesh:  collider_.115
+	writing mesh:  collider_.116
+	writing mesh:  collider_.117
+	writing mesh:  collider_.118
+	writing mesh:  collider_.119
+	writing mesh:  collider_.120
+	writing mesh:  collider_.121
+	writing mesh:  collider_.122
+	writing mesh:  collider_.123
+	writing mesh:  collider_.124
+	writing mesh:  collider_.125
+	writing mesh:  collider_.132
+	writing mesh:  collider_.133
+	writing mesh:  collider_.286
+	writing mesh:  collider_.287
+	writing mesh:  collider_.288
+	writing mesh:  collider_.289
+	writing mesh:  collider_.290
+	writing mesh:  collider_.291
+	writing mesh:  collider_.292
+	writing mesh:  collider_.293
+	writing mesh:  collider_.294
+	writing mesh:  collider_.296
+	writing mesh:  collider_.297
+	writing mesh:  collider_.298
+	writing mesh:  collider_.301
+	writing mesh:  collider_.302
+	writing mesh:  collider_.305
+	writing mesh:  collider_.306
+	writing mesh:  collider_.309
+	writing mesh:  collider_.310
+	writing mesh:  collider_.311
+	writing mesh:  collider_.312
+	writing mesh:  collider_.313
+	writing mesh:  collider_balcao.001
+	writing mesh:  collider_balcao.002
+	writing mesh:  collider_balcao.003
+	writing mesh:  collider_balcao.004
+	writing mesh:  collider_balcao.005
+	writing mesh:  collider_balcao.006
+	writing mesh:  collider_balcao.007
+	writing mesh:  collider_balcao.008
+	writing mesh:  collider_balcao.009
+	writing mesh:  collider_balcao.010
+	writing mesh:  collider_balcao.011
+	writing mesh:  collider_balcao.012
+	writing mesh:  collider_balcao.013
+	writing mesh:  collider_parede
+	writing mesh:  MESA 1
+	writing mesh:  CHAO
+	writing mesh:  PRATELEIRA
+	writing mesh:  MESA e CADEIRA
+	writing mesh:  Barril externo
+	writing mesh:  BARRIL interno
+	writing mesh:  BARRIL interno 2
+	writing mesh:  PAREDE lateral
+	writing mesh:  BALCAO. v2
+	writing mesh:  CADEIRA 1.003
+	writing mesh:  CADEIRA 1.001
+	writing mesh:  MESA 2.002
+	writing mesh:  CADEIRA 1.004
+	writing mesh:  GARRAFA.001
+	writing mesh:  GARRAFAS QUEBRADAS
+	writing mesh:  GARRAFA QUEBRADA
+	writing mesh:  COROTE 5
+	writing mesh:  Geladeira bebidas
+	writing mesh:  copo 1
+	writing mesh:  copo 2
+	writing mesh:  copo 4
+	writing mesh:  copo 3
+	writing mesh:  MOITA
+	writing mesh:  CHALE.001
+	writing mesh:  PEDRA.001
+	writing mesh:  PEDRA.003
+	writing mesh:  PEDRA.004
+	writing mesh:  PEDRA.005
+	writing mesh:  PEDRA.006
+	writing mesh:  PEDRA.007
+	writing mesh:  PEDRA.008
+	writing mesh:  PEDRA.009
+	writing mesh:  TRONCO.003
+	writing mesh:  CHAO.001
+	writing mesh:  CHAO.005
+	writing mesh:  PEDRA.017
+	writing mesh:  PEDRA.018
+	writing mesh:  PEDRA.019
+	writing mesh:  PEDRA.020
+	writing mesh:  CHAO.006
+	writing mesh:  ARVORE-02-TRONCO.150
+	writing mesh:  PEDRA.027
+	writing mesh:  PEDRA.028
+	writing mesh:  PEDRA.030
+	writing mesh:  CHAO.009
+	writing mesh:  PEDRA.031
+	writing mesh:  LAPIDE G.028
+	writing mesh:  LAPIDE P.028
+	writing mesh:  MONTE 01.014
+	writing mesh:  MONTE 02.014
+	writing mesh:  ARVORE-02-TRONCO.001
+	writing mesh:  CHALE.002
+	writing mesh:  ARVORE-02-TRONCO.002
+	writing mesh:  ARVORE-02-TRONCO.003
+	writing mesh:  TRONCO.001
+	writing mesh:  PEDRA.002
+	writing mesh:  PEDRA.010
+	writing mesh:  PEDRA.011
+	writing mesh:  PEDRA.012
+	writing mesh:  PEDRA.013
+	writing mesh:  PEDRA.014
+	writing mesh:  MOITA.001
+	writing mesh:  MOITA.002
+	writing mesh:  MOITA.003
+	writing mesh:  CHALE.003
+	writing mesh:  MAUSOLEU
+	writing mesh:  CHALE
+	writing mesh:  LAPIDES 1
+	writing mesh:  MONTE 01.012
+	writing mesh:  CHAO.002
+	writing mesh:  LAPIDES 2
+	writing mesh:  MONTE 01.001
+	writing mesh:  FLORES
+	writing mesh:  COROTE 5.001
+	writing mesh:  CHAO.003
+	writing mesh:  COROTE 1
+	writing mesh:  CERCA.001
+	writing mesh:  TRIGO
+	writing mesh:  CHAO.004
+	writing mesh:  BARRIL.003
+	writing mesh:  BARRIL.004
+	writing mesh:  BARRIL.006
+	writing mesh:  BARRIL.008
+	writing mesh:  BARRIL.010
+	writing mesh:  COROTE 2
+	writing mesh:  TOCO 3
+	writing mesh:  TOCO 1
+	writing mesh:  TOCO 2
+	writing mesh:  TOCO 2.001
+	writing mesh:  CHALE.004
+	writing mesh:  ARVORE-02-TRONCO.148
+	writing mesh:  CERCA.056
+	writing mesh:  CERCA.004
+	writing mesh:  CERCA.005
+	writing mesh:  CERCA.006
+	writing mesh:  CERCA.007
+	writing mesh:  CERCA.008
+	writing mesh:  CHAO.008
+	writing mesh:  Cube
+	writing mesh:  Cube.001
+	writing mesh:  Cube.002
+	writing mesh:  Cube.003
+	writing mesh:  Cube.004
+	writing mesh:  Cube.005
+	writing mesh:  COROTE 4
+	writing mesh:  CERCA.002
+	writing mesh:  CERCA.003
+	writing mesh:  MAR
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 18.6516 secs
